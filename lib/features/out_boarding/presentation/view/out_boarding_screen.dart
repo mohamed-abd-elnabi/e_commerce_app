@@ -171,6 +171,9 @@ class _OutBoardingState extends State<OutBoarding> {
               Visibility(
                 visible: isLastPage(),
                 replacement: base_button(
+                  textStyle: const TextStyle(
+                    color: ManagerColors.white,
+                  ),
                   title: ManagerStrings.skip,
                   onPeessed: () {
                     _pageController.animateToPage(
@@ -182,6 +185,9 @@ class _OutBoardingState extends State<OutBoarding> {
                   isVisibalIcon: true,
                 ),
                 child: base_button(
+                  textStyle: const TextStyle(
+                    color: ManagerColors.white,
+                  ),
                   onPeessed: () {
                     Navigator.pushNamed(context, Routes.authScreen);
                   },
