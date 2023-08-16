@@ -6,4 +6,5 @@ class ManagerFontWeight {
   static const FontWeight w800 = FontWeight.w800;
   static const FontWeight Regular = FontWeight.w500;
   static const FontWeight w300 = FontWeight.w300;
+  static const FontWeight w400 = FontWeight.w400;
 }

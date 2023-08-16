@@ -11,4 +11,10 @@ class ManagerStrings {
       ' dolorem occaecati cum atque in dolorum sequi qui.';
   static const String start = 'Start';
   static const String naxt = 'Next';
+  static const String skip = 'Skip';
+  static const String welcome = 'WelCOME to';
+  static const String new4shop = 'new4shop';
+  static const String signUp = 'Sign Up';
+  static const String signIn = 'Sign In';
+  static const String visitor = 'Visitor';
 }

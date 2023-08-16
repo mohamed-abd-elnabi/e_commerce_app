@@ -3,6 +3,8 @@ class ManagerAssets {
   static const String splash1 = 'assets/images/splach/splach1.png';
   static const String splash2 = 'assets/images/splach/splach2.png';
   static const String splash3 = 'assets/images/splach/splach3.png';
+  static const String authBg = 'assets/images/auth/bgauthen.png';
+  static const String logoAppAuth = 'assets/images/auth/logoapp.png';
   static const String outboarding1 =
       'assets/images/outboardind/outBoarding1.png';
   static const String outboarding2 =
