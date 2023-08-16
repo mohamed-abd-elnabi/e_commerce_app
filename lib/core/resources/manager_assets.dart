@@ -5,6 +5,12 @@ class ManagerAssets {
   static const String splash3 = 'assets/images/splach/splach3.png';
   static const String authBg = 'assets/images/auth/bgauthen.png';
   static const String logoAppAuth = 'assets/images/auth/logoapp.png';
+  static const String logoapplogin = 'assets/images/auth/login/logoapp.png';
+  static const String facebookIconSignIn =
+      'assets/images/auth/login/fasebook.png';
+  static const String googelIconSignIn = 'assets/images/auth/login/googel.png';
+  static const String twitterIconSignIn =
+      'assets/images/auth/login/twitter.png';
   static const String outboarding1 =
       'assets/images/outboardind/outBoarding1.png';
   static const String outboarding2 =

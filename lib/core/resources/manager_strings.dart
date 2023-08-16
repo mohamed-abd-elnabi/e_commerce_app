@@ -17,4 +17,15 @@ class ManagerStrings {
   static const String signUp = 'Sign Up';
   static const String signIn = 'Sign In';
   static const String visitor = 'Visitor';
+  static const String login = 'Login';
+  static const String email = 'Email';
+  static const String password = 'Password';
+  static const String rememberMe = '  Remember me';
+  static const String forgetPassword = 'Forgot your password?';
+  static const String haveAcoount = 'Don\'t have an account?';
+  static const String or = 'OR';
+  static const String username = 'Username';
+  static const String numberCity = '🇵🇸    Ex : 986-786-421';
+  static const String confirmPassword = 'Confirm Password';
+  static const String alreadyhaveAcoount = 'Already have account?';
 }
