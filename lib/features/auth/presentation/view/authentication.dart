@@ -4,6 +4,7 @@ import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_height.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
+import 'package:shop_avatar/core/routes.dart';
 import 'package:shop_avatar/core/widegts/base_button.dart';
 
 import '../../../../core/resources/managar_font_size.dart';
@@ -65,7 +66,9 @@ class Authentication extends StatelessWidget {
               const Spacer(),
               base_button(
                 title: ManagerStrings.signUp,
-                onPeessed: () {},
+                onPeessed: () {
+                  Navigator.pushNamed(context, Routes.registerView);
+                },
                 isVisibalIcon: false,
                 spacer: ManagerConestant.Spacer3,
                 textStyle: const TextStyle(
@@ -76,7 +79,9 @@ class Authentication extends StatelessWidget {
               ),
               base_button(
                 title: ManagerStrings.signIn,
-                onPeessed: () {},
+                onPeessed: () {
+                  Navigator.pushNamed(context, Routes.loginView);
+                },
                 isVisibalIcon: false,
                 spacer: ManagerConestant.Spacer3,
                 bgColor: ManagerColors.white,
