@@ -10,6 +10,7 @@ import 'package:shop_avatar/core/resources/manager_icon_size.dart';
 import 'package:shop_avatar/core/resources/manager_spacer.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
+import 'package:shop_avatar/core/routes.dart';
 import '../../../../core/resources/manager_padding.dart';
 import '../../../../core/widegts/base_button.dart';
 import '../widegts/out_boarding_content.dart';
@@ -130,7 +131,7 @@ class _OutBoardingState extends State<OutBoarding> {
                 children: [
                   progressIndicator(
                       color: isFirstPage()
-                          ? ManagerColors.blake
+                          ? ManagerColors.grey
                           : ManagerColors.prossColor,
                       width:
                           isFirstPage() ? ManagerWeight.w20 : ManagerWeight.w8),
@@ -139,7 +140,7 @@ class _OutBoardingState extends State<OutBoarding> {
                   ),
                   progressIndicator(
                       color: isSecondPage()
-                          ? ManagerColors.blake
+                          ? ManagerColors.grey
                           : ManagerColors.prossColor,
                       width: isSecondPage()
                           ? ManagerWeight.w20
@@ -149,7 +150,7 @@ class _OutBoardingState extends State<OutBoarding> {
                   ),
                   progressIndicator(
                       color: isThirdPage()
-                          ? ManagerColors.blake
+                          ? ManagerColors.grey
                           : ManagerColors.prossColor,
                       width:
                           isThirdPage() ? ManagerWeight.w20 : ManagerWeight.w8),
@@ -158,7 +159,7 @@ class _OutBoardingState extends State<OutBoarding> {
                   ),
                   progressIndicator(
                       color: isLastPage()
-                          ? ManagerColors.blake
+                          ? ManagerColors.grey
                           : ManagerColors.prossColor,
                       width:
                           isLastPage() ? ManagerWeight.w20 : ManagerWeight.w8),
@@ -167,9 +168,25 @@ class _OutBoardingState extends State<OutBoarding> {
               const SizedBox(
                 height: ManagerHeight.h50,
               ),
-              base_button(
-                onPeessed: () {},
-                isVisibalIcon: true,
+              Visibility(
+                visible: isLastPage(),
+                replacement: base_button(
+                  title: ManagerStrings.skip,
+                  onPeessed: () {
+                    _pageController.animateToPage(
+                        ManagerConestant.LastPageindex,
+                        duration: const Duration(
+                            microseconds: ManagerConestant.Durationoutbording),
+                        curve: Curves.bounceIn);
+                  },
+                  isVisibalIcon: true,
+                ),
+                child: base_button(
+                  onPeessed: () {
+                    Navigator.pushNamed(context, Routes.authScreen);
+                  },
+                  isVisibalIcon: true,
+                ),
               ),
             ],
           ),
