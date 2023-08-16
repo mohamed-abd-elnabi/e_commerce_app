@@ -3,6 +3,8 @@ import 'package:shop_avatar/core/routes.dart';
 import 'package:shop_avatar/features/out_boarding/presentation/view/out_boarding_screen.dart';
 import 'package:shop_avatar/features/splach/presentation/view/splach_screen.dart';
 
+import 'features/auth/presentation/view/authentication.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Routes.splachScreen: (context) => const SplachScreen(),
         Routes.outBoarding: (context) => const OutBoarding(),
+        Routes.authScreen: (context) => const Authentication(),
       },
     );
   }
