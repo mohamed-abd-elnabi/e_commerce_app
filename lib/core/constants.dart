@@ -10,4 +10,5 @@ class ManagerConestant {
   static const double OpacityBgauthscreen = 0.7;
   static const double OpacityButtonauthscreen = 0.6;
   static const int Spacer3 = 3;
+  static const double letterSpacingWithSignInText = 2;
 }
