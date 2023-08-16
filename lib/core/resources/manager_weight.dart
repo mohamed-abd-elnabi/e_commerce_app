@@ -2,6 +2,7 @@ class ManagerWeight {
   static const double w30 = 30;
   static const double w8 = 8;
   static const double w9 = 9;
+  static const double w10 = 10;
   static const double w20 = 20;
   static const double w50 = 50;
   static const double w60 = 60;

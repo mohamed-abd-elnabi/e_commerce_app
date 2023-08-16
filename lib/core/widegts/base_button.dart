@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_avatar/core/constants.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
 
 import '../resources/managar_font_size.dart';
@@ -15,17 +16,27 @@ class base_button extends StatelessWidget {
   final bool isVisibalIcon;
   final double width;
   final double height;
-  //final double elevation;
+  final double elevation;
   void Function() onPeessed;
+  final Color bgColor;
+  final int? spacer;
 
   base_button({
     this.title = ManagerStrings.start,
     this.isVisibalIcon = false,
     this.width = ManagerWeight.Winfinity,
     this.height = ManagerHeight.h50,
+    this.elevation = ManagerConestant.elevationAppbar,
+    this.bgColor = ManagerColors.primaryColor,
     required this.onPeessed,
+    this.textStyle,
+    this.spacer,
   });
-
+  TextStyle? textStyle = const TextStyle(
+    color: ManagerColors.white,
+    fontSize: ManagerFontSize.s18,
+    fontWeight: ManagerFontWeight.Regular,
+  );
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,20 +47,17 @@ class base_button extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPeessed,
         style: ElevatedButton.styleFrom(
-            backgroundColor: ManagerColors.primaryColor),
+          backgroundColor: bgColor,
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            const Spacer(
-              flex: ManagerSpacer.s4,
+            Spacer(
+              flex: spacer ?? ManagerSpacer.s4,
             ),
             Text(
               title,
-              style: const TextStyle(
-                color: ManagerColors.white,
-                fontSize: ManagerFontSize.s18,
-                fontWeight: ManagerFontWeight.Regular,
-              ),
+              style: textStyle,
             ),
             const Spacer(
               flex: ManagerSpacer.s3,
