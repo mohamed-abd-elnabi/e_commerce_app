@@ -7,7 +7,7 @@ import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_assets.dart';
 import '../../../../core/resources/manager_font_weight.dart';
 import '../../../../core/resources/manager_strings.dart';
-import '../../../../core/routes.dart';
+import '../../../../routes/routes.dart';
 import '../../../../core/widegts/base_button.dart';
 
 class RegisterView extends StatefulWidget {
@@ -181,7 +181,7 @@ class _RegisterViewState extends State<RegisterView> {
                   color: ManagerColors.white, fontSize: ManagerFontSize.s18),
             ),
             const Spacer(
-              flex: 2,
+              flex: ManagerConestant.Spacer3,
             ),
           ],
         ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_avatar/core/constants.dart';
 import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
-import 'package:shop_avatar/core/routes.dart';
+import 'package:shop_avatar/routes/routes.dart';
 
 class SplachScreen extends StatefulWidget {
   const SplachScreen({super.key});
