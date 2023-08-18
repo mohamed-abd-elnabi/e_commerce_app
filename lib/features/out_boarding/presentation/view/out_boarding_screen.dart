@@ -10,7 +10,7 @@ import 'package:shop_avatar/core/resources/manager_icon_size.dart';
 import 'package:shop_avatar/core/resources/manager_spacer.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
-import 'package:shop_avatar/core/routes.dart';
+import 'package:shop_avatar/routes/routes.dart';
 import '../../../../core/resources/manager_padding.dart';
 import '../../../../core/widegts/base_button.dart';
 import '../widegts/out_boarding_content.dart';

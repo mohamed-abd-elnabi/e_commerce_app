@@ -4,7 +4,7 @@ import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_height.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
-import 'package:shop_avatar/core/routes.dart';
+import 'package:shop_avatar/routes/routes.dart';
 import 'package:shop_avatar/core/widegts/base_button.dart';
 
 import '../../../../core/resources/managar_font_size.dart';
