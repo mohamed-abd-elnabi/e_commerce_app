@@ -28,4 +28,5 @@ class ManagerStrings {
   static const String numberCity = '🇵🇸    Ex : 986-786-421';
   static const String confirmPassword = 'Confirm Password';
   static const String alreadyhaveAcoount = 'Already have account?';
+  static const String notFoundRoute = 'notFoundRoute';
 }
