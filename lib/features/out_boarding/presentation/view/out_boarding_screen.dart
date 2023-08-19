@@ -10,6 +10,7 @@ import 'package:shop_avatar/core/resources/manager_icon_size.dart';
 import 'package:shop_avatar/core/resources/manager_spacer.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
+import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import 'package:shop_avatar/routes/routes.dart';
 import '../../../../core/resources/manager_padding.dart';
 import '../../../../core/widegts/base_button.dart';
@@ -26,6 +27,8 @@ class OutBoarding extends StatefulWidget {
 class _OutBoardingState extends State<OutBoarding> {
   late PageController _pageController;
   final int _intialpage = 0;
+  final AppSittingsSharedPreferences _appSittingsSharedPreferences =
+      AppSittingsSharedPreferences();
   int _cuttentpageindex = 0;
   @override
   void initState() {
@@ -65,7 +68,9 @@ class _OutBoardingState extends State<OutBoarding> {
               child: Visibility(
                 visible: isNotLastPage(),
                 replacement: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _appSittingsSharedPreferences.saveViewedOutBoarding();
+                  },
                   child: const Text(
                     ManagerStrings.start,
                     style: TextStyle(
@@ -190,6 +195,7 @@ class _OutBoardingState extends State<OutBoarding> {
                   ),
                   onPeessed: () {
                     Navigator.pushNamed(context, Routes.authScreen);
+                    _appSittingsSharedPreferences.saveViewedOutBoarding();
                   },
                   isVisibalIcon: true,
                 ),
