@@ -12,3 +12,7 @@ class ManagerConestant {
   static const int Spacer3 = 3;
   static const double letterSpacingWithSignInText = 2;
 }
+
+class keyConestant {
+  static const String outBoardingViewedKey = 'out_boarding_viewed';
+}
