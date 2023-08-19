@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_avatar/core/constants.dart';
 import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
+import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import 'package:shop_avatar/routes/routes.dart';
 
 class SplachScreen extends StatefulWidget {
@@ -15,9 +16,10 @@ class _SplachScreenState extends State<SplachScreen> {
   @override
   void initState() {
     super.initState();
-
     Future.delayed(const Duration(seconds: ManagerConestant.SplachTime), () {
-      Navigator.pushReplacementNamed(context, Routes.outBoarding);
+      AppSittingsSharedPreferences().outBoardingViewed
+          ? Navigator.pushReplacementNamed(context, Routes.authScreen)
+          : Navigator.pushReplacementNamed(context, Routes.outBoarding);
     });
   }
 
