@@ -19,7 +19,7 @@ extension NonNullString on String? {
 
   String parseLocale() {
     if (this == null) {
-      return 'ar';
+      return 'en';
     } else {
       return this!;
     }
