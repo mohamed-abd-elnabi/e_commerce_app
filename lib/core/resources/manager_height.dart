@@ -1,18 +1,20 @@
+import '../utils/size_util.dart';
+
 class ManagerHeight {
-  static const double h50 = 50;
-  static const double h20 = 20;
-  static const double h34 = 34;
-  static const double h40 = 40;
-  static const double h60 = 60;
-  static const double h70 = 70;
-  static const double h80 = 80;
-  static const double h8 = 8;
-  static const double h9 = 9;
-  static const double h10 = 10;
-  static const double h24 = 24;
-  static const double h16 = 16;
-  static const double h18 = 18;
-  static const double h90 = 90;
-  static const double h100 = 100;
-  static const double h200 = 200;
+  static double h50 = SizeUtil.setWidth(50);
+  static double h20 = SizeUtil.setWidth(20);
+  static double h34 = SizeUtil.setWidth(34);
+  static double h40 = SizeUtil.setWidth(40);
+  static double h60 = SizeUtil.setWidth(60);
+  static double h70 = SizeUtil.setWidth(70);
+  static double h80 = SizeUtil.setWidth(80);
+  static double h8 = SizeUtil.setWidth(8);
+  static double h9 = SizeUtil.setWidth(9);
+  static double h10 = SizeUtil.setWidth(10);
+  static double h24 = SizeUtil.setWidth(24);
+  static double h16 = SizeUtil.setWidth(16);
+  static double h18 = SizeUtil.setWidth(18);
+  static double h90 = SizeUtil.setWidth(90);
+  static double h100 = SizeUtil.setWidth(100);
+  static double h200 = SizeUtil.setWidth(200);
 }
