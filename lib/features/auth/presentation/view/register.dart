@@ -44,7 +44,7 @@ class _RegisterViewState extends State<RegisterView> {
       body: SingleChildScrollView(
         child: Container(
           alignment: AlignmentDirectional.center,
-          margin: const EdgeInsets.symmetric(horizontal: ManagerHeight.h40),
+          margin: EdgeInsets.symmetric(horizontal: ManagerHeight.h40),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,7 +56,7 @@ class _RegisterViewState extends State<RegisterView> {
                 alignment: AlignmentDirectional.centerStart,
                 child: Text(
                   ManagerStrings.signUp.toUpperCase(),
-                  style: const TextStyle(
+                  style: TextStyle(
                     letterSpacing: ManagerConestant.letterSpacingWithSignInText,
                     color: ManagerColors.textcolor,
                     fontSize: ManagerFontSize.s30,
@@ -171,14 +171,14 @@ class _RegisterViewState extends State<RegisterView> {
                 children: [
                   Text(
                     ManagerStrings.alreadyhaveAcoount,
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontSize: ManagerFontSize.s16,
                         color: ManagerColors.textcolor),
                   ),
                   TextButton(
                     child: Text(
                       ManagerStrings.login,
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.primaryColor),
                     ),
@@ -199,7 +199,7 @@ class _RegisterViewState extends State<RegisterView> {
                 isVisibalIcon: false,
                 spacer: ManagerConestant.Spacer3,
                 bgColor: ManagerColors.primaryColor,
-                textStyle: const TextStyle(
+                textStyle: TextStyle(
                     color: ManagerColors.white, fontSize: ManagerFontSize.s18),
               ),
             ],
