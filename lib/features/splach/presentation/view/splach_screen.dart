@@ -17,7 +17,7 @@ class _SplachScreenState extends State<SplachScreen> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: ManagerConestant.SplachTime), () {
-      AppSittingsSharedPreferences().outBoardingViewed
+      AppSettingsSharedPreferences().outBoardingViewed
           ? Navigator.pushReplacementNamed(context, Routes.authScreen)
           : Navigator.pushReplacementNamed(context, Routes.outBoarding);
     });
