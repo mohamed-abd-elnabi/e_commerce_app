@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shop_avatar/config/locale/locale_settings.dart';
 import 'package:shop_avatar/config/localization/dependancy_injection.dart';
@@ -24,26 +25,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      locale: context.locale,
-      supportedLocales: context.supportedLocales,
-      localizationsDelegates: context.localizationDelegates,
-      debugShowCheckedModeBanner: false,
+    return ScreenUtilInit(
+      builder: (context, child) {
+        return GetMaterialApp(
+          locale: context.locale,
+          supportedLocales: context.supportedLocales,
+          localizationsDelegates: context.localizationDelegates,
+          debugShowCheckedModeBanner: false,
 
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      initialRoute: Routes.splachScreen,
-      onGenerateRoute: RouteGenerator.getRoute,
-      // defaultTransition: Transition.cupertino,
+          theme: ThemeData(
+            useMaterial3: true,
+          ),
+          initialRoute: Routes.splachScreen,
+          onGenerateRoute: RouteGenerator.getRoute,
+          // defaultTransition: Transition.cupertino,
 
-      //   routes: {
-      //     Routes.splashScreen: (context) => const SplachScreen(),
-      //     Routes.outBoarding: (context) => const OutBoarding(),
-      //     Routes.authScreen: (context) => const Authentication(),
-      //     Routes.loginView: (context) => const LoginView(),
-      //     Routes.registerView: (context) => const RegisterView(),
-      //   },
+          //   routes: {
+          //     Routes.splashScreen: (context) => const SplachScreen(),
+          //     Routes.outBoarding: (context) => const OutBoarding(),
+          //     Routes.authScreen: (context) => const Authentication(),
+          //     Routes.loginView: (context) => const LoginView(),
+          //     Routes.registerView: (context) => const RegisterView(),
+          //   },
+        );
+      },
     );
   }
 }
