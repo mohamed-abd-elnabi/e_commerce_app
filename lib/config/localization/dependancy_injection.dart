@@ -3,5 +3,5 @@ import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_s
 
 initModule() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await AppSittingsSharedPreferences().initPreferences();
+  await AppSettingsSharedPreferences().initPreferences();
 }

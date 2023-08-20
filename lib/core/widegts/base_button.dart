@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_avatar/core/constants.dart';
+import 'package:shop_avatar/core/extinsion/extinsion.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
 
 import '../resources/managar_font_size.dart';
@@ -12,7 +13,7 @@ import '../resources/manager_strings.dart';
 
 // ignore: camel_case_types
 class base_button extends StatelessWidget {
-  final String title;
+  final String? title;
   final bool isVisibalIcon;
   final double width;
   final double height;
@@ -22,7 +23,7 @@ class base_button extends StatelessWidget {
   final int? spacer;
 
   base_button({
-    this.title = ManagerStrings.start,
+    this.title,
     this.isVisibalIcon = false,
     this.width = ManagerWeight.Winfinity,
     this.height = ManagerHeight.h50,
@@ -56,7 +57,7 @@ class base_button extends StatelessWidget {
               flex: spacer ?? ManagerSpacer.s4,
             ),
             Text(
-              title,
+              title.onNull(),
               style: textStyle,
             ),
             const Spacer(

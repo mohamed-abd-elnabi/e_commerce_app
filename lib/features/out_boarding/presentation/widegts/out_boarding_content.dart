@@ -10,15 +10,15 @@ import '../../../../core/resources/manager_strings.dart';
 
 Column outBoardingContent({
   String image = ManagerAssets.outboarding1,
-  String title = ManagerStrings.outboardingTitleOne,
-  String subtitle = ManagerStrings.subtitle1,
+  String? title,
+  String? subtitle,
 }) {
   return Column(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
       Image.asset(image),
       Text(
-        title,
+        title ?? ManagerStrings.outboardingTitleOne,
         style: TextStyle(
             color: ManagerColors.secondaryColor,
             fontSize: ManagerFontSize.s26,
@@ -28,7 +28,7 @@ Column outBoardingContent({
       SizedBox(
         height: ManagerHeight.h70,
         child: Text(
-          subtitle,
+          subtitle ?? ManagerStrings.subtitle1,
           style: TextStyle(
             color: ManagerColors.secondaryColor,
             fontSize: ManagerFontSize.s16,

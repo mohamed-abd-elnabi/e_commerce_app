@@ -149,16 +149,16 @@ class _RegisterViewState extends State<RegisterView> {
             const Spacer(),
             Row(
               children: [
-                const Text(
+                Text(
                   ManagerStrings.alreadyhaveAcoount,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: ManagerFontSize.s16,
                       color: ManagerColors.textcolor),
                 ),
                 TextButton(
-                  child: const Text(
+                  child: Text(
                     ManagerStrings.login,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: ManagerFontSize.s16,
                         color: ManagerColors.primaryColor),
                   ),
