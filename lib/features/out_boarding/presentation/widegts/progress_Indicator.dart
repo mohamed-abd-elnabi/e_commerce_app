@@ -7,14 +7,13 @@ import '../../../../core/resources/manager_weight.dart';
 
 Container progressIndicator({
   Color color = ManagerColors.blake,
-  double width = ManagerWeight.w9,
+  double? width,
 }) {
   return Container(
     height: ManagerHeight.h9,
-    width: width,
+    width: width ?? ManagerWeight.w9,
     decoration: BoxDecoration(
         color: color,
-        borderRadius:
-            const BorderRadius.all(Radius.circular(ManagerRaduis.r20))),
+        borderRadius: BorderRadius.all(Radius.circular(ManagerRaduis.r20))),
   );
 }
