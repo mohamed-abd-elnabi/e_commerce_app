@@ -110,14 +110,14 @@ class _LoginViewState extends State<LoginView> {
                       shape: BoxShape.circle,
                       border: Border.all(color: ManagerColors.primaryColor)),
                 ),
-                const Text(
+                Text(
                   ManagerStrings.rememberMe,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: ManagerFontSize.s16,
                       color: ManagerColors.textcolor),
                 ),
                 const Spacer(),
-                const Text(
+                Text(
                   ManagerStrings.forgetPassword,
                   style: TextStyle(
                       fontSize: ManagerFontSize.s16,
@@ -128,16 +128,16 @@ class _LoginViewState extends State<LoginView> {
             const Spacer(),
             Row(
               children: [
-                const Text(
+                Text(
                   ManagerStrings.haveAcoount,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: ManagerFontSize.s16,
                       color: ManagerColors.textcolor),
                 ),
                 TextButton(
-                  child: const Text(
+                  child: Text(
                     ManagerStrings.signUp,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: ManagerFontSize.s16,
                         color: ManagerColors.primaryColor),
                   ),
@@ -160,9 +160,9 @@ class _LoginViewState extends State<LoginView> {
                   color: ManagerColors.white, fontSize: ManagerFontSize.s18),
             ),
             const Spacer(),
-            const Text(
+            Text(
               ManagerStrings.or,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: ManagerFontSize.s16,
                   color: ManagerColors.textcolor),
             ),
