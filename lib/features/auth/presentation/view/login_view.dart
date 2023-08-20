@@ -41,142 +41,169 @@ class _LoginViewState extends State<LoginView> {
         elevation: ManagerConestant.elevationAppbar,
         backgroundColor: ManagerColors.transparent,
       ),
-      body: Container(
-        alignment: AlignmentDirectional.center,
-        margin: const EdgeInsets.symmetric(horizontal: ManagerHeight.h40),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Spacer(),
-            Image.asset(
-              ManagerAssets.logoapplogin,
-              fit: BoxFit.fitWidth,
-            ),
-            const Spacer(),
-            Align(
-              alignment: AlignmentDirectional.centerStart,
-              child: Text(
-                ManagerStrings.signIn.toUpperCase(),
-                style: const TextStyle(
-                  letterSpacing: ManagerConestant.letterSpacingWithSignInText,
-                  color: ManagerColors.textcolor,
-                  fontSize: ManagerFontSize.s30,
-                  fontWeight: ManagerFontWeight.w600,
+      body: SingleChildScrollView(
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+        child: Container(
+          alignment: AlignmentDirectional.center,
+          margin: const EdgeInsets.symmetric(horizontal: ManagerHeight.h40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: ManagerHeight.h24,
+              ),
+              Image.asset(
+                ManagerAssets.logoapplogin,
+                fit: BoxFit.fitWidth,
+              ),
+              SizedBox(
+                height: ManagerHeight.h18,
+              ),
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(
+                  ManagerStrings.signIn.toUpperCase(),
+                  style: const TextStyle(
+                    letterSpacing: ManagerConestant.letterSpacingWithSignInText,
+                    color: ManagerColors.textcolor,
+                    fontSize: ManagerFontSize.s30,
+                    fontWeight: ManagerFontWeight.w600,
+                  ),
                 ),
               ),
-            ),
-            const Spacer(),
-            TextField(
-              controller: _textEmailEditingController,
-              decoration: InputDecoration(
-                  fillColor: Colors.amber,
-                  label: Text(
-                    ManagerStrings.email,
-                    style: TextStyle(
-                        fontSize: ManagerFontSize.s16,
-                        color: ManagerColors.grey),
+              SizedBox(
+                height: ManagerHeight.h24,
+              ),
+              TextField(
+                controller: _textEmailEditingController,
+                decoration: InputDecoration(
+                    fillColor: Colors.amber,
+                    label: Text(
+                      ManagerStrings.email,
+                      style: TextStyle(
+                          fontSize: ManagerFontSize.s16,
+                          color: ManagerColors.grey),
+                    ),
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide:
+                            BorderSide(color: ManagerColors.primaryColor)),
+                    focusedBorder: const UnderlineInputBorder(
+                        borderSide:
+                            BorderSide(color: ManagerColors.textcolor))),
+              ),
+              SizedBox(
+                height: ManagerHeight.h24,
+              ),
+              TextField(
+                controller: _textPasswordEditingController,
+                decoration: InputDecoration(
+                    fillColor: Colors.amber,
+                    label: Text(
+                      ManagerStrings.password,
+                      style: TextStyle(
+                          fontSize: ManagerFontSize.s16,
+                          color: ManagerColors.grey),
+                    ),
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide:
+                            BorderSide(color: ManagerColors.primaryColor)),
+                    focusedBorder: const UnderlineInputBorder(
+                        borderSide:
+                            BorderSide(color: ManagerColors.textcolor))),
+              ),
+              SizedBox(
+                height: ManagerHeight.h24,
+              ),
+              Row(
+                children: [
+                  Container(
+                    width: ManagerWeight.w10,
+                    height: ManagerHeight.h10,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: ManagerColors.primaryColor)),
                   ),
-                  enabledBorder: const UnderlineInputBorder(
-                      borderSide:
-                          BorderSide(color: ManagerColors.primaryColor)),
-                  focusedBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(color: ManagerColors.textcolor))),
-            ),
-            const Spacer(),
-            TextField(
-              controller: _textPasswordEditingController,
-              decoration: InputDecoration(
-                  fillColor: Colors.amber,
-                  label: Text(
-                    ManagerStrings.password,
-                    style: TextStyle(
-                        fontSize: ManagerFontSize.s16,
-                        color: ManagerColors.grey),
-                  ),
-                  enabledBorder: const UnderlineInputBorder(
-                      borderSide:
-                          BorderSide(color: ManagerColors.primaryColor)),
-                  focusedBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(color: ManagerColors.textcolor))),
-            ),
-            const Spacer(),
-            Row(
-              children: [
-                Container(
-                  width: ManagerWeight.w10,
-                  height: ManagerHeight.h10,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: ManagerColors.primaryColor)),
-                ),
-                Text(
-                  ManagerStrings.rememberMe,
-                  style: const TextStyle(
-                      fontSize: ManagerFontSize.s16,
-                      color: ManagerColors.textcolor),
-                ),
-                const Spacer(),
-                Text(
-                  ManagerStrings.forgetPassword,
-                  style: TextStyle(
-                      fontSize: ManagerFontSize.s16,
-                      color: ManagerColors.primaryColor),
-                ),
-              ],
-            ),
-            const Spacer(),
-            Row(
-              children: [
-                Text(
-                  ManagerStrings.haveAcoount,
-                  style: const TextStyle(
-                      fontSize: ManagerFontSize.s16,
-                      color: ManagerColors.textcolor),
-                ),
-                TextButton(
-                  child: Text(
-                    ManagerStrings.signUp,
+                  Text(
+                    ManagerStrings.rememberMe,
                     style: const TextStyle(
+                        fontSize: ManagerFontSize.s16,
+                        color: ManagerColors.textcolor),
+                  ),
+                  SizedBox(
+                    width: ManagerHeight.h34,
+                  ),
+                  Text(
+                    ManagerStrings.forgetPassword,
+                    style: TextStyle(
                         fontSize: ManagerFontSize.s16,
                         color: ManagerColors.primaryColor),
                   ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, Routes.registerView);
-                  },
-                )
-              ],
-            ),
-            const Spacer(),
-            base_button(
-              title: ManagerStrings.login,
-              onPeessed: () {
-                Navigator.pushNamed(context, Routes.loginView);
-              },
-              isVisibalIcon: false,
-              spacer: ManagerConestant.Spacer3,
-              bgColor: ManagerColors.primaryColor,
-              textStyle: const TextStyle(
-                  color: ManagerColors.white, fontSize: ManagerFontSize.s18),
-            ),
-            const Spacer(),
-            Text(
-              ManagerStrings.or,
-              style: const TextStyle(
-                  fontSize: ManagerFontSize.s16,
-                  color: ManagerColors.textcolor),
-            ),
-            const Spacer(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Image.asset(ManagerAssets.facebookIconSignIn),
-                Image.asset(ManagerAssets.googelIconSignIn),
-                Image.asset(ManagerAssets.twitterIconSignIn),
-              ],
-            ),
-            const Spacer(),
-          ],
+                ],
+              ),
+              SizedBox(
+                height: ManagerHeight.h34,
+              ),
+              Row(
+                children: [
+                  Text(
+                    ManagerStrings.haveAcoount,
+                    style: const TextStyle(
+                        fontSize: ManagerFontSize.s16,
+                        color: ManagerColors.textcolor),
+                  ),
+                  TextButton(
+                    child: Text(
+                      ManagerStrings.signUp,
+                      style: const TextStyle(
+                          fontSize: ManagerFontSize.s16,
+                          color: ManagerColors.primaryColor),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.registerView);
+                    },
+                  )
+                ],
+              ),
+              SizedBox(
+                height: ManagerHeight.h24,
+              ),
+              base_button(
+                title: ManagerStrings.login,
+                onPeessed: () {
+                  Navigator.pushNamed(context, Routes.loginView);
+                },
+                isVisibalIcon: false,
+                spacer: ManagerConestant.Spacer3,
+                bgColor: ManagerColors.primaryColor,
+                textStyle: const TextStyle(
+                    color: ManagerColors.white, fontSize: ManagerFontSize.s18),
+              ),
+              SizedBox(
+                height: ManagerHeight.h24,
+              ),
+              Text(
+                ManagerStrings.or,
+                style: const TextStyle(
+                    fontSize: ManagerFontSize.s16,
+                    color: ManagerColors.textcolor),
+              ),
+              SizedBox(
+                height: ManagerHeight.h24,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(ManagerAssets.facebookIconSignIn),
+                  Image.asset(ManagerAssets.googelIconSignIn),
+                  Image.asset(ManagerAssets.twitterIconSignIn),
+                ],
+              ),
+              SizedBox(
+                height: ManagerHeight.h34,
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -35,8 +35,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: Routes.splachScreen,
       onGenerateRoute: RouteGenerator.getRoute,
+      // defaultTransition: Transition.cupertino,
+
       //   routes: {
-      //     Routes.splachScreen: (context) => const SplachScreen(),
+      //     Routes.splashScreen: (context) => const SplachScreen(),
       //     Routes.outBoarding: (context) => const OutBoarding(),
       //     Routes.authScreen: (context) => const Authentication(),
       //     Routes.loginView: (context) => const LoginView(),
