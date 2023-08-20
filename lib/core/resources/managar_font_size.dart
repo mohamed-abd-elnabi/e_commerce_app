@@ -1,12 +1,14 @@
+import 'package:shop_avatar/core/utils/size_util.dart';
+
 class ManagerFontSize {
-  static const double s14 = 14;
-  static const double s16 = 16;
-  static const double s18 = 18;
-  static const double s20 = 20;
-  static const double s24 = 24;
-  static const double s26 = 26;
-  static const double s28 = 28;
-  static const double s30 = 30;
-  static const double s32 = 32;
-  static const double s38 = 38;
+  static double s14 = SizeUtil.setFontSize(14);
+  static double s16 = SizeUtil.setFontSize(16);
+  static double s18 = SizeUtil.setFontSize(18);
+  static double s20 = SizeUtil.setFontSize(20);
+  static double s24 = SizeUtil.setFontSize(24);
+  static double s26 = SizeUtil.setFontSize(26);
+  static double s28 = SizeUtil.setFontSize(28);
+  static double s30 = SizeUtil.setFontSize(30);
+  static double s32 = SizeUtil.setFontSize(32);
+  static double s38 = SizeUtil.setFontSize(38);
 }
