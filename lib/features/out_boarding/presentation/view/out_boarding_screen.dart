@@ -27,8 +27,8 @@ class OutBoarding extends StatefulWidget {
 class _OutBoardingState extends State<OutBoarding> {
   late PageController _pageController;
   final int _intialpage = 0;
-  final AppSittingsSharedPreferences _appSittingsSharedPreferences =
-      AppSittingsSharedPreferences();
+  final AppSettingsSharedPreferences _appSittingsSharedPreferences =
+      AppSettingsSharedPreferences();
   int _cuttentpageindex = 0;
   @override
   void initState() {
@@ -71,9 +71,9 @@ class _OutBoardingState extends State<OutBoarding> {
                   onPressed: () {
                     _appSittingsSharedPreferences.saveViewedOutBoarding();
                   },
-                  child: const Text(
+                  child: Text(
                     ManagerStrings.start,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: ManagerFontSize.s18,
                       color: ManagerColors.blake,
                     ),
@@ -87,9 +87,9 @@ class _OutBoardingState extends State<OutBoarding> {
                         ),
                         curve: Curves.easeIn);
                   },
-                  child: const Text(
+                  child: Text(
                     ManagerStrings.naxt,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: ManagerFontSize.s18,
                       color: ManagerColors.blake,
                     ),
