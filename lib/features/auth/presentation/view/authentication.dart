@@ -31,7 +31,7 @@ class Authentication extends StatelessWidget {
           color: Colors.black.withOpacity(ManagerConestant.OpacityBgauthscreen),
         ),
         Container(
-          margin: const EdgeInsets.symmetric(horizontal: ManagerHeight.h16),
+          margin: EdgeInsets.symmetric(horizontal: ManagerHeight.h16),
           height: double.infinity,
           width: double.infinity,
           child: Column(
@@ -46,18 +46,18 @@ class Authentication extends StatelessWidget {
               ),
               Text(
                 ManagerStrings.welcome.toUpperCase(),
-                style: const TextStyle(
+                style:  TextStyle(
                   color: ManagerColors.white,
                   fontSize: ManagerFontSize.s28,
                   fontWeight: ManagerFontWeight.w300,
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: ManagerHeight.h8,
               ),
               Text(
                 ManagerStrings.new4shop.toUpperCase(),
-                style: const TextStyle(
+                style:  TextStyle(
                     color: ManagerColors.white,
                     fontSize: ManagerFontSize.s38,
                     fontWeight: ManagerFontWeight.bold,
@@ -71,10 +71,10 @@ class Authentication extends StatelessWidget {
                 },
                 isVisibalIcon: false,
                 spacer: ManagerConestant.Spacer3,
-                textStyle: const TextStyle(
+                textStyle:  TextStyle(
                     color: ManagerColors.white, fontSize: ManagerFontSize.s18),
               ),
-              const SizedBox(
+              SizedBox(
                 height: ManagerHeight.h18,
               ),
               base_button(
@@ -85,11 +85,11 @@ class Authentication extends StatelessWidget {
                 isVisibalIcon: false,
                 spacer: ManagerConestant.Spacer3,
                 bgColor: ManagerColors.white,
-                textStyle: const TextStyle(
+                textStyle:  TextStyle(
                     color: ManagerColors.primaryColor,
                     fontSize: ManagerFontSize.s18),
               ),
-              const SizedBox(
+              SizedBox(
                 height: ManagerHeight.h18,
               ),
               base_button(
@@ -98,7 +98,7 @@ class Authentication extends StatelessWidget {
                 spacer: ManagerConestant.Spacer3,
                 bgColor: ManagerColors.white
                     .withOpacity(ManagerConestant.OpacityButtonauthscreen),
-                textStyle: const TextStyle(
+                textStyle:  TextStyle(
                     color: ManagerColors.white, fontSize: ManagerFontSize.s18),
               ),
               const Spacer(),
