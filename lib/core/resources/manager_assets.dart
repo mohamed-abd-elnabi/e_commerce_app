@@ -20,3 +20,7 @@ class ManagerAssets {
   static const String outboarding4 =
       'assets/images/outboardind/outBoarding4.png';
 }
+
+class ManagerPathes {
+  static const String translationsPaths = 'assets/translations';
+}
