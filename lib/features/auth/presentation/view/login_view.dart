@@ -37,6 +37,7 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: false,
       appBar: AppBar(
         elevation: ManagerConestant.elevationAppbar,
         backgroundColor: ManagerColors.transparent,
@@ -45,14 +46,11 @@ class _LoginViewState extends State<LoginView> {
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: Container(
           alignment: AlignmentDirectional.center,
-          margin: const EdgeInsets.symmetric(horizontal: ManagerHeight.h40),
+          margin: EdgeInsets.symmetric(horizontal: ManagerHeight.h24),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
-                height: ManagerHeight.h24,
-              ),
               Image.asset(
                 ManagerAssets.logoapplogin,
                 fit: BoxFit.fitWidth,
@@ -64,7 +62,7 @@ class _LoginViewState extends State<LoginView> {
                 alignment: AlignmentDirectional.centerStart,
                 child: Text(
                   ManagerStrings.signIn.toUpperCase(),
-                  style: const TextStyle(
+                  style: TextStyle(
                     letterSpacing: ManagerConestant.letterSpacingWithSignInText,
                     color: ManagerColors.textcolor,
                     fontSize: ManagerFontSize.s30,
@@ -126,12 +124,12 @@ class _LoginViewState extends State<LoginView> {
                   ),
                   Text(
                     ManagerStrings.rememberMe,
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontSize: ManagerFontSize.s16,
                         color: ManagerColors.textcolor),
                   ),
                   SizedBox(
-                    width: ManagerHeight.h34,
+                    width: ManagerHeight.h10,
                   ),
                   Text(
                     ManagerStrings.forgetPassword,
@@ -148,14 +146,14 @@ class _LoginViewState extends State<LoginView> {
                 children: [
                   Text(
                     ManagerStrings.haveAcoount,
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontSize: ManagerFontSize.s16,
                         color: ManagerColors.textcolor),
                   ),
                   TextButton(
                     child: Text(
                       ManagerStrings.signUp,
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.primaryColor),
                     ),
@@ -176,7 +174,7 @@ class _LoginViewState extends State<LoginView> {
                 isVisibalIcon: false,
                 spacer: ManagerConestant.Spacer3,
                 bgColor: ManagerColors.primaryColor,
-                textStyle: const TextStyle(
+                textStyle: TextStyle(
                     color: ManagerColors.white, fontSize: ManagerFontSize.s18),
               ),
               SizedBox(
@@ -184,7 +182,7 @@ class _LoginViewState extends State<LoginView> {
               ),
               Text(
                 ManagerStrings.or,
-                style: const TextStyle(
+                style: TextStyle(
                     fontSize: ManagerFontSize.s16,
                     color: ManagerColors.textcolor),
               ),
@@ -200,7 +198,7 @@ class _LoginViewState extends State<LoginView> {
                 ],
               ),
               SizedBox(
-                height: ManagerHeight.h34,
+                height: ManagerHeight.h50,
               ),
             ],
           ),
