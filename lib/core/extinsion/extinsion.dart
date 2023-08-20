@@ -1,7 +1,7 @@
-extension NonNullBoolean on bool? {
-  bool onNull() {
+extension NonNullInt on int? {
+  int onNull() {
     if (this == null) {
-      return false;
+      return 0;
     } else {
       return this!;
     }
@@ -16,12 +16,20 @@ extension NonNullString on String? {
       return this!;
     }
   }
+
+  String parseLocale() {
+    if (this == null) {
+      return 'ar';
+    } else {
+      return this!;
+    }
+  }
 }
 
-extension NonNullint on int? {
-  int onNull() {
+extension NonNullBoolean on bool? {
+  bool onNull() {
     if (this == null) {
-      return 0;
+      return false;
     } else {
       return this!;
     }
