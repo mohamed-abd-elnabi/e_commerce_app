@@ -35,7 +35,7 @@ class RouteGenerator {
 
   static Route<dynamic> unDefindRout() {
     return MaterialPageRoute(
-      builder: (context) => const Scaffold(
+      builder: (context) => Scaffold(
         body: Center(
           child: Text(ManagerStrings.notFoundRoute),
         ),
