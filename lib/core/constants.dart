@@ -11,6 +11,8 @@ class ManagerConestant {
   static const double OpacityButtonauthscreen = 0.6;
   static const int Spacer3 = 3;
   static const double letterSpacingWithSignInText = 2;
+  static const double designSizeWidth = 375;
+  static const double designSizeHigth = 810;
 }
 
 class keyConestant {
