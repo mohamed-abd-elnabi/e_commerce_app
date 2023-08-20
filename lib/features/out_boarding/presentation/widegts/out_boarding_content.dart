@@ -37,7 +37,7 @@ Column outBoardingContent({
           textAlign: TextAlign.center,
         ),
       ),
-      const SizedBox(
+      SizedBox(
         height: ManagerHeight.h20,
       )
     ],
