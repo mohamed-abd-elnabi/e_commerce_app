@@ -15,8 +15,8 @@ import '../resources/manager_strings.dart';
 class base_button extends StatelessWidget {
   final String? title;
   final bool isVisibalIcon;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final double elevation;
   void Function() onPeessed;
   final Color bgColor;
@@ -25,15 +25,15 @@ class base_button extends StatelessWidget {
   base_button({
     this.title,
     this.isVisibalIcon = false,
-    this.width = ManagerWeight.Winfinity,
-    this.height = ManagerHeight.h50,
+    this.width,
+    this.height,
     this.elevation = ManagerConestant.elevationAppbar,
     this.bgColor = ManagerColors.primaryColor,
     required this.onPeessed,
     this.textStyle,
     this.spacer,
   });
-  TextStyle? textStyle = const TextStyle(
+  TextStyle? textStyle = TextStyle(
     color: ManagerColors.white,
     fontSize: ManagerFontSize.s18,
     fontWeight: ManagerFontWeight.Regular,
@@ -41,10 +41,9 @@ class base_button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin:
-          const EdgeInsetsDirectional.symmetric(horizontal: ManagerHeight.h20),
-      height: height,
-      width: width,
+      margin: EdgeInsetsDirectional.symmetric(horizontal: ManagerHeight.h20),
+      height: height ?? ManagerHeight.h50,
+      width: width ?? ManagerWeight.Winfinity,
       child: ElevatedButton(
         onPressed: onPeessed,
         style: ElevatedButton.styleFrom(
