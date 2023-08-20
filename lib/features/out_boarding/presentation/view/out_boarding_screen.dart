@@ -73,7 +73,7 @@ class _OutBoardingState extends State<OutBoarding> {
                   },
                   child: Text(
                     ManagerStrings.start,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: ManagerFontSize.s18,
                       color: ManagerColors.blake,
                     ),
@@ -89,7 +89,7 @@ class _OutBoardingState extends State<OutBoarding> {
                   },
                   child: Text(
                     ManagerStrings.naxt,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: ManagerFontSize.s18,
                       color: ManagerColors.blake,
                     ),
@@ -100,7 +100,7 @@ class _OutBoardingState extends State<OutBoarding> {
           ],
         ),
         body: Container(
-          margin: const EdgeInsets.symmetric(
+          margin: EdgeInsets.symmetric(
             horizontal: ManagerWeight.w30,
             vertical: ManagerHeight.h34,
           ),
@@ -140,7 +140,7 @@ class _OutBoardingState extends State<OutBoarding> {
                           : ManagerColors.prossColor,
                       width:
                           isFirstPage() ? ManagerWeight.w20 : ManagerWeight.w8),
-                  const SizedBox(
+                  SizedBox(
                     width: ManagerWeight.w9,
                   ),
                   progressIndicator(
@@ -150,7 +150,7 @@ class _OutBoardingState extends State<OutBoarding> {
                       width: isSecondPage()
                           ? ManagerWeight.w20
                           : ManagerWeight.w8),
-                  const SizedBox(
+                  SizedBox(
                     width: ManagerWeight.w9,
                   ),
                   progressIndicator(
@@ -159,7 +159,7 @@ class _OutBoardingState extends State<OutBoarding> {
                           : ManagerColors.prossColor,
                       width:
                           isThirdPage() ? ManagerWeight.w20 : ManagerWeight.w8),
-                  const SizedBox(
+                  SizedBox(
                     width: ManagerWeight.w9,
                   ),
                   progressIndicator(
@@ -170,7 +170,7 @@ class _OutBoardingState extends State<OutBoarding> {
                           isLastPage() ? ManagerWeight.w20 : ManagerWeight.w8),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: ManagerHeight.h50,
               ),
               Visibility(
