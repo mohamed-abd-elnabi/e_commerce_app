@@ -9,6 +9,7 @@ import 'package:shop_avatar/core/resources/manager_height.dart';
 import 'package:shop_avatar/core/resources/manager_icon_size.dart';
 import 'package:shop_avatar/core/resources/manager_spacer.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
+import 'package:shop_avatar/core/resources/manager_text_styles.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
 import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import 'package:shop_avatar/routes/routes.dart';
@@ -73,7 +74,7 @@ class _OutBoardingState extends State<OutBoarding> {
                   },
                   child: Text(
                     ManagerStrings.start,
-                    style: TextStyle(
+                    style: getRegularTextStyle(
                       fontSize: ManagerFontSize.s18,
                       color: ManagerColors.blake,
                     ),
@@ -89,7 +90,7 @@ class _OutBoardingState extends State<OutBoarding> {
                   },
                   child: Text(
                     ManagerStrings.naxt,
-                    style: TextStyle(
+                    style: getRegularTextStyle(
                       fontSize: ManagerFontSize.s18,
                       color: ManagerColors.blake,
                     ),
@@ -190,6 +191,7 @@ class _OutBoardingState extends State<OutBoarding> {
                   isVisibalIcon: true,
                 ),
                 child: base_button(
+                  title: ManagerStrings.start,
                   textStyle: const TextStyle(
                     color: ManagerColors.white,
                   ),

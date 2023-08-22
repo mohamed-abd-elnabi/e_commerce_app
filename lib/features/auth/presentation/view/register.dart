@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_avatar/core/constants.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_height.dart';
+import 'package:shop_avatar/core/resources/manager_text_styles.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_assets.dart';
@@ -56,11 +57,9 @@ class _RegisterViewState extends State<RegisterView> {
                 alignment: AlignmentDirectional.centerStart,
                 child: Text(
                   ManagerStrings.signUp.toUpperCase(),
-                  style: TextStyle(
-                    letterSpacing: ManagerConestant.letterSpacingWithSignInText,
-                    color: ManagerColors.textcolor,
+                  style: getMediumTextStyle(
+                    color: ManagerColors.primaryTextColor,
                     fontSize: ManagerFontSize.s30,
-                    fontWeight: ManagerFontWeight.w600,
                   ),
                 ),
               ),
@@ -73,7 +72,7 @@ class _RegisterViewState extends State<RegisterView> {
                     fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.username,
-                      style: TextStyle(
+                      style: getRegularTextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.grey),
                     ),
@@ -82,7 +81,7 @@ class _RegisterViewState extends State<RegisterView> {
                             BorderSide(color: ManagerColors.primaryColor)),
                     focusedBorder: const UnderlineInputBorder(
                         borderSide:
-                            BorderSide(color: ManagerColors.textcolor))),
+                            BorderSide(color: ManagerColors.primaryTextColor))),
               ),
               SizedBox(
                 height: ManagerHeight.h18,
@@ -93,7 +92,7 @@ class _RegisterViewState extends State<RegisterView> {
                     fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.email,
-                      style: TextStyle(
+                      style: getRegularTextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.grey),
                     ),
@@ -102,7 +101,7 @@ class _RegisterViewState extends State<RegisterView> {
                             BorderSide(color: ManagerColors.primaryColor)),
                     focusedBorder: const UnderlineInputBorder(
                         borderSide:
-                            BorderSide(color: ManagerColors.textcolor))),
+                            BorderSide(color: ManagerColors.primaryTextColor))),
               ),
               SizedBox(
                 height: ManagerHeight.h18,
@@ -113,7 +112,7 @@ class _RegisterViewState extends State<RegisterView> {
                     fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.numberCity,
-                      style: TextStyle(
+                      style: getRegularTextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.grey),
                     ),
@@ -122,7 +121,7 @@ class _RegisterViewState extends State<RegisterView> {
                             BorderSide(color: ManagerColors.primaryColor)),
                     focusedBorder: const UnderlineInputBorder(
                         borderSide:
-                            BorderSide(color: ManagerColors.textcolor))),
+                            BorderSide(color: ManagerColors.primaryTextColor))),
               ),
               SizedBox(
                 height: ManagerHeight.h18,
@@ -133,7 +132,7 @@ class _RegisterViewState extends State<RegisterView> {
                     fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.password,
-                      style: TextStyle(
+                      style: getRegularTextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.grey),
                     ),
@@ -142,7 +141,7 @@ class _RegisterViewState extends State<RegisterView> {
                             BorderSide(color: ManagerColors.primaryColor)),
                     focusedBorder: const UnderlineInputBorder(
                         borderSide:
-                            BorderSide(color: ManagerColors.textcolor))),
+                            BorderSide(color: ManagerColors.primaryTextColor))),
               ),
               SizedBox(
                 height: ManagerHeight.h18,
@@ -153,7 +152,7 @@ class _RegisterViewState extends State<RegisterView> {
                     fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.confirmPassword,
-                      style: TextStyle(
+                      style: getRegularTextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.grey),
                     ),
@@ -162,7 +161,7 @@ class _RegisterViewState extends State<RegisterView> {
                             BorderSide(color: ManagerColors.primaryColor)),
                     focusedBorder: const UnderlineInputBorder(
                         borderSide:
-                            BorderSide(color: ManagerColors.textcolor))),
+                            BorderSide(color: ManagerColors.primaryTextColor))),
               ),
               SizedBox(
                 height: ManagerHeight.h24,
@@ -171,14 +170,14 @@ class _RegisterViewState extends State<RegisterView> {
                 children: [
                   Text(
                     ManagerStrings.alreadyhaveAcoount,
-                    style: TextStyle(
+                    style: getRegularTextStyle(
                         fontSize: ManagerFontSize.s16,
-                        color: ManagerColors.textcolor),
+                        color: ManagerColors.primaryTextColor),
                   ),
                   TextButton(
                     child: Text(
                       ManagerStrings.login,
-                      style: TextStyle(
+                      style: getRegularTextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.primaryColor),
                     ),
@@ -199,7 +198,7 @@ class _RegisterViewState extends State<RegisterView> {
                 isVisibalIcon: false,
                 spacer: ManagerConestant.Spacer3,
                 bgColor: ManagerColors.primaryColor,
-                textStyle: TextStyle(
+                textStyle: getRegularTextStyle(
                     color: ManagerColors.white, fontSize: ManagerFontSize.s18),
               ),
             ],

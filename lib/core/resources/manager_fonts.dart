@@ -1,3 +1,3 @@
 class ManagerFontsFamily {
-  static const String fontApp = 'Cairo';
+  static const String fontApp = 'Mulish';
 }

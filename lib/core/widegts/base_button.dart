@@ -36,7 +36,7 @@ class base_button extends StatelessWidget {
   TextStyle? textStyle = TextStyle(
     color: ManagerColors.white,
     fontSize: ManagerFontSize.s18,
-    fontWeight: ManagerFontWeight.Regular,
+    fontWeight: ManagerFontWeight.regular,
   );
   @override
   Widget build(BuildContext context) {

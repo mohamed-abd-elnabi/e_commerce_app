@@ -32,7 +32,7 @@ Column outBoardingContent({
           style: TextStyle(
             color: ManagerColors.secondaryColor,
             fontSize: ManagerFontSize.s16,
-            fontWeight: ManagerFontWeight.Regular,
+            fontWeight: ManagerFontWeight.regular,
           ),
           textAlign: TextAlign.center,
         ),
