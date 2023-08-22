@@ -12,7 +12,7 @@ class LocaleSettings {
     keyConestant.english: keyConestant.englishName,
   };
   List<Locale> get locales =>
-      languages.keys.map((langKeey) => Locale(langKeey)).toList();
+      languages.keys.map((langKey) => Locale(langKey)).toList();
 
   Locale get defaultLocale =>
       Locale(_appSittingsSharedPreferences.defaultLocale);
