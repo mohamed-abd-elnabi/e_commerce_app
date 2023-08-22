@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_avatar/core/constants.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_height.dart';
+import 'package:shop_avatar/core/resources/manager_text_styles.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_assets.dart';
@@ -62,11 +63,9 @@ class _LoginViewState extends State<LoginView> {
                 alignment: AlignmentDirectional.centerStart,
                 child: Text(
                   ManagerStrings.signIn.toUpperCase(),
-                  style: TextStyle(
-                    letterSpacing: ManagerConestant.letterSpacingWithSignInText,
-                    color: ManagerColors.textcolor,
+                  style: getMediumTextStyle(
+                    color: ManagerColors.primaryTextColor,
                     fontSize: ManagerFontSize.s30,
-                    fontWeight: ManagerFontWeight.w600,
                   ),
                 ),
               ),
@@ -79,7 +78,7 @@ class _LoginViewState extends State<LoginView> {
                     fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.email,
-                      style: TextStyle(
+                      style: getRegularTextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.grey),
                     ),
@@ -88,7 +87,7 @@ class _LoginViewState extends State<LoginView> {
                             BorderSide(color: ManagerColors.primaryColor)),
                     focusedBorder: const UnderlineInputBorder(
                         borderSide:
-                            BorderSide(color: ManagerColors.textcolor))),
+                            BorderSide(color: ManagerColors.primaryTextColor))),
               ),
               SizedBox(
                 height: ManagerHeight.h24,
@@ -99,7 +98,7 @@ class _LoginViewState extends State<LoginView> {
                     fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.password,
-                      style: TextStyle(
+                      style: getRegularTextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.grey),
                     ),
@@ -108,7 +107,7 @@ class _LoginViewState extends State<LoginView> {
                             BorderSide(color: ManagerColors.primaryColor)),
                     focusedBorder: const UnderlineInputBorder(
                         borderSide:
-                            BorderSide(color: ManagerColors.textcolor))),
+                            BorderSide(color: ManagerColors.primaryTextColor))),
               ),
               SizedBox(
                 height: ManagerHeight.h24,
@@ -124,16 +123,16 @@ class _LoginViewState extends State<LoginView> {
                   ),
                   Text(
                     ManagerStrings.rememberMe,
-                    style: TextStyle(
+                    style: getRegularTextStyle(
                         fontSize: ManagerFontSize.s16,
-                        color: ManagerColors.textcolor),
+                        color: ManagerColors.primaryTextColor),
                   ),
                   SizedBox(
                     width: ManagerHeight.h10,
                   ),
                   Text(
                     ManagerStrings.forgetPassword,
-                    style: TextStyle(
+                    style: getRegularTextStyle(
                         fontSize: ManagerFontSize.s16,
                         color: ManagerColors.primaryColor),
                   ),
@@ -146,14 +145,14 @@ class _LoginViewState extends State<LoginView> {
                 children: [
                   Text(
                     ManagerStrings.haveAcoount,
-                    style: TextStyle(
+                    style: getRegularTextStyle(
                         fontSize: ManagerFontSize.s16,
-                        color: ManagerColors.textcolor),
+                        color: ManagerColors.primaryTextColor),
                   ),
                   TextButton(
                     child: Text(
                       ManagerStrings.signUp,
-                      style: TextStyle(
+                      style: getRegularTextStyle(
                           fontSize: ManagerFontSize.s16,
                           color: ManagerColors.primaryColor),
                     ),
@@ -174,7 +173,7 @@ class _LoginViewState extends State<LoginView> {
                 isVisibalIcon: false,
                 spacer: ManagerConestant.Spacer3,
                 bgColor: ManagerColors.primaryColor,
-                textStyle: TextStyle(
+                textStyle: getRegularTextStyle(
                     color: ManagerColors.white, fontSize: ManagerFontSize.s18),
               ),
               SizedBox(
@@ -182,9 +181,9 @@ class _LoginViewState extends State<LoginView> {
               ),
               Text(
                 ManagerStrings.or,
-                style: TextStyle(
+                style: getRegularTextStyle(
                     fontSize: ManagerFontSize.s16,
-                    color: ManagerColors.textcolor),
+                    color: ManagerColors.primaryTextColor),
               ),
               SizedBox(
                 height: ManagerHeight.h24,
