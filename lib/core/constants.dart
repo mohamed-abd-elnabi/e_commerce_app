@@ -24,6 +24,14 @@ class keyConestant {
   static const String englishName = 'English';
   static const String token = 'token';
   static const String loggedIn = 'logged_in';
+  static const String user = 'user';
+  static const String userId = '${user}id';
+  static const String userType = '${user}type';
+  static const String userName = '${user}name';
+  static const String userEmail = '${user}email';
+  static const String userAvatar = '${user}avatar';
+  static const String userAvatarOriginal = '${user}avatar_original';
+  static const String userPhone = '${user}phone';
 }
 
 class ApiRequest {
