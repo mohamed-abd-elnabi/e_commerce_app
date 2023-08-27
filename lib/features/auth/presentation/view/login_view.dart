@@ -150,7 +150,7 @@ class LoginView extends StatelessWidget {
                 base_button(
                   title: ManagerStrings.login,
                   onPeessed: () {
-                    Get.offAllNamed(Routes.homePage);
+                    controller.performLogin(context);
                   },
                   isVisibalIcon: false,
                   spacer: ManagerConestant.Spacer3,
