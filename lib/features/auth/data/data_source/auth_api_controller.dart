@@ -1,11 +1,13 @@
 import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:shop_avatar/core/constants.dart';
 import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import 'package:shop_avatar/core/widegts/helpers.dart';
+import 'package:shop_avatar/features/auth/data/mapper/login_mapper.dart';
+import 'package:shop_avatar/features/auth/data/response/login_response.dart';
+import 'package:shop_avatar/features/auth/presentation/model/login_model.dart';
 
 class AuthApiController with Helpers {
   AppSettingsSharedPreferences appSettingsSharedPreferences =
@@ -28,8 +30,9 @@ class AuthApiController with Helpers {
     );
     var json = jsonDecode(response.body);
     if (response.statusCode == 200) {
-      appSettingsSharedPreferences
-          .setToken(json[ApiConstants.accessToken] ?? '');
+      LoginModel loginModel = LoginResponse.fromJson(json).toDomain();
+      appSettingsSharedPreferences.setToken(loginModel.accessToken);
+      appSettingsSharedPreferences.saveUserInfo(loginModel.user);
       appSettingsSharedPreferences.setLoggedIn();
       return true;
     }
