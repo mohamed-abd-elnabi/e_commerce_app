@@ -12,6 +12,10 @@ class AppSettingsSharedPreferences {
     return _instance;
   }
 
+  clear() {
+    _sharedPreferences.clear();
+  }
+
   Future<void> initPreferences() async {
     _sharedPreferences = await SharedPreferences.getInstance();
   }
@@ -31,4 +35,17 @@ class AppSettingsSharedPreferences {
 
   String get defaultLocale =>
       _sharedPreferences.getString(keyConestant.localeKey).parseLocale();
+
+  Future<void> setToken(String token) async {
+    await _sharedPreferences.setString(keyConestant.token, token);
+  }
+
+  String get defaultToken =>
+      _sharedPreferences.getString(keyConestant.token).onNull();
+
+  bool get loggedIn =>
+      _sharedPreferences.getBool(keyConestant.loggedIn).onNull();
+  Future<void> setLoggedIn() async {
+    await _sharedPreferences.setBool(keyConestant.loggedIn, true);
+  }
 }
