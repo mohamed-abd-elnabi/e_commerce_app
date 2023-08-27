@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop_avatar/config/localization/dependancy_injection.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
-import 'package:shop_avatar/features/auth/presentation/controller/auth_controller.dart';
+import 'package:shop_avatar/features/splach/presentation/controller/splach_controller.dart';
 import '../features/auth/presentation/view/authentication.dart';
 import '../features/home.dart';
 import '../features/out_boarding/presentation/view/out_boarding_screen.dart';
@@ -24,6 +24,7 @@ class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.splachScreen:
+        initSplash();
         return MaterialPageRoute(builder: (_) => const SplachScreen());
       case Routes.outBoarding:
         return MaterialPageRoute(builder: (_) => const OutBoarding());
@@ -35,8 +36,7 @@ class RouteGenerator {
       case Routes.registerView:
         return MaterialPageRoute(builder: (context) => const RegisterView());
       case Routes.homePage:
-        disposeAuth();
-
+        initHome();
         return MaterialPageRoute(builder: (context) => const HomePage());
       default:
         return unDefindRout();
