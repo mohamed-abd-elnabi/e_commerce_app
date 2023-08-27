@@ -3,16 +3,33 @@ import 'package:get/get.dart';
 import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 
 import '../../features/auth/presentation/controller/auth_controller.dart';
+import '../../features/splach/presentation/controller/splach_controller.dart';
 
 initModule() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppSettingsSharedPreferences().initPreferences();
 }
 
-initAuth() async {
+initAuth() {
+  disposeSplash();
   Get.put<AuthController>(AuthController());
 }
 
-disposeAuth() async {
+disposeAuth() {
   Get.delete<AuthController>();
 }
+
+initSplash() {
+  Get.put<SplashController>(SplashController());
+}
+
+disposeSplash() {
+  Get.delete<SplashController>();
+}
+
+initHome() {
+  disposeSplash();
+  disposeAuth();
+}
+
+disposeHome() {}
