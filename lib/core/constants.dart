@@ -22,4 +22,23 @@ class keyConestant {
   static const String english = 'en';
   static const String arabicName = 'العربية';
   static const String englishName = 'English';
+  static const String token = 'token';
+  static const String loggedIn = 'logged_in';
+}
+
+class ApiRequest {
+  static const String baseUrl = 'http://e-commerce-selkroad.actit.ps';
+  static const String api = '$baseUrl/api/v2';
+  static const String apiAuth = '$api/auth';
+  static const String login = '$apiAuth/login';
+  static const String register = '$apiAuth/signup';
+  static const String categories = '$api/categories';
+}
+
+class ApiConstants {
+  static const String email = 'email';
+  static const String password = 'password';
+  static const String acceptLanguage = 'Accept-Language';
+  static const String errormassage = 'message';
+  static const String accessToken = 'access_token';
 }
