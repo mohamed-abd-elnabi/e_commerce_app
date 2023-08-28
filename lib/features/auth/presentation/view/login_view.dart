@@ -68,26 +68,49 @@ class LoginView extends StatelessWidget {
                               BorderSide(color: ManagerColors.primaryColor)),
                       focusedBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(
-                              color: ManagerColors.primaryTextColor))),
+                              color: ManagerColors.primaryTextColor)),
+                      errorText: controller.emailError,
+                      errorBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: ManagerColors.error))),
                 ),
                 SizedBox(
                   height: ManagerHeight.h24,
                 ),
                 TextField(
                   controller: controller.textPasswordEditingController,
+                  obscureText: controller.showPassword,
                   decoration: InputDecoration(
-                      label: Text(
-                        ManagerStrings.password,
-                        style: getRegularTextStyle(
-                            fontSize: ManagerFontSize.s16,
-                            color: ManagerColors.grey),
+                    suffixIcon: IconButton(
+                        onPressed: () {
+                          controller.changePasswordVisibility();
+                        },
+                        icon: controller.showPassword
+                            ? Icon(
+                                Icons.visibility_off,
+                              )
+                            : Icon(
+                                Icons.visibility,
+                                color: ManagerColors.primaryColor,
+                              )),
+                    label: Text(
+                      ManagerStrings.password,
+                      style: getRegularTextStyle(
+                          fontSize: ManagerFontSize.s16,
+                          color: ManagerColors.grey),
+                    ),
+                    enabledBorder: const UnderlineInputBorder(
+                      borderSide: BorderSide(color: ManagerColors.primaryColor),
+                    ),
+                    focusedBorder: const UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: ManagerColors.primaryTextColor,
                       ),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: ManagerColors.primaryColor)),
-                      focusedBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: ManagerColors.primaryTextColor))),
+                    ),
+                    errorText: controller.passwordError,
+                    errorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: ManagerColors.error),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: ManagerHeight.h24,
