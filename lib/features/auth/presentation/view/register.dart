@@ -51,19 +51,26 @@ class RegisterView extends StatelessWidget {
                 TextField(
                   controller: controller.textUsernameEditingController,
                   decoration: InputDecoration(
-                      fillColor: Colors.amber,
-                      label: Text(
-                        ManagerStrings.username,
-                        style: getRegularTextStyle(
-                            fontSize: ManagerFontSize.s16,
-                            color: ManagerColors.grey),
+                    fillColor: Colors.amber,
+                    label: Text(
+                      ManagerStrings.username,
+                      style: getRegularTextStyle(
+                        fontSize: ManagerFontSize.s16,
+                        color: ManagerColors.grey,
                       ),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: ManagerColors.primaryColor)),
-                      focusedBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: ManagerColors.primaryTextColor))),
+                    ),
+                    enabledBorder: const UnderlineInputBorder(
+                      borderSide: BorderSide(color: ManagerColors.primaryColor),
+                    ),
+                    focusedBorder: const UnderlineInputBorder(
+                      borderSide:
+                          BorderSide(color: ManagerColors.primaryTextColor),
+                    ),
+                    errorText: controller.nameError,
+                    errorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: ManagerColors.error),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: ManagerHeight.h18,
@@ -71,19 +78,25 @@ class RegisterView extends StatelessWidget {
                 TextField(
                   controller: controller.textEmailEditingController,
                   decoration: InputDecoration(
-                      fillColor: Colors.amber,
-                      label: Text(
-                        ManagerStrings.email,
-                        style: getRegularTextStyle(
-                            fontSize: ManagerFontSize.s16,
-                            color: ManagerColors.grey),
-                      ),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: ManagerColors.primaryColor)),
-                      focusedBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: ManagerColors.primaryTextColor))),
+                    fillColor: Colors.amber,
+                    label: Text(
+                      ManagerStrings.email,
+                      style: getRegularTextStyle(
+                          fontSize: ManagerFontSize.s16,
+                          color: ManagerColors.grey),
+                    ),
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide:
+                            BorderSide(color: ManagerColors.primaryColor)),
+                    focusedBorder: const UnderlineInputBorder(
+                      borderSide:
+                          BorderSide(color: ManagerColors.primaryTextColor),
+                    ),
+                    errorText: controller.emailError,
+                    errorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: ManagerColors.error),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: ManagerHeight.h18,
@@ -91,59 +104,103 @@ class RegisterView extends StatelessWidget {
                 TextField(
                   controller: controller.textNumberEditingController,
                   decoration: InputDecoration(
-                      fillColor: Colors.amber,
-                      label: Text(
-                        ManagerStrings.numberCity,
-                        style: getRegularTextStyle(
-                            fontSize: ManagerFontSize.s16,
-                            color: ManagerColors.grey),
-                      ),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: ManagerColors.primaryColor)),
-                      focusedBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: ManagerColors.primaryTextColor))),
+                    fillColor: Colors.amber,
+                    label: Text(
+                      ManagerStrings.numberCity,
+                      style: getRegularTextStyle(
+                          fontSize: ManagerFontSize.s16,
+                          color: ManagerColors.grey),
+                    ),
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide:
+                            BorderSide(color: ManagerColors.primaryColor)),
+                    focusedBorder: const UnderlineInputBorder(
+                      borderSide:
+                          BorderSide(color: ManagerColors.primaryTextColor),
+                    ),
+                    errorText: controller.phoneError,
+                    errorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: ManagerColors.error),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: ManagerHeight.h18,
                 ),
                 TextField(
                   controller: controller.textPasswordEditingController,
+                  obscureText: controller.showPassword,
                   decoration: InputDecoration(
-                      fillColor: Colors.amber,
-                      label: Text(
-                        ManagerStrings.password,
-                        style: getRegularTextStyle(
-                            fontSize: ManagerFontSize.s16,
-                            color: ManagerColors.grey),
-                      ),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: ManagerColors.primaryColor)),
-                      focusedBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: ManagerColors.primaryTextColor))),
+                    suffixIcon: IconButton(
+                        onPressed: () {
+                          controller.changePasswordVisibility();
+                        },
+                        icon: controller.showPassword
+                            ? Icon(
+                                Icons.visibility_off,
+                              )
+                            : Icon(
+                                Icons.visibility,
+                                color: ManagerColors.primaryColor,
+                              )),
+                    fillColor: Colors.amber,
+                    label: Text(
+                      ManagerStrings.password,
+                      style: getRegularTextStyle(
+                          fontSize: ManagerFontSize.s16,
+                          color: ManagerColors.grey),
+                    ),
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide:
+                            BorderSide(color: ManagerColors.primaryColor)),
+                    focusedBorder: const UnderlineInputBorder(
+                      borderSide:
+                          BorderSide(color: ManagerColors.primaryTextColor),
+                    ),
+                    errorText: controller.passwordError,
+                    errorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: ManagerColors.error),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: ManagerHeight.h18,
                 ),
                 TextField(
                   controller: controller.textPasswordConfirmEditingController,
+                  obscureText: controller.showConfirmPassword,
                   decoration: InputDecoration(
-                      fillColor: Colors.amber,
-                      label: Text(
-                        ManagerStrings.confirmPassword,
-                        style: getRegularTextStyle(
-                            fontSize: ManagerFontSize.s16,
-                            color: ManagerColors.grey),
-                      ),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: ManagerColors.primaryColor)),
-                      focusedBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: ManagerColors.primaryTextColor))),
+                    suffixIcon: IconButton(
+                        onPressed: () {
+                          controller.changeConfirmPasswordVisibility();
+                        },
+                        icon: controller.showConfirmPassword
+                            ? Icon(
+                                Icons.visibility_off,
+                              )
+                            : Icon(
+                                Icons.visibility,
+                                color: ManagerColors.primaryColor,
+                              )),
+                    fillColor: Colors.amber,
+                    label: Text(
+                      ManagerStrings.confirmPassword,
+                      style: getRegularTextStyle(
+                          fontSize: ManagerFontSize.s16,
+                          color: ManagerColors.grey),
+                    ),
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide:
+                            BorderSide(color: ManagerColors.primaryColor)),
+                    focusedBorder: const UnderlineInputBorder(
+                      borderSide:
+                          BorderSide(color: ManagerColors.primaryTextColor),
+                    ),
+                    errorText: controller.confirmPasswordError,
+                    errorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: ManagerColors.error),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: ManagerHeight.h24,
@@ -175,7 +232,7 @@ class RegisterView extends StatelessWidget {
                 base_button(
                   title: ManagerStrings.signUp,
                   onPeessed: () {
-                    //Navigator.pushNamed(context, Routes.HomePage);
+                    controller.performRegister(context);
                   },
                   isVisibalIcon: false,
                   spacer: ManagerConestant.Spacer3,
