@@ -12,14 +12,26 @@ import 'package:shop_avatar/features/auth/presentation/model/login_model.dart';
 class AuthApiController with Helpers {
   AppSettingsSharedPreferences appSettingsSharedPreferences =
       AppSettingsSharedPreferences();
+
+  Future post({
+    required String endPoint,
+    required Map<String, dynamic> body,
+    required Map<String, String> headers,
+  }) async {
+    return await http.post(
+      Uri.parse(endPoint),
+      body: body,
+      headers: headers,
+    );
+  }
+
   Future<bool> login({
     required String email,
     required String password,
     required BuildContext context,
   }) async {
-    Uri url = Uri.parse(ApiRequest.login);
-    Response response = await http.post(
-      url,
+    http.Response response = await post(
+      endPoint: ApiRequest.login,
       body: {
         ApiConstants.email: email,
         ApiConstants.password: password,
@@ -29,7 +41,7 @@ class AuthApiController with Helpers {
       },
     );
     var json = jsonDecode(response.body);
-    if (response.statusCode == 200) {
+    if (response.statusCode >= 200 && response.statusCode > 300) {
       LoginModel loginModel = LoginResponse.fromJson(json).toDomain();
       appSettingsSharedPreferences.setToken(loginModel.accessToken);
       appSettingsSharedPreferences.saveUserInfo(loginModel.user);
@@ -40,7 +52,42 @@ class AuthApiController with Helpers {
     showSnackBar(
       context: context,
       error: true,
-      message: json[ApiConstants.errormassage] ?? 'error',
+      message: json[ApiConstants.errorMassage] ?? 'error',
+    );
+    return false;
+  }
+
+  Future<bool> register({
+    required String name,
+    required String email,
+    required String password,
+    required String passwordConfirmation,
+    required String phone,
+    String? registerBy,
+    required BuildContext context,
+  }) async {
+    http.Response response = await post(
+      endPoint: ApiRequest.register,
+      body: {
+        ApiConstants.email: email,
+        ApiConstants.password: password,
+        ApiConstants.passwordConfirmation: passwordConfirmation,
+        ApiConstants.authName: name,
+        ApiConstants.phone: phone,
+        ApiConstants.registerBy: 'email',
+      },
+      headers: {},
+    );
+
+    var json = jsonDecode(response.body);
+    if (response.statusCode >= 200 && response.statusCode > 300) {
+      return true;
+    }
+
+    showSnackBar(
+      context: context,
+      error: true,
+      message: json[ApiConstants.errorMassage] ?? 'error',
     );
     return false;
   }
