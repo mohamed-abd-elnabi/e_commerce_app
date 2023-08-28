@@ -9,6 +9,6 @@ class ManagerColors {
   static const Color primaryTextColor = Color(0xff393939);
   static Color secondaryColor = Color(0xff393939);
   static Color prossColor = Color(0xff979797);
-  static Color brown200 = Colors.brown.shade300;
+  static Color error = Colors.red;
   static Color transparent = Colors.transparent;
 }
