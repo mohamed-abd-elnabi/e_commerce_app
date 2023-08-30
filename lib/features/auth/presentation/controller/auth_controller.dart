@@ -78,7 +78,6 @@ class AuthController extends GetxController with Helpers {
       )) {
         showSnackBar(
           context: context,
-          error: false,
           message: 'Login Succesfulleu',
         );
         Get.back();
