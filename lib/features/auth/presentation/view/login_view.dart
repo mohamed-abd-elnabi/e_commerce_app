@@ -51,7 +51,7 @@ class LoginView extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: ManagerHeight.h24,
+                  height: ManagerHeight.h16,
                 ),
                 TextField(
                   controller: controller.textEmailEditingController,
@@ -74,7 +74,7 @@ class LoginView extends StatelessWidget {
                           borderSide: BorderSide(color: ManagerColors.error))),
                 ),
                 SizedBox(
-                  height: ManagerHeight.h24,
+                  height: ManagerHeight.h16,
                 ),
                 TextField(
                   controller: controller.textPasswordEditingController,
@@ -116,7 +116,7 @@ class LoginView extends StatelessWidget {
                   height: ManagerHeight.h24,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       width: ManagerWeight.w10,
@@ -129,7 +129,7 @@ class LoginView extends StatelessWidget {
                     Text(
                       ManagerStrings.rememberMe,
                       style: getRegularTextStyle(
-                          fontSize: ManagerFontSize.s14,
+                          fontSize: ManagerFontSize.s12,
                           color: ManagerColors.primaryTextColor),
                     ),
                     SizedBox(
@@ -138,7 +138,7 @@ class LoginView extends StatelessWidget {
                     Text(
                       ManagerStrings.forgetPassword,
                       style: getRegularTextStyle(
-                          fontSize: ManagerFontSize.s14,
+                          fontSize: ManagerFontSize.s10,
                           color: ManagerColors.primaryColor),
                     ),
                   ],
@@ -151,14 +151,14 @@ class LoginView extends StatelessWidget {
                     Text(
                       ManagerStrings.haveAcoount,
                       style: getRegularTextStyle(
-                          fontSize: ManagerFontSize.s16,
+                          fontSize: ManagerFontSize.s14,
                           color: ManagerColors.primaryTextColor),
                     ),
                     TextButton(
                       child: Text(
                         ManagerStrings.signUp,
                         style: getRegularTextStyle(
-                            fontSize: ManagerFontSize.s16,
+                            fontSize: ManagerFontSize.s14,
                             color: ManagerColors.primaryColor),
                       ),
                       onPressed: () {

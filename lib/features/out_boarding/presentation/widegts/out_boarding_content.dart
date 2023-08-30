@@ -26,10 +26,12 @@ Column outBoardingContent({
             letterSpacing: ManagerConestant.letterSpacing3),
       ),
       SizedBox(
-        height: ManagerHeight.h70,
+        height: ManagerHeight.h100,
         child: Text(
+          maxLines: 3,
           subtitle ?? ManagerStrings.subtitle1,
           style: TextStyle(
+            overflow: TextOverflow.ellipsis,
             color: ManagerColors.secondaryColor,
             fontSize: ManagerFontSize.s16,
             fontWeight: ManagerFontWeight.regular,

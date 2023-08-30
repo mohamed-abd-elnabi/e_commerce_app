@@ -32,17 +32,16 @@ class AuthApiController with Helpers {
   }) async {
     http.Response response = await post(
       endPoint: ApiRequest.login,
-      body: {
-        ApiConstants.email: email,
-        ApiConstants.password: password,
-      },
+      body: {ApiConstants.email: email, ApiConstants.password: password},
       headers: {
         ApiConstants.acceptLanguage: appSettingsSharedPreferences.defaultLocale,
       },
     );
+
     var json = jsonDecode(response.body);
-    if (response.statusCode >= 200 && response.statusCode > 300) {
-      LoginModel loginModel = LoginResponse.fromJson(json).toDomain();
+    if (response.statusCode >= 200 && response.statusCode < 300) {
+      LoginResponse loginResponse = LoginResponse.fromJson(json);
+      LoginModel loginModel = loginResponse.toDomain();
       appSettingsSharedPreferences.setToken(loginModel.accessToken);
       appSettingsSharedPreferences.saveUserInfo(loginModel.user);
       appSettingsSharedPreferences.setLoggedIn();
@@ -51,8 +50,8 @@ class AuthApiController with Helpers {
 
     showSnackBar(
       context: context,
+      message: json[ApiConstants.errorMassage] ?? 'Error',
       error: true,
-      message: json[ApiConstants.errorMassage] ?? 'error',
     );
     return false;
   }

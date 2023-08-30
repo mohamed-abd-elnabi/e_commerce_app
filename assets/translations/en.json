@@ -23,5 +23,7 @@
   "numberCity": "🇵🇸    Ex : 986-786-421",
   "confirmPassword": "Confirm Password",
   "alreadyhaveAcoount": "Already have account?",
-  "notFoundRoute": "notFoundRoute"
+  "notFoundRoute": "notFoundRoute",
+  "home": "HOME",
+  "search": "|   Search"
 }

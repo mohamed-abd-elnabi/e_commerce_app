@@ -27,4 +27,6 @@ class ManagerStrings {
   static String get alreadyhaveAcoount => tr('alreadyhaveAcoount');
   static String get notFoundRoute => tr('notFoundRoute');
   static String get mohammed => tr('mohammed');
+  static String get home => tr('home');
+  static String get search => tr('search');
 }

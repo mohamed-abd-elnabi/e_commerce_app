@@ -5,11 +5,7 @@ class LoginResponse {
   String? tokenType;
   String? expiresAt;
   UserResponse? user;
-/*
-الدالة fromJson هي دالة موجودة في الكلاس LoginResponse وتستقبل وسيطة
-واحدة من نوعMap<String, dynamic> json  تمثل JSON. الهدف من هذه الدالة هو استخراج البيانات
- الـ JSON وتخزينها في متغيرات محددة داخل كائن LoginResponse
- */
+
   LoginResponse.fromJson(Map<String, dynamic> json) {
     result = json['result'];
     message = json['message'];

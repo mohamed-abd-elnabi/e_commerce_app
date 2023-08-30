@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
+import 'package:shop_avatar/features/home/presentation/controller/home_controller..dart';
 
 import '../../features/auth/presentation/controller/auth_controller.dart';
 import '../../features/splach/presentation/controller/splach_controller.dart';
@@ -30,6 +31,7 @@ disposeSplash() {
 initHome() {
   disposeSplash();
   disposeAuth();
+  Get.put<HomeController>(HomeController());
 }
 
 disposeHome() {}
