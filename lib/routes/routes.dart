@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:shop_avatar/config/localization/dependancy_injection.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
-import 'package:shop_avatar/features/splach/presentation/controller/splach_controller.dart';
 import '../features/auth/presentation/view/authentication.dart';
-import '../features/home.dart';
+import '../features/home/presentation/view/home_view.dart';
 import '../features/out_boarding/presentation/view/out_boarding_screen.dart';
 import '../features/auth/presentation/view/login_view.dart';
 import '../features/auth/presentation/view/register.dart';
