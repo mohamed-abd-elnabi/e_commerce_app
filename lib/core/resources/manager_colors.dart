@@ -11,4 +11,5 @@ class ManagerColors {
   static Color prossColor = Color(0xff979797);
   static Color error = Colors.red;
   static Color transparent = Colors.transparent;
+  static const Color homeScaffoldBackGround = Color(0xffF8F8FC);
 }

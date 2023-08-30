@@ -4,6 +4,7 @@ class ManagerWeight {
   static double w30 = SizeUtil.setWidth(30);
   static double w8 = SizeUtil.setWidth(8);
   static double w9 = SizeUtil.setWidth(9);
+  static double w16 = SizeUtil.setWidth(16);
   static double w10 = SizeUtil.setWidth(10);
   static double w20 = SizeUtil.setWidth(20);
   static double w50 = SizeUtil.setWidth(50);
