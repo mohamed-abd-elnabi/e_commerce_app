@@ -210,14 +210,14 @@ class RegisterView extends StatelessWidget {
                     Text(
                       ManagerStrings.alreadyhaveAcoount,
                       style: getRegularTextStyle(
-                          fontSize: ManagerFontSize.s16,
+                          fontSize: ManagerFontSize.s14,
                           color: ManagerColors.primaryTextColor),
                     ),
                     TextButton(
                       child: Text(
                         ManagerStrings.login,
                         style: getRegularTextStyle(
-                            fontSize: ManagerFontSize.s16,
+                            fontSize: ManagerFontSize.s14,
                             color: ManagerColors.primaryColor),
                       ),
                       onPressed: () {
@@ -240,6 +240,9 @@ class RegisterView extends StatelessWidget {
                   textStyle: getRegularTextStyle(
                       color: ManagerColors.white,
                       fontSize: ManagerFontSize.s18),
+                ),
+                SizedBox(
+                  height: ManagerHeight.h40,
                 ),
               ],
             ),
