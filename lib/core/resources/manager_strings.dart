@@ -29,4 +29,8 @@ class ManagerStrings {
   static String get mohammed => tr('mohammed');
   static String get home => tr('home');
   static String get search => tr('search');
+  static String get bestProduct => tr('bestProduct');
+  static String get showMore => tr('showMore');
+  static String get features => tr('features');
+  static String get discounted => tr('discounted');
 }
