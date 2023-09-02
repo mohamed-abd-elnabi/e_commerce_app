@@ -25,6 +25,9 @@
   "alreadyhaveAcoount": "هل لديك حساب بالفعل؟",
   "notFoundRoute": "الصفحة غير موجودة",
   "home": "الرئيسية",
-  "search": "|   بحث"
-
+  "search": "|   بحث",
+  "bestProduct": "افضل المنتجات",
+  "showMore": "المزيد",
+  "features": "المفضلة",
+  "discounted": "الخصومات"
 }
