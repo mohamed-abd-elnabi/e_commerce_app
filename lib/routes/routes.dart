@@ -35,7 +35,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => const RegisterView());
       case Routes.homePage:
         initHome();
-        return MaterialPageRoute(builder: (context) => const HomePage());
+        return MaterialPageRoute(builder: (context) => const HomeView());
       default:
         return unDefindRout();
     }

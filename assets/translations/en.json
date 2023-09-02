@@ -25,5 +25,9 @@
   "alreadyhaveAcoount": "Already have account?",
   "notFoundRoute": "notFoundRoute",
   "home": "HOME",
-  "search": "|   Search"
+  "search": "|   Search",
+  "bestProduct": "Best Product",
+  "showMore": "Show more",
+  "features": "features",
+  "discounted": "discounted"
 }

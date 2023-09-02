@@ -6,6 +6,7 @@ import '../../../../routes/routes.dart';
 class SplashController extends GetxController {
   AppSettingsSharedPreferences appSettingsSharedPreferences =
       AppSettingsSharedPreferences();
+
   //BuildContext? context;
   @override
   void onInit() {

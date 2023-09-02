@@ -4,11 +4,8 @@ import 'package:shop_avatar/core/constants.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_height.dart';
 import 'package:shop_avatar/core/resources/manager_text_styles.dart';
-import 'package:shop_avatar/core/resources/manager_weight.dart';
 import 'package:shop_avatar/features/auth/presentation/controller/auth_controller.dart';
 import '../../../../core/resources/managar_font_size.dart';
-import '../../../../core/resources/manager_assets.dart';
-import '../../../../core/resources/manager_font_weight.dart';
 import '../../../../core/resources/manager_strings.dart';
 import '../../../../routes/routes.dart';
 import '../../../../core/widegts/base_button.dart';
@@ -136,7 +133,7 @@ class RegisterView extends StatelessWidget {
                           controller.changePasswordVisibility();
                         },
                         icon: controller.showPassword
-                            ? Icon(
+                            ? const Icon(
                                 Icons.visibility_off,
                               )
                             : Icon(

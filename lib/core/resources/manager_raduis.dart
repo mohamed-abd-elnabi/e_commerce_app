@@ -8,4 +8,5 @@ class ManagerRaduis {
   static double r10 = SizeUtil.setRadius(10);
   static double r12 = SizeUtil.setRadius(12);
   static double r20 = SizeUtil.setRadius(20);
+  static double r100 = SizeUtil.setRadius(100);
 }

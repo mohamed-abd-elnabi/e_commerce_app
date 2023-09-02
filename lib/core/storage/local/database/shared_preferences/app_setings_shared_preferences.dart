@@ -80,4 +80,30 @@ class AppSettingsSharedPreferences {
       user.phone,
     );
   }
+
+  User getUserInfo() {
+    final int userId = _sharedPreferences.getInt(keyConestant.userId) ?? 0;
+    final String userName =
+        _sharedPreferences.getString(keyConestant.userName) ?? '';
+    final String userType =
+        _sharedPreferences.getString(keyConestant.userType) ?? '';
+    final String userEmail =
+        _sharedPreferences.getString(keyConestant.userEmail) ?? '';
+    final String userAvatar =
+        _sharedPreferences.getString(keyConestant.userAvatar) ?? '';
+    final String userAvatarOriginal =
+        _sharedPreferences.getString(keyConestant.userAvatarOriginal) ?? '';
+    final String userPhone =
+        _sharedPreferences.getString(keyConestant.userPhone) ?? '';
+
+    return User(
+      id: userId,
+      name: userName,
+      type: userType,
+      email: userEmail,
+      avatar: userAvatar,
+      avatarOriginal: userAvatarOriginal,
+      phone: userPhone,
+    );
+  }
 }

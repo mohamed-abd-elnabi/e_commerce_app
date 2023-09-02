@@ -35,3 +35,23 @@ extension NonNullBoolean on bool? {
     }
   }
 }
+
+extension NonNullStringList on List<String>? {
+  List<String> onNull() {
+    if (this == null) {
+      return [];
+    } else {
+      return this!;
+    }
+  }
+}
+
+extension NonNullDouble on double? {
+  double onNull() {
+    if (this == null) {
+      return 0;
+    } else {
+      return this!;
+    }
+  }
+}
