@@ -1,11 +1,10 @@
-import 'package:shop_avatar/core/resources/managar_font_size.dart';
-import 'package:shop_avatar/core/resources/manager_raduis.dart';
-import 'package:shop_avatar/features/home/presentation/view/widegts/CategoriesList.dart';
-import 'package:shop_avatar/features/home/presentation/view/widegts/home_appbar.dart';
-import 'package:shop_avatar/features/home/presentation/view/widegts/product_card_item.dart';
-import 'package:shop_avatar/features/home/presentation/view/widegts/section_title.dart';
-import 'package:shop_avatar/features/home/presentation/view/widegts/slider_drawer.dart';
-
+import '/core/resources/managar_font_size.dart';
+import '/core/resources/manager_raduis.dart';
+import '/features/home/presentation/view/widegts/CategoriesList.dart';
+import '/features/home/presentation/view/widegts/home_appbar.dart';
+import '/features/home/presentation/view/widegts/product_card_item.dart';
+import '/features/home/presentation/view/widegts/section_title.dart';
+import '/features/home/presentation/view/widegts/slider_drawer.dart';
 import '../../../../core/resources/manager_weight.dart';
 import '../controller/home_controller..dart';
 import '../model/home_model.dart';
