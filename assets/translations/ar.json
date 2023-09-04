@@ -29,5 +29,18 @@
   "bestProduct": "افضل المنتجات",
   "showMore": "المزيد",
   "features": "المفضلة",
-  "discounted": "الخصومات"
+  "discounted": "الخصومات",
+  "loginSuccesfulleu": "نممممممممممممم",
+  "emailRequired": "الايميل يمعلم",
+  "passwordRequired": "كلمة السر يمعلم",
+  "productDetails": "تفاصيل المنتج",
+  "reviews": "نبذة",
+  "more": "المزيد",
+  "addReview": "اضافة تعليق",
+  "notes": "ملاحظات ",
+  "writeHere": "اكتب هنا ",
+  "price": "السعر"
+
+
+
 }
