@@ -82,19 +82,19 @@ class AppSettingsSharedPreferences {
   }
 
   User getUserInfo() {
-    final int userId = _sharedPreferences.getInt(keyConestant.userId) ?? 0;
+    final int userId = _sharedPreferences.getInt(keyConestant.userId).onNull();
     final String userName =
-        _sharedPreferences.getString(keyConestant.userName) ?? '';
+        _sharedPreferences.getString(keyConestant.userName).onNull();
     final String userType =
-        _sharedPreferences.getString(keyConestant.userType) ?? '';
+        _sharedPreferences.getString(keyConestant.userType).onNull();
     final String userEmail =
-        _sharedPreferences.getString(keyConestant.userEmail) ?? '';
+        _sharedPreferences.getString(keyConestant.userEmail).onNull();
     final String userAvatar =
-        _sharedPreferences.getString(keyConestant.userAvatar) ?? '';
+        _sharedPreferences.getString(keyConestant.userAvatar).onNull();
     final String userAvatarOriginal =
-        _sharedPreferences.getString(keyConestant.userAvatarOriginal) ?? '';
+        _sharedPreferences.getString(keyConestant.userAvatarOriginal).onNull();
     final String userPhone =
-        _sharedPreferences.getString(keyConestant.userPhone) ?? '';
+        _sharedPreferences.getString(keyConestant.userPhone).onNull();
 
     return User(
       id: userId,
