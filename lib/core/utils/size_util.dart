@@ -9,11 +9,11 @@ class SizeUtil {
     return height.h;
   }
 
-  static double setRadius(double Radius) {
-    return Radius.r;
+  static double setRadius(double radius) {
+    return radius.r;
   }
 
-  static double setFontSize(double FontSize) {
-    return FontSize.sp;
+  static double setFontSize(double fontSize) {
+    return fontSize.sp;
   }
 }
