@@ -2,23 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:shop_avatar/core/constants.dart';
 import 'package:shop_avatar/core/extinsion/extinsion.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
-
 import '../resources/managar_font_size.dart';
 import '../resources/manager_colors.dart';
 import '../resources/manager_font_weight.dart';
 import '../resources/manager_height.dart';
 import '../resources/manager_icon_size.dart';
 import '../resources/manager_spacer.dart';
-import '../resources/manager_strings.dart';
 
-// ignore: camel_case_types
 class base_button extends StatelessWidget {
   final String? title;
   final bool isVisibalIcon;
   final double? width;
   final double? height;
   final double elevation;
-  void Function() onPeessed;
+  void Function() onPreessed;
   final Color bgColor;
   final int? spacer;
 
@@ -29,7 +26,7 @@ class base_button extends StatelessWidget {
     this.height,
     this.elevation = ManagerConestant.elevationAppbar,
     this.bgColor = ManagerColors.primaryColor,
-    required this.onPeessed,
+    required this.onPreessed,
     this.textStyle,
     this.spacer,
   });
@@ -43,9 +40,9 @@ class base_button extends StatelessWidget {
     return Container(
       margin: EdgeInsetsDirectional.symmetric(horizontal: ManagerHeight.h20),
       height: height ?? ManagerHeight.h50,
-      width: width ?? ManagerWeight.Winfinity,
+      width: width ?? ManagerWeight.wInfinity,
       child: ElevatedButton(
-        onPressed: onPeessed,
+        onPressed: onPreessed,
         style: ElevatedButton.styleFrom(
           backgroundColor: bgColor,
         ),
