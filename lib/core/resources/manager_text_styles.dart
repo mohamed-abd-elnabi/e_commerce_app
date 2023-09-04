@@ -74,3 +74,17 @@ TextStyle getItalicTextStyle({
 }) {
   return getRegularTextStyle(fontStyle: FontStyle.italic);
 }
+
+TextStyle getTextStyle({
+  double? fontSize,
+  Color? color,
+  TextDecoration? textDecoration,
+  FontWeight? fontWeight,
+}) {
+  return _getTextStyle(
+    fontSize: fontSize ?? ManagerFontSize.s14,
+    fontWeight: fontWeight ?? ManagerFontWeight.regular,
+    color: color,
+    textDecoration: textDecoration,
+  );
+}

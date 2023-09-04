@@ -23,7 +23,6 @@ class OutBoarding extends StatefulWidget {
 
 class _OutBoardingState extends State<OutBoarding> {
   late PageController _pageController;
-  final int _intialpage = 0;
   final AppSettingsSharedPreferences _appSittingsSharedPreferences =
       AppSettingsSharedPreferences();
   int _cuttentpageindex = 0;
@@ -35,7 +34,6 @@ class _OutBoardingState extends State<OutBoarding> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _pageController.dispose();
     super.dispose();
   }
@@ -138,7 +136,7 @@ class _OutBoardingState extends State<OutBoarding> {
                       width:
                           isFirstPage() ? ManagerWeight.w20 : ManagerWeight.w8),
                   SizedBox(
-                    width: ManagerWeight.w9,
+                    width: ManagerWeight.w10,
                   ),
                   progressIndicator(
                       color: isSecondPage()
@@ -148,7 +146,7 @@ class _OutBoardingState extends State<OutBoarding> {
                           ? ManagerWeight.w20
                           : ManagerWeight.w8),
                   SizedBox(
-                    width: ManagerWeight.w9,
+                    width: ManagerWeight.w10,
                   ),
                   progressIndicator(
                       color: isThirdPage()
@@ -157,7 +155,7 @@ class _OutBoardingState extends State<OutBoarding> {
                       width:
                           isThirdPage() ? ManagerWeight.w20 : ManagerWeight.w8),
                   SizedBox(
-                    width: ManagerWeight.w9,
+                    width: ManagerWeight.w10,
                   ),
                   progressIndicator(
                       color: isLastPage()
@@ -177,7 +175,7 @@ class _OutBoardingState extends State<OutBoarding> {
                     color: ManagerColors.white,
                   ),
                   title: ManagerStrings.skip,
-                  onPeessed: () {
+                  onPreessed: () {
                     _pageController.animateToPage(
                         ManagerConestant.LastPageindex,
                         duration: const Duration(
@@ -191,7 +189,7 @@ class _OutBoardingState extends State<OutBoarding> {
                   textStyle: const TextStyle(
                     color: ManagerColors.white,
                   ),
-                  onPeessed: () {
+                  onPreessed: () {
                     Navigator.pushNamed(context, Routes.authScreen);
                     _appSittingsSharedPreferences.saveViewedOutBoarding();
                   },

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shop_avatar/core/constants.dart';
-import 'package:shop_avatar/core/resources/manager_colors.dart';
-import 'package:shop_avatar/core/resources/manager_height.dart';
-import 'package:shop_avatar/core/resources/manager_text_styles.dart';
-import 'package:shop_avatar/core/resources/manager_weight.dart';
-import 'package:shop_avatar/features/auth/presentation/controller/auth_controller.dart';
+import '/core/constants.dart';
+import '/core/resources/manager_colors.dart';
+import '/core/resources/manager_height.dart';
+import '/core/resources/manager_spacer.dart';
+import '/core/resources/manager_text_styles.dart';
+import '/core/resources/manager_weight.dart';
+import '/features/auth/presentation/controller/auth_controller.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_assets.dart';
 import '../../../../core/resources/manager_strings.dart';
@@ -85,10 +86,10 @@ class LoginView extends StatelessWidget {
                           controller.changePasswordVisibility();
                         },
                         icon: controller.showPassword
-                            ? Icon(
+                            ? const Icon(
                                 Icons.visibility_off,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.visibility,
                                 color: ManagerColors.primaryColor,
                               )),
@@ -172,11 +173,11 @@ class LoginView extends StatelessWidget {
                 ),
                 base_button(
                   title: ManagerStrings.login,
-                  onPeessed: () {
+                  onPreessed: () {
                     controller.performLogin(context);
                   },
                   isVisibalIcon: false,
-                  spacer: ManagerConestant.Spacer3,
+                  spacer: ManagerSpacer.s3,
                   bgColor: ManagerColors.primaryColor,
                   textStyle: getRegularTextStyle(
                       color: ManagerColors.white,

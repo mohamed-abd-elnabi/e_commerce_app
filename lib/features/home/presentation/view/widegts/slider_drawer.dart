@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_avatar/core/resources/managar_font_size.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_height.dart';
+import 'package:shop_avatar/core/resources/manager_spacer.dart';
 import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import 'package:slide_drawer/slide_drawer.dart';
 import '../../../../../core/resources/manager_text_styles.dart';
@@ -42,7 +43,7 @@ class SliderDrawer extends StatelessWidget {
                 color: Colors.black, fontSize: ManagerFontSize.s16),
           ),
           const Spacer(
-            flex: 2,
+            flex: ManagerSpacer.s2,
           ),
         ]),
       ),

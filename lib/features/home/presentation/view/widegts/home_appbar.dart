@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_avatar/core/constants.dart';
 import 'package:slide_drawer/slide_drawer.dart';
-
 import '../../../../../core/resources/managar_font_size.dart';
 import '../../../../../core/resources/manager_colors.dart';
 import '../../../../../core/resources/manager_icon_size.dart';

@@ -10,8 +10,8 @@ Container progressIndicator({
   double? width,
 }) {
   return Container(
-    height: ManagerHeight.h9,
-    width: width ?? ManagerWeight.w9,
+    height: ManagerHeight.h8,
+    width: width ?? ManagerWeight.w8,
     decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.all(Radius.circular(ManagerRaduis.r20))),

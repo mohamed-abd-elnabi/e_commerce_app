@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
-import 'package:http/http.dart';
 import 'package:shop_avatar/core/constants.dart';
 import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import 'package:shop_avatar/core/widegts/helpers.dart';
@@ -79,7 +78,7 @@ class AuthApiController with Helpers {
     );
 
     var json = jsonDecode(response.body);
-    if (response.statusCode >= 200 && response.statusCode > 300) {
+    if (response.statusCode >= 200 && response.statusCode < 300) {
       return true;
     }
 

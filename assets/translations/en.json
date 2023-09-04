@@ -29,5 +29,19 @@
   "bestProduct": "Best Product",
   "showMore": "Show more",
   "features": "features",
-  "discounted": "discounted"
+  "discounted": "discounted",
+  "loginSuccesfulleu": "Login Succesfulleu",
+  "emailRequired": "Email is required",
+  "passwordRequired": "Password is required",
+  "productDetails": "Product Details",
+  "details": "DETAILS",
+  "reviews": "REVIEWS",
+  "addReview": "Add Review",
+  "notes": "Notes",
+  "writeHere": "Write here",
+  "price": "PRICE"
+
+
+
+
 }
