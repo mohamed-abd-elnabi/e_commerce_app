@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_avatar/core/constants.dart';
 
 mixin Helpers {
   void showSnackBar({
@@ -10,7 +11,7 @@ mixin Helpers {
       SnackBar(
         content: Text(message),
         backgroundColor: error ? Colors.red : Colors.green,
-        duration: const Duration(seconds: 1),
+        duration: const Duration(seconds: ManagerConestant.timeSnackBar),
       ),
     );
   }
