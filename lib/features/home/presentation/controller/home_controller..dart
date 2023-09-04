@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:shop_avatar/core/resources/manager_weight.dart';
 import 'package:shop_avatar/features/home/data/data_source/home_api_controller.dart';
 import 'package:shop_avatar/features/home/presentation/model/home_model.dart';
-import '../../../../core/resources/manager_height.dart';
+import '../../../../routes/routes.dart';
 import '../model/category_model.dart';
 
 class HomeController extends GetxController {
@@ -52,7 +51,7 @@ class HomeController extends GetxController {
   }
 
   productDetails(BuildContext context) {
-    Navigator.pushNamed(context, ' Routes.itemDetails');
+    Navigator.pushNamed(context, Routes.itemDetails);
   }
 
   Widget image({required String courseAvatar, String? defaultImage}) {
