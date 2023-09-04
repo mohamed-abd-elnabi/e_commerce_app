@@ -7,7 +7,7 @@ import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/routes/routes.dart';
 import 'package:shop_avatar/core/widegts/base_button.dart';
 import '../../../../core/resources/managar_font_size.dart';
-import '../../../../core/resources/manager_font_weight.dart';
+import '../../../../core/resources/manager_spacer.dart';
 import '../../../../core/resources/manager_text_styles.dart';
 
 class Authentication extends StatelessWidget {
@@ -38,11 +38,11 @@ class Authentication extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Spacer(
-                flex: ManagerConestant.Spacer3,
+                flex: ManagerSpacer.s3,
               ),
               Image.asset(ManagerAssets.logoAppAuth),
               const Spacer(
-                flex: 2,
+                flex: ManagerSpacer.s2,
               ),
               Text(
                 ManagerStrings.welcome.toUpperCase(),
@@ -64,11 +64,11 @@ class Authentication extends StatelessWidget {
               const Spacer(),
               base_button(
                 title: ManagerStrings.signUp,
-                onPeessed: () {
+                onPreessed: () {
                   Navigator.pushNamed(context, Routes.registerView);
                 },
                 isVisibalIcon: false,
-                spacer: ManagerConestant.Spacer3,
+                spacer: ManagerSpacer.s3,
                 textStyle: getRegularTextStyle(
                     color: ManagerColors.white, fontSize: ManagerFontSize.s18),
               ),
@@ -77,11 +77,11 @@ class Authentication extends StatelessWidget {
               ),
               base_button(
                 title: ManagerStrings.signIn,
-                onPeessed: () {
+                onPreessed: () {
                   Navigator.pushNamed(context, Routes.loginView);
                 },
                 isVisibalIcon: false,
-                spacer: ManagerConestant.Spacer3,
+                spacer: ManagerSpacer.s3,
                 bgColor: ManagerColors.white,
                 textStyle: getRegularTextStyle(
                     color: ManagerColors.primaryColor,
@@ -92,8 +92,8 @@ class Authentication extends StatelessWidget {
               ),
               base_button(
                 title: ManagerStrings.visitor,
-                onPeessed: () {},
-                spacer: ManagerConestant.Spacer3,
+                onPreessed: () {},
+                spacer: ManagerSpacer.s3,
                 bgColor: ManagerColors.white
                     .withOpacity(ManagerConestant.OpacityButtonauthscreen),
                 textStyle: getRegularTextStyle(
