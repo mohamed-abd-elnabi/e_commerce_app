@@ -6,6 +6,7 @@ import '../features/home/presentation/view/home_view.dart';
 import '../features/out_boarding/presentation/view/out_boarding_screen.dart';
 import '../features/auth/presentation/view/login_view.dart';
 import '../features/auth/presentation/view/register.dart';
+import '../features/product_details/presentation/view/product_details.dart';
 import '../features/splach/presentation/view/splach_screen.dart';
 
 class Routes {
@@ -16,6 +17,7 @@ class Routes {
   static const String loginView = '/loginview_screen';
   static const String registerView = '/register_screen';
   static const String homePage = '/home_screen';
+  static const String itemDetails = '/itemDetails_screen';
 }
 
 class RouteGenerator {
@@ -36,6 +38,8 @@ class RouteGenerator {
       case Routes.homePage:
         initHome();
         return MaterialPageRoute(builder: (context) => const HomeView());
+      case Routes.itemDetails:
+        return MaterialPageRoute(builder: (context) => ItemDetails());
       default:
         return unDefindRout();
     }

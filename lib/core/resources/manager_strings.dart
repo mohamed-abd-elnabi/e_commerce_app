@@ -33,4 +33,15 @@ class ManagerStrings {
   static String get showMore => tr('showMore');
   static String get features => tr('features');
   static String get discounted => tr('discounted');
+  static String get emailRequired => tr('emailRequired');
+  static String get passwordRequired => tr('passwordRequired');
+  static String get loginSuccesfulleu => tr('loginSuccesfulleu');
+  static String get productDetails => tr('productDetails');
+  static String get details => tr('details');
+  static String get reviews => tr('reviews');
+  static String get more => tr('more');
+  static String get addReview => tr('addReview');
+  static String get notes => tr('notes');
+  static String get writeHere => tr('writeHere');
+  static String get price => tr('price');
 }
