@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop_avatar/core/extinsion/extinsion.dart';
+import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/routes/routes.dart';
 import '../../../../core/resources/manager_colors.dart';
+import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/widegts/helpers.dart';
 import '../../data/data_source/auth_api_controller.dart';
 
@@ -78,7 +80,7 @@ class AuthController extends GetxController with Helpers {
       )) {
         showSnackBar(
           context: context,
-          message: 'Login Succesfulleu',
+          message: ManagerStrings.loginSuccesfulleu,
         );
         Get.back();
         Get.offAllNamed(Routes.homePage);
@@ -90,7 +92,7 @@ class AuthController extends GetxController with Helpers {
 
   bool checkEmail(BuildContext context) {
     if (textEmailEditingController.text.isEmpty) {
-      emailError = 'Email is required';
+      emailError = ManagerStrings.emailRequired;
       showSnackBar(
         context: context,
         error: true,
@@ -103,7 +105,7 @@ class AuthController extends GetxController with Helpers {
 
   bool checkPassword(BuildContext context) {
     if (textPasswordEditingController.text.isEmpty) {
-      passwordError = 'Password is required';
+      passwordError = ManagerStrings.passwordRequired;
       showSnackBar(
         context: context,
         error: true,
