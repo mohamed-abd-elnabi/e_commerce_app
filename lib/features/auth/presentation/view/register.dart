@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
-import 'package:shop_avatar/core/constants.dart';
-import 'package:shop_avatar/core/resources/manager_colors.dart';
-import 'package:shop_avatar/core/resources/manager_height.dart';
-import 'package:shop_avatar/core/resources/manager_text_styles.dart';
-import 'package:shop_avatar/features/auth/presentation/controller/auth_controller.dart';
+import 'package:shop_avatar/core/resources/manager_spacer.dart';
+import '/core/constants.dart';
+import '/core/resources/manager_colors.dart';
+import '/core/resources/manager_height.dart';
+import '/core/resources/manager_text_styles.dart';
+import '/features/auth/presentation/controller/auth_controller.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_strings.dart';
 import '../../../../routes/routes.dart';
@@ -48,7 +49,6 @@ class RegisterView extends StatelessWidget {
                 TextField(
                   controller: controller.textUsernameEditingController,
                   decoration: InputDecoration(
-                    fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.username,
                       style: getRegularTextStyle(
@@ -75,7 +75,6 @@ class RegisterView extends StatelessWidget {
                 TextField(
                   controller: controller.textEmailEditingController,
                   decoration: InputDecoration(
-                    fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.email,
                       style: getRegularTextStyle(
@@ -101,7 +100,6 @@ class RegisterView extends StatelessWidget {
                 TextField(
                   controller: controller.textNumberEditingController,
                   decoration: InputDecoration(
-                    fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.numberCity,
                       style: getRegularTextStyle(
@@ -136,11 +134,10 @@ class RegisterView extends StatelessWidget {
                             ? const Icon(
                                 Icons.visibility_off,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.visibility,
                                 color: ManagerColors.primaryColor,
                               )),
-                    fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.password,
                       style: getRegularTextStyle(
@@ -172,14 +169,13 @@ class RegisterView extends StatelessWidget {
                           controller.changeConfirmPasswordVisibility();
                         },
                         icon: controller.showConfirmPassword
-                            ? Icon(
+                            ? const Icon(
                                 Icons.visibility_off,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.visibility,
                                 color: ManagerColors.primaryColor,
                               )),
-                    fillColor: Colors.amber,
                     label: Text(
                       ManagerStrings.confirmPassword,
                       style: getRegularTextStyle(
@@ -228,11 +224,11 @@ class RegisterView extends StatelessWidget {
                 ),
                 base_button(
                   title: ManagerStrings.signUp,
-                  onPeessed: () {
+                  onPreessed: () {
                     controller.performRegister(context);
                   },
                   isVisibalIcon: false,
-                  spacer: ManagerConestant.Spacer3,
+                  spacer: ManagerSpacer.s3,
                   bgColor: ManagerColors.primaryColor,
                   textStyle: getRegularTextStyle(
                       color: ManagerColors.white,
