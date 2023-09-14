@@ -18,7 +18,9 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AuthController>(builder: (controller) {
+    return GetBuilder<AuthController>(
+        // init: AuthController(),
+        builder: (controller) {
       return Scaffold(
         extendBodyBehindAppBar: false,
         appBar: AppBar(
