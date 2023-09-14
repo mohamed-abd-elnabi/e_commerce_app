@@ -11,8 +11,8 @@ class ManagerConestant {
   static const double OpacityButtonauthscreen = 0.6;
   static const int timeSnackBar = 2;
   static const double letterSpacingWithSignInText = 2;
-  static const double designSizeWidth = 375;
-  static const double designSizeHigth = 810;
+  static const double designDeviceWidth = 375;
+  static const double designDeviceHeight = 812;
 }
 
 class keyConestant {
@@ -54,4 +54,6 @@ class ApiConstants {
   static const String acceptLanguage = 'Accept-Language';
   static const String errorMassage = 'message';
   static const String accessToken = 'access_token';
+  static const String bearer = 'Bearer';
+  static const String authorization = 'Authorization';
 }
