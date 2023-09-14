@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../core/resources/manager_assets.dart';
-import '../presentation/view/Review.dart';
 
-class DetailsController extends GetxController {
+import '../../../../core/resources/manager_assets.dart';
+import '../view/Review.dart';
+
+class ProductDetailsController extends GetxController {
   late PageController pageController;
   int currentPageIndex = 0;
   bool isFavorite = false;
