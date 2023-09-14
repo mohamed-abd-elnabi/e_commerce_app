@@ -9,7 +9,7 @@ import 'package:shop_avatar/core/network/api/dio_factory.dart';
 import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import 'package:shop_avatar/features/home/presentation/controller/home_controller.dart';
 import '../../features/auth/presentation/controller/auth_controller.dart';
-import '../../features/product_details/controller/item_details.dart';
+import '../../features/product_details/presentation/controller/product_details_controller.dart';
 import '../../features/splach/presentation/controller/splach_controller.dart';
 
 final instance = GetIt.instance;
@@ -60,9 +60,9 @@ initHome() {
 disposeHome() {}
 
 initDetails() {
-  Get.put<DetailsController>(DetailsController());
+  Get.put<ProductDetailsController>(ProductDetailsController());
 }
 
 disposeDetails() {
-  Get.delete<DetailsController>();
+  Get.delete<ProductDetailsController>();
 }

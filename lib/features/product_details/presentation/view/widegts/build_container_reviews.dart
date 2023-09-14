@@ -6,8 +6,7 @@ import 'package:shop_avatar/core/resources/manager_weight.dart';
 import '../../../../../core/constants.dart';
 import '../../../../../core/resources/managar_font_size.dart';
 import '../../../../../core/resources/manager_icon_size.dart';
-import '../../../../../core/resources/manager_padding.dart';
-import '../../../controller/item_details.dart';
+import '../../controller/product_details_controller.dart';
 import '/core/resources/manager_colors.dart';
 import '/core/resources/manager_height.dart';
 import '/core/resources/manager_text_styles.dart';
@@ -22,7 +21,7 @@ class buildContainerReviews extends StatefulWidget {
 class _buildContainerReviewsState extends State<buildContainerReviews> {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<DetailsController>(builder: (controller) {
+    return GetBuilder<ProductDetailsController>(builder: (controller) {
       return Container(
         margin: EdgeInsets.only(
           bottom: ManagerHeight.h6,
