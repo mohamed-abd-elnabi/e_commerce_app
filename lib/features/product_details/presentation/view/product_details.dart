@@ -6,27 +6,24 @@ import 'package:shop_avatar/core/resources/manager_weight.dart';
 import 'package:shop_avatar/features/product_details/presentation/view/widegts/build_container_details.dart';
 import 'package:shop_avatar/features/product_details/presentation/view/widegts/build_container_reviews.dart';
 import '../../../../core/resources/managar_font_size.dart';
-import '../../../../core/resources/manager_font_weight.dart';
 import '../../../../core/resources/manager_icon_size.dart';
-import '../../../../core/resources/manager_padding.dart';
 import '../../../../core/widegts/page_view_indicator.dart';
-import '../../controller/item_details.dart';
+import '../controller/product_details_controller.dart';
 import '/core/resources/manager_assets.dart';
-import '/core/resources/manager_colors.dart';
 import '/core/resources/manager_height.dart';
 import '/core/resources/manager_text_styles.dart';
 
-class ItemDetails extends StatefulWidget {
-  const ItemDetails({Key? key}) : super(key: key);
+class ProductDetailsView extends StatefulWidget {
+  const ProductDetailsView({Key? key}) : super(key: key);
 
   @override
-  _ItemDetailsState createState() => _ItemDetailsState();
+  _ProductDetailsViewState createState() => _ProductDetailsViewState();
 }
 
-class _ItemDetailsState extends State<ItemDetails> {
+class _ProductDetailsViewState extends State<ProductDetailsView> {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<DetailsController>(
+    return GetBuilder<ProductDetailsController>(
       builder: (controller) {
         return Scaffold(
           appBar: AppBar(
