@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -6,8 +7,13 @@ import 'package:shop_avatar/config/locale/locale_settings.dart';
 import 'package:shop_avatar/config/localization/dependancy_injection.dart';
 import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/routes/routes.dart';
+import 'core/constants.dart';
+import 'firebase_options.dart';
 
 main() async {
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
   await initModule();
   runApp(
     EasyLocalization(
@@ -26,6 +32,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
+      splitScreenMode: true,
+      designSize: Size(
+        ManagerConestant.designDeviceWidth,
+        ManagerConestant.designDeviceHeight,
+      ),
       builder: (context, child) {
         return GetMaterialApp(
           locale: context.locale,

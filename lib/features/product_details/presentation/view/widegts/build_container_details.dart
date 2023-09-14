@@ -214,7 +214,7 @@ Container buildContainerDetails(DetailsController controller) {
             Expanded(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(155, 50),
+                  minimumSize: Size(ManagerWeight.w156, ManagerHeight.h56),
                   backgroundColor: ManagerColors.primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
@@ -231,6 +231,7 @@ Container buildContainerDetails(DetailsController controller) {
             ),
           ],
         ),
+        SizedBox(height: ManagerHeight.h30),
       ],
     ),
   );

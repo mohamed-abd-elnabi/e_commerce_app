@@ -151,24 +151,26 @@ class _buildContainerReviewsState extends State<buildContainerReviews> {
                     ],
                   )),
             ),
-            Padding(
-              padding: EdgeInsets.all(ManagerPadding.p10),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(ManagerWeight.w260, ManagerHeight.h50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(ManagerRaduis.r12),
-                  ),
-                  backgroundColor: Colors.deepOrangeAccent,
+            SizedBox(
+              height: ManagerHeight.h24,
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(ManagerWeight.w220, ManagerHeight.h40),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(ManagerRaduis.r12),
                 ),
-                onPressed: () {},
-                child: Text(
-                  ManagerStrings.addReview,
-                  style: getMediumTextStyle(
-                      fontSize: ManagerFontSize.s16,
-                      color: ManagerColors.white),
-                ),
+                backgroundColor: Colors.deepOrangeAccent,
               ),
+              onPressed: () {},
+              child: Text(
+                ManagerStrings.addReview,
+                style: getMediumTextStyle(
+                    fontSize: ManagerFontSize.s16, color: ManagerColors.white),
+              ),
+            ),
+            SizedBox(
+              height: ManagerHeight.h24,
             ),
           ],
         ),

@@ -6,7 +6,7 @@ import '/features/home/presentation/view/widegts/product_card_item.dart';
 import '/features/home/presentation/view/widegts/section_title.dart';
 import '/features/home/presentation/view/widegts/slider_drawer.dart';
 import '../../../../core/resources/manager_weight.dart';
-import '../controller/home_controller..dart';
+import '../controller/home_controller.dart';
 import '../model/home_model.dart';
 import '/core/resources/manager_colors.dart';
 import '/core/resources/manager_height.dart';
