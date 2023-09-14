@@ -5,13 +5,13 @@ import 'package:shop_avatar/core/resources/manager_weight.dart';
 import '../../../../../core/resources/managar_font_size.dart';
 import '../../../../../core/resources/manager_font_weight.dart';
 import '../../../../../core/resources/manager_icon_size.dart';
-import '../../../controller/item_details.dart';
+import '../../controller/product_details_controller.dart';
 import '/core/resources/manager_colors.dart';
 import '/core/resources/manager_height.dart';
 import '/core/resources/manager_text_styles.dart';
 import 'expandable_text.dart';
 
-Container buildContainerDetails(DetailsController controller) {
+Container buildContainerDetails(ProductDetailsController controller) {
   return Container(
     margin: EdgeInsets.only(
       left: ManagerWeight.w30,
