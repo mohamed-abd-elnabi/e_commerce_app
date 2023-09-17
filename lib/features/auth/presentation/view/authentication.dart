@@ -65,7 +65,7 @@ class Authentication extends StatelessWidget {
               base_button(
                 title: ManagerStrings.signUp,
                 onPreessed: () {
-                  Navigator.pushNamed(context, Routes.registerView);
+                  Navigator.pushNamed(context, Routes.registerScreen);
                 },
                 isVisibalIcon: false,
                 spacer: ManagerSpacer.s3,
@@ -78,7 +78,7 @@ class Authentication extends StatelessWidget {
               base_button(
                 title: ManagerStrings.signIn,
                 onPreessed: () {
-                  Navigator.pushNamed(context, Routes.loginView);
+                  Navigator.pushNamed(context, Routes.loginScreen);
                 },
                 isVisibalIcon: false,
                 spacer: ManagerSpacer.s3,

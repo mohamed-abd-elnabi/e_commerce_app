@@ -11,11 +11,12 @@ abstract class ProductDetailsRepository {
   );
 }
 
-class ProductRepositoryImplementation implements ProductDetailsRepository {
+class ProductDetailsRepositoryImplementation
+    implements ProductDetailsRepository {
   final ProductDetailsRemoteDataSource data;
   final NetworkInfo networkInfo;
 
-  ProductRepositoryImplementation({
+  ProductDetailsRepositoryImplementation({
     required this.data,
     required this.networkInfo,
   });

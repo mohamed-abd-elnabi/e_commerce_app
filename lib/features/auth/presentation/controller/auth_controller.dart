@@ -215,7 +215,7 @@ class AuthController extends GetxController with Helpers {
           message: 'Register Succesfulleu',
         );
         Get.back();
-        Get.offAllNamed(Routes.loginView);
+        Get.offAllNamed(Routes.loginScreen);
       }
       Get.back();
     }

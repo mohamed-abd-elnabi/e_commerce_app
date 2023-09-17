@@ -10,7 +10,7 @@ ProductDetailsResponse _$ProductDetailsResponseFromJson(
         Map<String, dynamic> json) =>
     ProductDetailsResponse(
       status: json['status'] as int?,
-      success: json['success'] as String?,
+      success: json['success'] as bool?,
       data: (json['data'] as List<dynamic>?)
           ?.map((e) =>
               ProductDetailsDataResponse.fromJson(e as Map<String, dynamic>))

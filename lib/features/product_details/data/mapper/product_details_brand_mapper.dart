@@ -6,6 +6,9 @@ import '../respose/product_details_brand_response.dart';
 extension ProductDetailsBrandMapper on ProductDetailsBrandResponse {
   ProductDetailsBrandModel toDomain() {
     return ProductDetailsBrandModel(
-        id: id.onNull(), name: name.onNull(), logo: logo.onNull());
+      id: id.onNull(),
+      name: name.onNull(),
+      logo: logo.onNull(),
+    );
   }
 }
