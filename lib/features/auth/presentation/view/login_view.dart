@@ -165,7 +165,7 @@ class LoginView extends StatelessWidget {
                             color: ManagerColors.primaryColor),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, Routes.registerView);
+                        Navigator.pushNamed(context, Routes.registerScreen);
                       },
                     )
                   ],
