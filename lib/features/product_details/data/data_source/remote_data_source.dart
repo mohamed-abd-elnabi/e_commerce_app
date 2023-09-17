@@ -15,7 +15,8 @@ class ProductDetailsDataSourceImplementation
 
   @override
   Future<ProductDetailsResponse> getProductDetails(
-      ProductDetailsRequest request) async {
+    ProductDetailsRequest request,
+  ) async {
     return await _appApi.productDetails(request.id);
   }
 }

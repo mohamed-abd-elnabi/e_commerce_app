@@ -3,12 +3,12 @@ import 'package:get/get.dart';
 import 'package:shop_avatar/core/constants.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
+import 'package:shop_avatar/features/home/presentation/controller/home_controller.dart';
 import 'package:shop_avatar/features/product_details/presentation/view/widegts/build_container_details.dart';
 import 'package:shop_avatar/features/product_details/presentation/view/widegts/build_container_reviews.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_icon_size.dart';
 import '../../../../core/widegts/page_view_indicator.dart';
-import '../controller/product_details_controller.dart';
 import '/core/resources/manager_assets.dart';
 import '/core/resources/manager_height.dart';
 import '/core/resources/manager_text_styles.dart';
@@ -23,7 +23,7 @@ class ProductDetailsView extends StatefulWidget {
 class _ProductDetailsViewState extends State<ProductDetailsView> {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<ProductDetailsController>(
+    return GetBuilder<HomeController>(
       builder: (controller) {
         return Scaffold(
           appBar: AppBar(
@@ -64,7 +64,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                           });
                         },
                         children: [
-                          Image.asset(
+                          Image.network(
                             ManagerAssets.product,
                             fit: BoxFit.fill,
                           ),

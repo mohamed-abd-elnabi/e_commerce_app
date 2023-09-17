@@ -7,7 +7,7 @@ class ProductDetailsResponse {
   @JsonKey(name: 'status')
   int? status;
   @JsonKey(name: 'success')
-  String? success;
+  bool? success;
   @JsonKey(name: 'data')
   List<ProductDetailsDataResponse>? data;
 

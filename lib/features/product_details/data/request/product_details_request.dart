@@ -1,5 +1,7 @@
 class ProductDetailsRequest {
   int id;
 
-  ProductDetailsRequest({required this.id});
+  ProductDetailsRequest({
+    required this.id,
+  });
 }

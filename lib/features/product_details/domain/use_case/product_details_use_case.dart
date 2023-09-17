@@ -1,27 +1,33 @@
+import '../../../../core/erorr_handler/erorr_handler.dart';
+import '../repository/product_details_repository.dart';
+import '/core/use_case/base_use_case.dart';
+import '/features/product_details/data/request/product_details_request.dart';
+import '/features/product_details/domain/model/product_details_model.dart';
 import 'package:dartz/dartz.dart';
-import 'package:shop_avatar/core/erorr_handler/erorr_handler.dart';
-import 'package:shop_avatar/core/use_case/base_use_case.dart';
-import 'package:shop_avatar/features/product_details/data/request/product_details_request.dart';
-import 'package:shop_avatar/features/product_details/domain/model/product_details_model.dart';
-import 'package:shop_avatar/features/product_details/domain/repository/product_details_repository.dart';
 
-class ProductDetailsUesCaseInput {
+class ProductDetailsUseCaseInput {
   int id;
 
-  ProductDetailsUesCaseInput({required this.id});
+  ProductDetailsUseCaseInput({
+    required this.id,
+  });
 }
 
-class ProductDetailsUesCaseImplementation
-    implements BaseUseCase<ProductDetailsUesCaseInput, ProductDetailsModel> {
+class ProductDetailsUseCaseImplementation
+    implements BaseUseCase<ProductDetailsUseCaseInput, ProductDetailsModel> {
   final ProductDetailsRepository _repository;
 
-  ProductDetailsUesCaseImplementation(this._repository);
+  ProductDetailsUseCaseImplementation(
+    this._repository,
+  );
 
   @override
   Future<Either<Failure, ProductDetailsModel>> execute(
-      ProductDetailsUesCaseInput input) async {
+      ProductDetailsUseCaseInput input) async {
     return await _repository.getProductDetails(
-      ProductDetailsRequest(id: input.id),
+      ProductDetailsRequest(
+        id: input.id,
+      ),
     );
   }
 }

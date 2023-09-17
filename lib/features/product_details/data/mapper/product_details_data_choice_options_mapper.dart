@@ -7,6 +7,9 @@ extension ProductDetailsDataChoiceOptionsMapper
     on ProductDetailsDataChoiceOptionsResponse {
   ProductDetailsDataChoiceOptionsModel toDomain() {
     return ProductDetailsDataChoiceOptionsModel(
-        name: name.onNull(), options: options.onNull(), title: title.onNull());
+      name: name.onNull(),
+      options: options.onNull(),
+      title: title.onNull(),
+    );
   }
 }

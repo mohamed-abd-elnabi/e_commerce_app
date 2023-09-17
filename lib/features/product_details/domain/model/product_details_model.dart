@@ -2,7 +2,7 @@ import 'package:shop_avatar/features/product_details/domain/model/product_detail
 
 class ProductDetailsModel {
   int status;
-  String success;
+  bool success;
   List<ProductDetailsDataModel> data;
 
   ProductDetailsModel({
