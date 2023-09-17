@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       splitScreenMode: true,
-      designSize: Size(
+      designSize: const Size(
         ManagerConestant.designDeviceWidth,
         ManagerConestant.designDeviceHeight,
       ),
