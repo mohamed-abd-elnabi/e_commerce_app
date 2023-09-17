@@ -44,4 +44,6 @@ class ManagerStrings {
   static String get notes => tr('notes');
   static String get writeHere => tr('writeHere');
   static String get price => tr('price');
+  static String get notifications => tr('notifications');
+  static String get profile => tr('profile');
 }
