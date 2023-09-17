@@ -7,35 +7,43 @@ import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_s
 class DioFactory {
   AppSettingsSharedPreferences appSettingsSharedPreferences =
       AppSettingsSharedPreferences();
+
   Future<Dio> getDio() async {
     Dio dio = Dio();
+
     dio.options = BaseOptions(
       baseUrl: ApiRequest.baseUrl,
       receiveTimeout: const Duration(seconds: 60),
       sendTimeout: const Duration(seconds: 120),
       headers: getHeaders(),
     );
-
-    InterceptorsWrapper interceptorsWrapper = InterceptorsWrapper(onRequest: (
-      RequestOptions options,
-      RequestInterceptorHandler handler,
-    ) async {
-      options.headers[ApiConstants.authorization] =
-          '${ApiConstants.bearer} ${appSettingsSharedPreferences.defaultToken}';
-
-      handler.next(options);
-    });
+    InterceptorsWrapper interceptorsWrapper = InterceptorsWrapper(
+      onRequest: (
+        RequestOptions options,
+        RequestInterceptorHandler handler,
+      ) {
+        options.headers[ApiConstants.authorization] = getAuthorization();
+        return handler.next(options);
+      },
+    );
     dio.interceptors.add(interceptorsWrapper);
-    if (kReleaseMode) {
-      dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: true,
-      ));
+
+    if (!kReleaseMode) {
+      dio.interceptors.add(
+        PrettyDioLogger(
+          requestHeader: true,
+          requestBody: true,
+          responseHeader: true,
+          responseBody: true,
+        ),
+      );
     }
 
     return dio;
+  }
+
+  String getAuthorization() {
+    return '${ApiConstants.bearer} ${appSettingsSharedPreferences.defaultToken}';
   }
 
   Map<String, String> getHeaders() {
@@ -45,9 +53,5 @@ class DioFactory {
       'Content-Type': 'application/json',
       'Accept-Language': appSettingsSharedPreferences.defaultLocale,
     };
-  }
-
-  String getAuthorization() {
-    return '${ApiConstants.bearer} ${appSettingsSharedPreferences.defaultToken}';
   }
 }
