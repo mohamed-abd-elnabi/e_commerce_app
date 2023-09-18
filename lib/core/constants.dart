@@ -43,6 +43,8 @@ class ApiRequest {
   static const String categories = '$api/categories';
   static const String home = '$api/products/home';
   static const String productDetails = '$api/products/{${ApiConstants.id}}';
+  static const String forgetPasswordRequest =
+      '${apiAuth}/password/forget_request';
 }
 
 class ApiConstants {
