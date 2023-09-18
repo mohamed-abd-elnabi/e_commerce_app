@@ -10,7 +10,7 @@ SizedBox CategoriesList(HomeController controller) {
     height: ManagerHeight.h100,
     child: ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: controller.categoryList.length,
+      itemCount: controller.categories.length,
       itemBuilder: (context, index) {
         return Container(
           height: ManagerHeight.h100,
@@ -27,10 +27,10 @@ SizedBox CategoriesList(HomeController controller) {
               children: [
                 Image.network(
                     height: ManagerHeight.h50,
-                    controller.categoryList[index].banner),
+                    controller.categories[index].banner),
                 Text(
                   maxLines: 1,
-                  controller.categoryList[index].name,
+                  controller.categories[index].name,
                   style: const TextStyle(overflow: TextOverflow.ellipsis),
                 ),
               ]),
