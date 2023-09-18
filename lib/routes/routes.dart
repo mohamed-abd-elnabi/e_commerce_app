@@ -4,6 +4,8 @@ import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/features/profile/presentation/view/profile_view.dart';
 import '../features/about_app/presentation/view/about_view.dart';
 import '../features/auth/presentation/view/authentication.dart';
+import '../features/forget_password/presentation/view/forget_password_view.dart';
+import '../features/forget_password/presentation/view/otb_code_verification.dart';
 import '../features/home/presentation/view/home_view.dart';
 import '../features/notifications/presentation/view/notifications_view.dart';
 import '../features/out_boarding/presentation/view/out_boarding_screen.dart';
@@ -30,6 +32,8 @@ class Routes {
   static const String aboutView = '/about_screen';
   static const String shareApp = '/share_screen';
   static const String supportView = '/support_screen';
+  static const String forgetPasswordView = '/forgetPassword_screen';
+  static const String otbCodeCerificationView = '/otbCodeCerification_screen';
 }
 
 class RouteGenerator {
@@ -52,8 +56,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => const HomeView());
       case Routes.itemDetails:
         initProductDetails();
-        return MaterialPageRoute(
-            builder: (context) => const ProductDetailsView());
+        return MaterialPageRoute(builder: (context) => const ItemDetails());
       case Routes.notificationsScreen:
         return MaterialPageRoute(
             builder: (context) => const NotificationsView());
@@ -67,6 +70,11 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => const ShareApp());
       case Routes.supportView:
         return MaterialPageRoute(builder: (context) => const SupportView());
+      case Routes.forgetPasswordView:
+        initForgetPassword();
+        return MaterialPageRoute(builder: (context) => ForgetPasswordView());
+      case Routes.otbCodeCerificationView:
+        return MaterialPageRoute(builder: (context) => VerificationScreen());
       default:
         return unDefindRout();
     }
