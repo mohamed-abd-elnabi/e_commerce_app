@@ -138,11 +138,16 @@ class LoginView extends StatelessWidget {
                     SizedBox(
                       width: ManagerHeight.h10,
                     ),
-                    Text(
-                      ManagerStrings.forgetPassword,
-                      style: getRegularTextStyle(
-                          fontSize: ManagerFontSize.s10,
-                          color: ManagerColors.primaryColor),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, Routes.forgetPasswordView);
+                      },
+                      child: Text(
+                        ManagerStrings.forgetPassword,
+                        style: getRegularTextStyle(
+                            fontSize: ManagerFontSize.s10,
+                            color: ManagerColors.primaryColor),
+                      ),
                     ),
                   ],
                 ),
