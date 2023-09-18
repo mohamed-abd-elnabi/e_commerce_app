@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:shop_avatar/core/erorr_handler/erorr_handler.dart';
 import 'package:shop_avatar/core/internet_checker/internet_checker.dart';
+import 'package:shop_avatar/features/product_details/data/mapper/product_details_mapper.dart';
 import 'package:shop_avatar/features/product_details/data/request/product_details_request.dart';
 import 'package:shop_avatar/features/product_details/domain/model/product_details_model.dart';
 import '../../data/data_source/remote_data_source.dart';
@@ -23,16 +24,26 @@ class ProductDetailsRepositoryImplementation
 
   @override
   Future<Either<Failure, ProductDetailsModel>> getProductDetails(
-      ProductDetailsRequest request) async {
+    ProductDetailsRequest request,
+  ) async {
     if (await networkInfo.isConnected) {
       try {
-        final response = data.getProductDetails(request);
-        return Right(response as ProductDetailsModel);
+        final response = await data.getProductDetails(request);
+        return Right(
+          response.toDomain(),
+        );
       } catch (e) {
-        return Left(ErrorHandler.handel(e).failure);
+        return Left(
+          ErrorHandler.handel(e).failure,
+        );
       }
     } else {
-      return Left(Failure(code: 400, massege: 'error'));
+      return Left(
+        Failure(
+          code: 400,
+          massege: 'error',
+        ),
+      );
     }
   }
 }

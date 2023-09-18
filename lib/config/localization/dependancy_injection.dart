@@ -1,5 +1,11 @@
+import 'package:shop_avatar/features/forget_password/data/repoitory_impl/forget_password_repository_impl.dart';
+
 import '../../core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import '../../features/auth/presentation/controller/auth_controller.dart';
+import '../../features/forget_password/data/data_sourse/forget_password_remote_data_source.dart';
+import '../../features/forget_password/domain/repository/forget_passwor_repository.dart';
+import '../../features/forget_password/domain/use_case/forget_password_use_case.dart';
+import '../../features/forget_password/presentation/controller/forget_password_controller.dart';
 import '../../features/product_details/domain/repository/product_details_repository.dart';
 import '../../features/splach/presentation/controller/splach_controller.dart';
 import '/core/internet_checker/internet_checker.dart';
@@ -73,7 +79,7 @@ disposeHome() {}
 initProductDetails() {
   if (!GetIt.I.isRegistered<ProductDetailsRemoteDataSource>()) {
     instance.registerLazySingleton<ProductDetailsRemoteDataSource>(
-      () => ProductDetailsDataSourceImplementation(
+      () => ProductDetailsRemoteDataSourceImplementation(
         instance<AppApi>(),
       ),
     );
@@ -98,3 +104,36 @@ initProductDetails() {
 }
 
 disposeProductDetails() {}
+
+initForgetPassword() {
+  if (!GetIt.I.isRegistered<RemoteForgetPasswordDataSource>()) {
+    instance.registerLazySingleton<RemoteForgetPasswordDataSource>(
+        () => RemoteForgetPasswordDataSourceImplement(instance<AppApi>()));
+  }
+  if (!GetIt.I.isRegistered<ForgetPasswordRepository>()) {
+    instance.registerLazySingleton<ForgetPasswordRepository>(
+        () => ForgetPasswordRepositoryImpl(instance(), instance()));
+  }
+  if (!GetIt.I.isRegistered<ForgetPasswordUseCase>()) {
+    instance.registerFactory<ForgetPasswordUseCase>(
+      () => ForgetPasswordUseCase(
+        instance<ForgetPasswordRepository>(),
+      ),
+    );
+  }
+  Get.put(ForgetPasswordController());
+}
+
+disposeForgetPassword() async {
+  if (GetIt.I.isRegistered<RemoteForgetPasswordDataSource>()) {
+    instance.unregister<RemoteForgetPasswordDataSource>();
+  }
+
+  if (GetIt.I.isRegistered<ForgetPasswordRepository>()) {
+    instance.unregister<ForgetPasswordRepository>();
+  }
+
+  if (GetIt.I.isRegistered<ForgetPasswordUseCase>()) {
+    instance.unregister<ForgetPasswordUseCase>();
+  }
+}

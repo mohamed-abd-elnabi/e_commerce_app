@@ -4,14 +4,15 @@ import '../respose/product_details_response.dart';
 
 abstract class ProductDetailsRemoteDataSource {
   Future<ProductDetailsResponse> getProductDetails(
-      ProductDetailsRequest request);
+    ProductDetailsRequest request,
+  );
 }
 
-class ProductDetailsDataSourceImplementation
+class ProductDetailsRemoteDataSourceImplementation
     implements ProductDetailsRemoteDataSource {
   final AppApi _appApi;
 
-  ProductDetailsDataSourceImplementation(this._appApi);
+  ProductDetailsRemoteDataSourceImplementation(this._appApi);
 
   @override
   Future<ProductDetailsResponse> getProductDetails(
