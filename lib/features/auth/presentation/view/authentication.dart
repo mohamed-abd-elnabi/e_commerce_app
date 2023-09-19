@@ -8,7 +8,7 @@ import 'package:shop_avatar/routes/routes.dart';
 import 'package:shop_avatar/core/widegts/base_button.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_spacer.dart';
-import '../../../../core/resources/manager_text_styles.dart';
+import '../../../../core/resources/manager_text_styles_light.dart';
 
 class Authentication extends StatelessWidget {
   const Authentication({super.key});
