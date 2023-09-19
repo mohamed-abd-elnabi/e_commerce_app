@@ -1,3 +1,5 @@
+import 'package:shop_avatar/routes/routes.dart';
+
 import '/core/resources/managar_font_size.dart';
 import '/core/resources/manager_raduis.dart';
 import '/features/home/presentation/view/widegts/CategoriesList.dart';
@@ -11,7 +13,7 @@ import '../model/home_model.dart';
 import '/core/resources/manager_colors.dart';
 import '/core/resources/manager_height.dart';
 import '/core/resources/manager_strings.dart';
-import '/core/resources/manager_text_styles.dart';
+import '/core/resources/manager_text_styles_light.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:slide_drawer/slide_drawer.dart';
@@ -43,7 +45,12 @@ class HomeView extends StatelessWidget {
                         children: [
                           CategoriesList(controller),
                           SizedBox(height: ManagerHeight.h20),
-                          sectionTitle(),
+                          sectionTitle(
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, Routes.showMoreProducts);
+                            },
+                          ),
                           SizedBox(
                             height: ManagerHeight.h20,
                           ),
