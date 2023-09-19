@@ -46,4 +46,24 @@ class ManagerStrings {
   static String get price => tr('price');
   static String get notifications => tr('notifications');
   static String get profile => tr('profile');
+  static String get about => tr('about');
+  static String get aboutUs => tr('aboutUs');
+  static String get passwordLeast => tr('passwordLeast');
+  static String get passwordsMatch => tr('passwordsMatch');
+  static String get phoneIsRequired => tr('phoneIsRequired');
+  static String get nameIsRequired => tr('nameIsRequired');
+  static String get registerSuccesfulleu => tr('registerSuccesfulleu');
+  static String get somthingWentErorr => tr('somthingWentErorr');
+  static String get myOrders => tr('myOrders');
+  static String get myPayment => tr('myPayment');
+  static String get shareApp => tr('shareApp');
+  static String get myAddress => tr('myAddress');
+  static String get support => tr('support');
+  static String get language => tr('language');
+  static String get editProfile => tr('editProfile');
+  static String get userName => tr('userName');
+  static String get phone => tr('phone');
+  static String get save => tr('save');
+  static String get mobileNumber => tr('mobileNumber');
+  static String get invite => tr('invite');
 }
