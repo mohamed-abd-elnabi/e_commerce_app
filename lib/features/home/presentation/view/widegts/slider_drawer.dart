@@ -1,11 +1,12 @@
+import 'package:shop_avatar/core/constants.dart';
+import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
-
 import '../../../../../core/resources/managar_font_size.dart';
 import '../../../../../routes/routes.dart';
 import '/core/resources/manager_colors.dart';
 import '/core/resources/manager_height.dart';
 import '/core/resources/manager_strings.dart';
-import '/core/resources/manager_text_styles.dart';
+import '/core/resources/manager_text_styles_light.dart';
 import '/features/home/presentation/controller/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,7 +22,7 @@ class SliderDrawer extends StatelessWidget {
         backgroundColor: ManagerColors.primaryColor,
         body: Stack(children: [
           Image.asset(
-            'assets/images/drawer/bg.png',
+            ManagerAssets.bgSlider,
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.fill,
@@ -43,12 +44,12 @@ class SliderDrawer extends StatelessWidget {
                       margin: EdgeInsetsDirectional.symmetric(
                           horizontal: ManagerWeight.w20,
                           vertical: ManagerHeight.h20),
-                      child: Image.asset('assets/images/drawer/icon.png')),
+                      child: Image.asset(ManagerAssets.iconBack)),
                 ),
                 SizedBox(
                   height: ManagerHeight.h20,
                 ),
-                Image.asset('assets/images/drawer/profile.png'),
+                Image.asset(ManagerAssets.profile),
                 Text(
                   controller.appSettingsSharedPreferences.getUserInfo().name,
                   style: getBoldTextStyle(
@@ -99,21 +100,21 @@ class SliderDrawer extends StatelessWidget {
                     // My Orders
                     drawerItem(
                       icon: Icons.book,
-                      title: 'My Orders',
+                      title: ManagerStrings.myOrders,
                       onPressed: () {},
                     ),
 
                     // Payment
                     drawerItem(
                       icon: Icons.payment,
-                      title: 'My Payment',
+                      title: ManagerStrings.myPayment,
                       onPressed: () {},
                     ),
 
                     // My Wishlist
                     drawerItem(
                       icon: Icons.star_border,
-                      title: 'share App',
+                      title: ManagerStrings.shareApp,
                       onPressed: () {
                         Navigator.pushNamed(context, Routes.shareApp);
                       },
@@ -122,14 +123,14 @@ class SliderDrawer extends StatelessWidget {
                     // My Address
                     drawerItem(
                       icon: Icons.add_location,
-                      title: 'My Address',
+                      title: ManagerStrings.myAddress,
                       onPressed: () {},
                     ),
 
                     // Support
                     drawerItem(
                       icon: Icons.support_agent_outlined,
-                      title: 'Support',
+                      title: ManagerStrings.support,
                       onPressed: () {
                         Navigator.pushNamed(context, Routes.supportView);
                       },
@@ -138,7 +139,7 @@ class SliderDrawer extends StatelessWidget {
                     // Language
                     drawerItem(
                       icon: Icons.language,
-                      title: 'Language',
+                      title: ManagerStrings.language,
                       onPressed: () {
                         Navigator.pushNamed(context, '');
                       },
@@ -147,7 +148,7 @@ class SliderDrawer extends StatelessWidget {
                     // About
                     drawerItem(
                       icon: Icons.question_mark,
-                      title: 'About',
+                      title: ManagerStrings.about,
                       onPressed: () {
                         Navigator.pushNamed(context, Routes.aboutView);
                       },
@@ -172,7 +173,7 @@ class SliderDrawer extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding: EdgeInsets.zero,
         backgroundColor: Colors.transparent,
-        elevation: 0,
+        elevation: ManagerConestant.elevationAppbar,
       ),
       onPressed: onPressed,
       child: Row(
