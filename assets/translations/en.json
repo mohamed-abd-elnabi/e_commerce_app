@@ -41,9 +41,25 @@
   "writeHere": "Write here",
   "price": "PRICE",
   "notifications": "Notifications",
-  "profile": "Profile"
-
-
-
-
+  "profile": "Profile",
+  "about": "About",
+  "aboutUs": "About Us",
+  "passwordLeast": "Password must be at least 6 characters",
+  "passwordsMatch": "Passwords do not match",
+  "phoneIsRequired": "phone is required",
+  "nameIsRequired": "name is required",
+  "registerSuccesfulleu": "Register Succesfulleu",
+  "somthingWentErorr": "Somthing Went Erorr",
+  "myOrders": "My Orders",
+  "myPayment": "My Payment",
+  "shareApp": "share App",
+  "myAddress": "My Address",
+  "support": "Support",
+  "language": "Language",
+  "editProfile": "Edit profile",
+  "userName": "User Name",
+  "phone": "Phone",
+  "save": "Save",
+  "mobileNumber": "Mobile Number",
+  "invite": "Invite"
 }

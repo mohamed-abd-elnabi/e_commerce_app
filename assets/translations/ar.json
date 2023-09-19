@@ -41,8 +41,24 @@
   "writeHere": "اكتب هنا ",
   "price": "السعر",
   "notifications": "اشعارات",
-  "profile": "الملف الشخصي"
-
-
-
+  "profile": "الملف الشخصي",
+  "about": "حول التطبيق",
+  "aboutUs": "حول التطبيق",
+  "passwordLeast": "يجب ان تكون كلمة السر اطول من6 احرف",
+  "passwordsMatch": "كلمة السر غير متشابهة بكفي مسخرة صحصح شوي",
+  "phoneIsRequired": "ادخل رقم الهاتف",
+  "nameIsRequired": "ادخل الاسم",
+  "registerSuccesfulleu": "تم انشاء حساب",
+  "somthingWentErorr": "هناك بعض الاخطاء",
+  "myOrders": "طلباتي",
+  "myPayment": "بوابات الدفع",
+  "shareApp": "مشاركة التطبيق",
+  "myAddress": "الموقع",
+  "language": "اللغات",
+  "editProfile": "تعدبل الملف",
+  "userName": "الاسم",
+  "phone": "رقم الهاتف",
+  "save": "حفظ",
+  "mobileNumber": "رقم الهاتف",
+  "invite": "دعوة"
 }
