@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/services.dart';
 import 'package:shop_avatar/features/forget_password/data/repoitory_impl/forget_password_repository_impl.dart';
 
 import '../../core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
@@ -6,6 +8,7 @@ import '../../features/forget_password/data/data_sourse/forget_password_remote_d
 import '../../features/forget_password/domain/repository/forget_passwor_repository.dart';
 import '../../features/forget_password/domain/use_case/forget_password_use_case.dart';
 import '../../features/forget_password/presentation/controller/forget_password_controller.dart';
+import '../../features/out_boarding/presentation/controller/outboading_controller.dart';
 import '../../features/product_details/domain/repository/product_details_repository.dart';
 import '../../features/splach/presentation/controller/splach_controller.dart';
 import '/core/internet_checker/internet_checker.dart';
@@ -24,8 +27,13 @@ final instance = GetIt.instance;
 
 initModule() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await EasyLocalization.ensureInitialized();
   await AppSettingsSharedPreferences().initPreferences();
+
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
 
   if (!GetIt.I.isRegistered<NetworkInfo>()) {
     instance.registerLazySingleton<NetworkInfo>(
@@ -51,6 +59,7 @@ initModule() async {
 
 initSplash() {
   Get.put<SplashController>(SplashController());
+  initOutBoarding();
 }
 
 disposeSplash() {
@@ -64,6 +73,14 @@ initAuth() {
 
 disposeAuth() {
   Get.delete<AuthController>();
+}
+
+initOutBoarding() {
+  Get.put<OutBoardingController>(OutBoardingController());
+}
+
+disposeOutBoarding() {
+  Get.delete<OutBoardingController>();
 }
 
 initHome() {
