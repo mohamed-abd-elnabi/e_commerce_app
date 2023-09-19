@@ -4,7 +4,6 @@ import 'package:shop_avatar/core/extinsion/extinsion.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/routes/routes.dart';
 import '../../../../core/resources/manager_colors.dart';
-import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/widegts/helpers.dart';
 import '../../data/data_source/auth_api_controller.dart';
 
@@ -118,7 +117,7 @@ class AuthController extends GetxController with Helpers {
       showSnackBar(
         context: context,
         error: true,
-        message: 'Password must be at least 6 characters',
+        message: ManagerStrings.passwordLeast,
       );
     } else {}
 
@@ -128,7 +127,7 @@ class AuthController extends GetxController with Helpers {
   bool confirmPassword(BuildContext context) {
     if (textPasswordEditingController.text !=
         textPasswordConfirmEditingController.text) {
-      confirmPasswordError = 'Passwords do not match';
+      confirmPasswordError = ManagerStrings.passwordsMatch;
       passwordError = confirmPasswordError;
       showSnackBar(
         context: context,
@@ -144,7 +143,7 @@ class AuthController extends GetxController with Helpers {
 
   bool checkNumber(BuildContext context) {
     if (textNumberEditingController.text.isEmpty) {
-      phoneError = 'phone is required';
+      phoneError = ManagerStrings.phoneIsRequired;
       showSnackBar(
         context: context,
         error: true,
@@ -159,7 +158,7 @@ class AuthController extends GetxController with Helpers {
 
   bool checkName(BuildContext context) {
     if (textUsernameEditingController.text.isEmpty) {
-      nameError = 'name is required';
+      nameError = ManagerStrings.nameIsRequired;
       showSnackBar(
         context: context,
         error: true,
@@ -212,7 +211,7 @@ class AuthController extends GetxController with Helpers {
         showSnackBar(
           context: context,
           error: false,
-          message: 'Register Succesfulleu',
+          message: ManagerStrings.registerSuccesfulleu,
         );
         Get.back();
         Get.offAllNamed(Routes.loginScreen);

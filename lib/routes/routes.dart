@@ -14,6 +14,7 @@ import '../features/auth/presentation/view/register.dart';
 import '../features/product_details/presentation/view/product_details.dart';
 import '../features/profile/presentation/view/edir_profile_view.dart';
 import '../features/share_app/presentation/view/share_app.dart';
+import '../features/show_more_products/presentation/view/show_more_products.dart';
 import '../features/splach/presentation/view/splach_screen.dart';
 import '../features/support/presentation/view/support_view.dart';
 
@@ -34,6 +35,7 @@ class Routes {
   static const String supportView = '/support_screen';
   static const String forgetPasswordView = '/forgetPassword_screen';
   static const String otbCodeCerificationView = '/otbCodeCerification_screen';
+  static const String showMoreProducts = '/showMoreProducts_screen';
 }
 
 class RouteGenerator {
@@ -75,6 +77,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => ForgetPasswordView());
       case Routes.otbCodeCerificationView:
         return MaterialPageRoute(builder: (context) => VerificationScreen());
+      case Routes.showMoreProducts:
+        return MaterialPageRoute(builder: (context) => ShowMoreProducts());
       default:
         return unDefindRout();
     }

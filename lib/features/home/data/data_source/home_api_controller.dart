@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
+import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import 'package:shop_avatar/core/widegts/helpers.dart';
 import 'package:shop_avatar/features/home/data/mapper/category_mapper.dart';
@@ -39,7 +40,7 @@ class HomeApiController with Helpers {
 
     showSnackBar(
       context: context,
-      message: 'Somthing Went Erorr',
+      message: ManagerStrings.somthingWentErorr,
       error: true,
     );
     return HomeModel(data: [], success: false, status: 404);

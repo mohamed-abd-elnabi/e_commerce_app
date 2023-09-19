@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:shop_avatar/core/constants.dart';
+import 'package:shop_avatar/core/resources/managar_font_size.dart';
+import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_height.dart';
-import 'package:shop_avatar/core/resources/manager_text_styles.dart';
+import 'package:shop_avatar/core/resources/manager_raduis.dart';
+import 'package:shop_avatar/core/resources/manager_strings.dart';
+import 'package:shop_avatar/core/resources/manager_text_styles_light.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
 import 'package:shop_avatar/routes/routes.dart';
 
@@ -19,53 +24,55 @@ class ProfileView extends StatelessWidget {
               Navigator.pushNamed(context, Routes.editProfileView);
             },
             child: Image.asset(
-              'assets/images/profile/edit-button.png',
+              ManagerAssets.editButton,
               filterQuality: FilterQuality.high,
-              width: 24,
+              width: ManagerWeight.w24,
             ),
           ),
           SizedBox(
             width: ManagerWeight.w16,
           ),
           Image.asset(
-            'assets/images/profile/logout.png',
-            width: 24,
+            ManagerAssets.logout,
+            width: ManagerWeight.w24,
           ),
           SizedBox(
             width: ManagerWeight.w16,
           ),
         ],
-        title: Text('profile'.toUpperCase(),
-            style: getBoldTextStyle(fontSize: 20, color: ManagerColors.white)),
+        title: Text(ManagerStrings.profile.toUpperCase(),
+            style: getBoldTextStyle(
+                fontSize: ManagerFontSize.s20, color: ManagerColors.white)),
         centerTitle: true,
-        elevation: 0,
-        iconTheme: const IconThemeData(color: Colors.white),
+        elevation: ManagerConestant.elevationAppbar,
+        iconTheme: const IconThemeData(color: ManagerColors.white),
         backgroundColor: ManagerColors.transparent,
       ),
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/drawer/bg.png',
+            ManagerAssets.bgSlider,
             width: double.infinity,
             height: double.infinity,
           ),
           Column(
             children: [
               SizedBox(
-                height: 20,
+                height: ManagerHeight.h20,
               ),
-              Image.asset('assets/images/drawer/profile.png'),
+              Image.asset(ManagerAssets.profile),
               Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius:
-                        BorderRadiusDirectional.all(Radius.circular(20))),
-                margin: const EdgeInsetsDirectional.symmetric(
-                    vertical: 28, horizontal: 20),
+                decoration: BoxDecoration(
+                    color: ManagerColors.white,
+                    borderRadius: BorderRadiusDirectional.all(
+                        Radius.circular(ManagerRaduis.r20))),
+                margin: EdgeInsetsDirectional.symmetric(
+                    vertical: ManagerWeight.w28, horizontal: ManagerHeight.h20),
                 width: double.infinity,
                 height: MediaQuery.sizeOf(context).height * 0.6,
                 child: Container(
-                  margin: const EdgeInsetsDirectional.symmetric(horizontal: 26),
+                  margin: EdgeInsetsDirectional.symmetric(
+                      horizontal: ManagerHeight.h26),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -73,9 +80,10 @@ class ProfileView extends StatelessWidget {
                         height: ManagerHeight.h20,
                       ),
                       Text(
-                        'UserName',
+                        ManagerStrings.userName,
                         style: getRegularTextStyle(
-                            fontSize: 18, color: ManagerColors.primaryColor),
+                            fontSize: ManagerFontSize.s18,
+                            color: ManagerColors.primaryColor),
                       ),
                       SizedBox(
                         height: ManagerHeight.h6,
@@ -83,13 +91,14 @@ class ProfileView extends StatelessWidget {
                       Text(
                         'Mohammed emad',
                         style: getBoldTextStyle(
-                            fontSize: 18, color: ManagerColors.blake),
+                            fontSize: ManagerFontSize.s18,
+                            color: ManagerColors.blake),
                       ),
                       SizedBox(
                         height: ManagerHeight.h26,
                       ),
                       Divider(
-                        height: 1,
+                        height: ManagerHeight.h1,
                         thickness: 1,
                         color: ManagerColors.greyLight,
                       ),
@@ -98,9 +107,10 @@ class ProfileView extends StatelessWidget {
                         height: ManagerHeight.h20,
                       ),
                       Text(
-                        'Email',
+                        ManagerStrings.email,
                         style: getRegularTextStyle(
-                            fontSize: 18, color: ManagerColors.primaryColor),
+                            fontSize: ManagerFontSize.s18,
+                            color: ManagerColors.primaryColor),
                       ),
                       SizedBox(
                         height: ManagerHeight.h6,
@@ -108,13 +118,14 @@ class ProfileView extends StatelessWidget {
                       Text(
                         'mohammedherez@gmail.com',
                         style: getBoldTextStyle(
-                            fontSize: 18, color: ManagerColors.blake),
+                            fontSize: ManagerFontSize.s18,
+                            color: ManagerColors.blake),
                       ),
                       SizedBox(
                         height: ManagerHeight.h26,
                       ),
                       Divider(
-                        height: 1,
+                        height: ManagerHeight.h1,
                         thickness: 1,
                         color: ManagerColors.greyLight,
                       ),
@@ -123,9 +134,10 @@ class ProfileView extends StatelessWidget {
                         height: ManagerHeight.h20,
                       ),
                       Text(
-                        'Mobile Number',
+                        ManagerStrings.mobileNumber,
                         style: getRegularTextStyle(
-                            fontSize: 18, color: ManagerColors.primaryColor),
+                            fontSize: ManagerFontSize.s18,
+                            color: ManagerColors.primaryColor),
                       ),
                       SizedBox(
                         height: ManagerHeight.h6,
@@ -133,13 +145,14 @@ class ProfileView extends StatelessWidget {
                       Text(
                         '+1 986-786-421',
                         style: getBoldTextStyle(
-                            fontSize: 18, color: ManagerColors.blake),
+                            fontSize: ManagerFontSize.s18,
+                            color: ManagerColors.blake),
                       ),
                       SizedBox(
                         height: ManagerHeight.h26,
                       ),
                       Divider(
-                        height: 1,
+                        height: ManagerHeight.h1,
                         thickness: 1,
                         color: ManagerColors.greyLight,
                       ),
@@ -153,7 +166,7 @@ class ProfileView extends StatelessWidget {
                           Text(
                             'Password',
                             style: getRegularTextStyle(
-                                fontSize: 18,
+                                fontSize: ManagerFontSize.s18,
                                 color: ManagerColors.primaryColor),
                           ),
                           ElevatedButton(
@@ -172,13 +185,14 @@ class ProfileView extends StatelessWidget {
                       Text(
                         '............',
                         style: getBoldTextStyle(
-                            fontSize: 20, color: ManagerColors.blake),
+                            fontSize: ManagerFontSize.s20,
+                            color: ManagerColors.blake),
                       ),
                       SizedBox(
-                        height: ManagerHeight.h26,
+                        height: ManagerHeight.h20,
                       ),
                       Divider(
-                        height: 1,
+                        height: ManagerHeight.h1,
                         thickness: 1,
                         color: ManagerColors.greyLight,
                       ),

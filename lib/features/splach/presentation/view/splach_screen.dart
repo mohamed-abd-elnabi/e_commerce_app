@@ -10,7 +10,7 @@ class SplachScreen extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Image.asset(
-            ManagerAssets.splash1,
+            ManagerAssets.logoApp,
             filterQuality: FilterQuality.high,
             fit: BoxFit.cover,
             height: double.infinity,

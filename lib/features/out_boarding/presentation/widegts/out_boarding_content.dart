@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../core/constants.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_assets.dart';
