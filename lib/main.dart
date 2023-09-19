@@ -6,8 +6,10 @@ import 'package:get/get.dart';
 import 'package:shop_avatar/config/locale/locale_settings.dart';
 import 'package:shop_avatar/config/localization/dependancy_injection.dart';
 import 'package:shop_avatar/core/resources/manager_assets.dart';
+import 'package:shop_avatar/core/theme/manager_dark_theme_data.dart';
 import 'package:shop_avatar/routes/routes.dart';
 import 'core/constants.dart';
+import 'core/theme/manager_light_theme_data.dart';
 import 'firebase_options.dart';
 
 main() async {
@@ -43,14 +45,12 @@ class MyApp extends StatelessWidget {
           supportedLocales: context.supportedLocales,
           localizationsDelegates: context.localizationDelegates,
           debugShowCheckedModeBanner: false,
-
-          theme: ThemeData(
-            useMaterial3: true,
-          ),
           initialRoute: Routes.splachScreen,
           onGenerateRoute: RouteGenerator.getRoute,
+          // theme: managerThemeDarkData(),
+          // themeMode: ThemeMode.light,
+          theme: ThemeData(useMaterial3: true),
           // defaultTransition: Transition.cupertino,
-
           //   routes: {
           //     Routes.splashScreen: (context) => const SplachScreen(),
           //     Routes.outBoarding: (context) => const OutBoarding(),

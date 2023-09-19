@@ -3,7 +3,7 @@ import 'package:shop_avatar/core/resources/managar_font_size.dart';
 import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
-import 'package:shop_avatar/core/resources/manager_text_styles_light.dart';
+import 'package:shop_avatar/core/resources/manager_text_styles.dart';
 
 class NotificationsView extends StatelessWidget {
   const NotificationsView({super.key});

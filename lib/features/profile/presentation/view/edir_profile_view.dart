@@ -8,7 +8,7 @@ import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_height.dart';
 import '../../../../core/resources/manager_spacer.dart';
 import '../../../../core/resources/manager_strings.dart';
-import '../../../../core/resources/manager_text_styles_light.dart';
+import '../../../../core/resources/manager_text_styles.dart';
 import '../../../../core/widegts/base_button.dart';
 
 class EditProfileView extends StatelessWidget {

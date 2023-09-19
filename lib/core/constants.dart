@@ -13,6 +13,9 @@ class ManagerConestant {
   static const double letterSpacingWithSignInText = 2;
   static const double designDeviceWidth = 375;
   static const double designDeviceHeight = 812;
+  static const String preferencesKeyTheme = 'theme_key';
+  static const String dark = 'dark';
+  static const String light = 'light';
 }
 
 class keyConestant {

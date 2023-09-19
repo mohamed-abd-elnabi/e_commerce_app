@@ -106,4 +106,16 @@ class AppSettingsSharedPreferences {
       phone: userPhone,
     );
   }
+
+  //////////////////////////////////////////////////////
+  Future<void> setAppTheme(String theme) async {
+    await _sharedPreferences.setString(
+        ManagerConestant.preferencesKeyTheme, theme);
+  }
+
+  String getAppTheme() {
+    return _sharedPreferences
+        .getString(ManagerConestant.preferencesKeyTheme)
+        .toString();
+  }
 }
