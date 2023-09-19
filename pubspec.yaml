@@ -91,6 +91,7 @@ flutter:
     - assets/images/profile/
     - assets/images/share_app/
     - assets/images/support/
+    - assets/images/more_products/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

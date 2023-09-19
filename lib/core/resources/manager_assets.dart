@@ -1,7 +1,6 @@
 class ManagerAssets {
-  static const String azkarImage = 'assets/images/azkar.jpg';
   static const String product = 'assets/images/product_details/product.png';
-  static const String splash1 = 'assets/images/splach/mmmm.png';
+  static const String logoApp = 'assets/images/splach/mmmm.png';
   static const String splash2 = 'assets/images/splach/mm.png';
   static const String splash3 = 'assets/images/splach/mmm.png';
   static const String authBg = 'assets/images/auth/bgauthen.png';
@@ -20,6 +19,14 @@ class ManagerAssets {
       'assets/images/outboardind/outBoarding3.png';
   static const String outboarding4 =
       'assets/images/outboardind/outBoarding4.png';
+  static const String bgSlider = 'assets/images/drawer/bg.png';
+  static const String iconBack = 'assets/images/drawer/icon.png';
+  static const String profile = 'assets/images/drawer/profile.png';
+  static const String editButton = 'assets/images/profile/edit-button.png';
+  static const String logout = 'assets/images/profile/logout.png';
+
+  static const String disableAlarm =
+      'assets/images/notifications/disable-alarm.png';
 }
 
 class ManagerPathes {
