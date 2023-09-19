@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../resources/managar_font_size.dart';
 import '../resources/manager_colors.dart';
-import '../resources/manager_text_styles_light.dart';
+import '../resources/manager_text_styles.dart';
 import '../resources/manager_text_theme_dark.dart';
 
 ThemeData managerThemeDarkData() {

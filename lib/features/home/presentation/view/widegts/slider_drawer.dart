@@ -6,7 +6,7 @@ import '../../../../../routes/routes.dart';
 import '/core/resources/manager_colors.dart';
 import '/core/resources/manager_height.dart';
 import '/core/resources/manager_strings.dart';
-import '/core/resources/manager_text_styles_light.dart';
+import '/core/resources/manager_text_styles.dart';
 import '/features/home/presentation/controller/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

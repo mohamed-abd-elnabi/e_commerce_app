@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
-import 'package:shop_avatar/core/resources/manager_text_styles_light.dart';
+import 'package:shop_avatar/core/resources/manager_text_styles.dart';
 import 'package:shop_avatar/features/forget_password/presentation/controller/forget_password_controller.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_colors.dart';

@@ -6,7 +6,7 @@ import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_colors.dart';
 import '../../../../core/resources/manager_height.dart';
 import '../../../../core/resources/manager_raduis.dart';
-import '../../../../core/resources/manager_text_styles_light.dart';
+import '../../../../core/resources/manager_text_styles.dart';
 import '../../../../core/resources/manager_weight.dart';
 import '../../../home/presentation/model/home_model.dart';
 

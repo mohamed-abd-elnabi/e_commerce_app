@@ -6,7 +6,7 @@ import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_height.dart';
 import 'package:shop_avatar/core/resources/manager_raduis.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
-import 'package:shop_avatar/core/resources/manager_text_styles_light.dart';
+import 'package:shop_avatar/core/resources/manager_text_styles.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
 import 'package:shop_avatar/routes/routes.dart';
 

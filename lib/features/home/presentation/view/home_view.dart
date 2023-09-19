@@ -13,7 +13,7 @@ import '../model/home_model.dart';
 import '/core/resources/manager_colors.dart';
 import '/core/resources/manager_height.dart';
 import '/core/resources/manager_strings.dart';
-import '/core/resources/manager_text_styles_light.dart';
+import '/core/resources/manager_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:slide_drawer/slide_drawer.dart';
