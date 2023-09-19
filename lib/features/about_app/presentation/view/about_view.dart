@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_height.dart';
-import 'package:shop_avatar/core/resources/manager_text_styles.dart';
+import 'package:shop_avatar/core/resources/manager_text_styles_light.dart';
 
 class AboutView extends StatelessWidget {
   const AboutView({super.key});
