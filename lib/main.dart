@@ -47,8 +47,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           initialRoute: Routes.splachScreen,
           onGenerateRoute: RouteGenerator.getRoute,
-          // theme: managerThemeDarkData(),
-          // themeMode: ThemeMode.light,
+          //theme: managerDarkThemeData(),
+          themeMode: ThemeMode.dark,
+          //  darkTheme: ThemeData.dark(),
           theme: ThemeData(useMaterial3: true),
           // defaultTransition: Transition.cupertino,
           //   routes: {
