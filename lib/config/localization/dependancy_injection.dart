@@ -8,8 +8,10 @@ import '../../features/forget_password/data/data_sourse/forget_password_remote_d
 import '../../features/forget_password/domain/repository/forget_passwor_repository.dart';
 import '../../features/forget_password/domain/use_case/forget_password_use_case.dart';
 import '../../features/forget_password/presentation/controller/forget_password_controller.dart';
+import '../../features/laguage/presentation/controller/locale_notifier_controller.dart';
 import '../../features/out_boarding/presentation/controller/outboading_controller.dart';
 import '../../features/product_details/domain/repository/product_details_repository.dart';
+import '../../features/profile/presentation/controller/profile_controller.dart';
 import '../../features/splach/presentation/controller/splach_controller.dart';
 import '/core/internet_checker/internet_checker.dart';
 import '/core/network/api/app_api.dart';
@@ -153,4 +155,12 @@ disposeForgetPassword() async {
   if (GetIt.I.isRegistered<ForgetPasswordUseCase>()) {
     instance.unregister<ForgetPasswordUseCase>();
   }
+}
+
+initLocale() {
+  Get.put<LocaleNotifierController>(LocaleNotifierController());
+}
+
+initProfile() {
+  Get.put<ProfileController>(ProfileController());
 }
