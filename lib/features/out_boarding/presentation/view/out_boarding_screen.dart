@@ -30,6 +30,8 @@ class _OutBoardingState extends State<OutBoarding> {
       child: GetBuilder<OutBoardingController>(builder: (controller) {
         return Scaffold(
           appBar: AppBar(
+            elevation: ManagerConestant.elevationAppbar,
+            backgroundColor: ManagerColors.transparent,
             leading: Visibility(
                 visible: controller.isNotFirstPage(),
                 child: IconButton(
