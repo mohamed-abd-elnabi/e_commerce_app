@@ -47,8 +47,8 @@ class Authentication extends StatelessWidget {
               Text(
                 ManagerStrings.welcome.toUpperCase(),
                 style: getMediumTextStyle(
-                  color: ManagerColors.white,
                   fontSize: ManagerFontSize.s28,
+                  color: ManagerColors.white,
                 ),
               ),
               SizedBox(
