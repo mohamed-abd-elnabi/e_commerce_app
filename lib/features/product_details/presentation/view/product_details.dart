@@ -5,6 +5,7 @@ import 'package:shop_avatar/features/product_details/presentation/view/widegts/e
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_icon_size.dart';
 import '../../../../core/widegts/page_view_indicator.dart';
+import '../../../../routes/routes.dart';
 import '/core/resources/manager_assets.dart';
 import '/core/resources/manager_colors.dart';
 import '/core/resources/manager_font_weight.dart';
@@ -481,11 +482,16 @@ class _ItemDetailsState extends State<ItemDetails> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      item.name,
-                      style: getTextStyle(
-                        fontSize: ManagerIconSize.s20,
-                        fontWeight: ManagerFontWeight.w600,
+                    Container(
+                      width: 270,
+                      child: Text(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 2,
+                        item.name,
+                        style: getTextStyle(
+                          fontSize: ManagerIconSize.s20,
+                          fontWeight: ManagerFontWeight.w600,
+                        ),
                       ),
                     ),
                     Container(
@@ -650,7 +656,9 @@ class _ItemDetailsState extends State<ItemDetails> {
                       borderRadius: BorderRadius.circular(15),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.cartView);
+                  },
                   child: Text(
                     'addToCart',
                     style: getMediumTextStyle(
