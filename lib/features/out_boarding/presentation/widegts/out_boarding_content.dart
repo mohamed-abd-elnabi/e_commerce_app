@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_avatar/core/resources/manager_text_styles.dart';
 import '../../../../core/constants.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_assets.dart';
@@ -19,7 +20,6 @@ Column outBoardingContent({
       Text(
         title ?? ManagerStrings.outboardingTitleOne,
         style: TextStyle(
-            color: ManagerColors.secondaryColor,
             fontSize: ManagerFontSize.s26,
             fontWeight: ManagerFontWeight.bold,
             letterSpacing: ManagerConestant.letterSpacing3),
@@ -29,11 +29,8 @@ Column outBoardingContent({
         child: Text(
           maxLines: 3,
           subtitle ?? ManagerStrings.subtitle1,
-          style: TextStyle(
-            overflow: TextOverflow.ellipsis,
-            color: ManagerColors.secondaryColor,
+          style: getRegularTextStyle(
             fontSize: ManagerFontSize.s16,
-            fontWeight: ManagerFontWeight.regular,
           ),
           textAlign: TextAlign.center,
         ),
