@@ -39,7 +39,7 @@ dependencies:
   shared_preferences: ^2.2.0
   easy_localization: ^3.0.2
   flutter_screenutil: ^5.8.4
-  http: ^0.13.4
+  http: ^0.13.6
   slide_drawer: ^1.0.3
   json_annotation: ^4.8.1
   retrofit: ^4.0.1
@@ -50,9 +50,9 @@ dependencies:
   get_it: ^7.6.4
   internet_connection_checker_plus: ^1.0.1
   flutter_state_render_dialog: ^1.0.5
-  mailer: ^6.0.1
   dartz: ^0.10.1
-
+  dropdown_button2: ^2.3.9
+  shimmer: ^3.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
