@@ -66,4 +66,5 @@ class ManagerStrings {
   static String get save => tr('save');
   static String get mobileNumber => tr('mobileNumber');
   static String get invite => tr('invite');
+  static String get change => tr('change');
 }
