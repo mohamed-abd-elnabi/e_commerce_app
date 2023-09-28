@@ -15,6 +15,7 @@ class SplashController extends GetxController {
     Future.delayed(const Duration(seconds: ManagerConestant.SplachTime), () {
       print('الوووووووووووووووووووووووووووووو');
       print(appSettingsSharedPreferences.loggedIn);
+      print(appSettingsSharedPreferences.outBoardingViewed);
       String route = appSettingsSharedPreferences.loggedIn
           ? Routes.homePage
           : appSettingsSharedPreferences.outBoardingViewed

@@ -141,7 +141,7 @@ class SliderDrawer extends StatelessWidget {
                       icon: Icons.language,
                       title: ManagerStrings.language,
                       onPressed: () {
-                        Navigator.pushNamed(context, '');
+                        Navigator.pushNamed(context, Routes.localView);
                       },
                     ),
 

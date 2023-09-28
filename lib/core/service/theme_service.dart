@@ -18,5 +18,5 @@ class ThemeService {
   ThemeMode getThemeMode() => isDarkTheme() ? ThemeMode.dark : ThemeMode.light;
 
   ThemeData getThemeData() =>
-      isDarkTheme() ? managerThemeDarkData() : managerThemeLightData();
+      isDarkTheme() ? managerDarkThemeData() : managerLightThemeData();
 }

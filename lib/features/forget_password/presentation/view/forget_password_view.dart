@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:shop_avatar/core/resources/manager_text_styles.dart';
 import 'package:shop_avatar/features/forget_password/presentation/controller/forget_password_controller.dart';
+import '../../../../core/constants.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_colors.dart';
 import '../../../../core/resources/manager_height.dart';
@@ -21,10 +22,12 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
     return GetBuilder<ForgetPasswordController>(builder: (controller) {
       return Scaffold(
         appBar: AppBar(
+          elevation: ManagerConestant.elevationAppbar,
+          backgroundColor: ManagerColors.transparent,
           title: Text('Forgot password'.toUpperCase(),
-              style: getRegularTextStyle(fontSize: 18)),
+              style: getRegularTextStyle(
+                  color: ManagerColors.white, fontSize: 18)),
           centerTitle: true,
-          backgroundColor: const Color(0xffF8F8FC),
         ),
         body: Container(
           margin: EdgeInsetsDirectional.symmetric(horizontal: 40),

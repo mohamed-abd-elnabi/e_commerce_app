@@ -1,6 +1,8 @@
 import 'package:shop_avatar/core/resources/manager_weight.dart';
 
 import '../../../../config/localization/dependancy_injection.dart';
+import '../../../../core/internet_checker/internet_checker.dart';
+import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import '../../../../routes/routes.dart';
 import '/features/home/data/data_source/home_api_controller.dart';
@@ -26,6 +28,7 @@ class HomeController extends GetxController {
   List<HomeModelData> discountedProducts = [];
   ProductDetailsUseCaseImplementation productDetailsUseCase =
       instance<ProductDetailsUseCaseImplementation>();
+  NetworkInfo networkInfo = instance<NetworkInfo>();
 
   @override
   void onInit() {
@@ -69,7 +72,7 @@ class HomeController extends GetxController {
     update();
   }
 
-  readpassword(int id) async {
+  readPassword(int id) async {
     BuildContext context = Get.context!;
     (await productDetailsUseCase.execute(ProductDetailsUseCaseInput(id: id)))
         .fold((l) {
@@ -89,7 +92,7 @@ class HomeController extends GetxController {
     if (isURLValid(courseAvatar)) {
       return Image.network(
         courseAvatar,
-        fit: BoxFit.fill,
+        fit: BoxFit.scaleDown,
         width: double.infinity,
       );
     }
@@ -118,9 +121,26 @@ class HomeController extends GetxController {
     readProductDetails(productId);
     Navigator.pushNamed(context, Routes.itemDetails);
   }
-}
 
-bool isURLValid(String url) {
-  Uri? uri = Uri.tryParse(url);
-  return uri != null && uri.isAbsolute;
+  bool isURLValid(String url) {
+    Uri? uri = Uri.tryParse(url);
+    return uri != null && uri.isAbsolute;
+  }
+
+  performRefresh() async {
+    if (await networkInfo.isConnected) {
+      await readHome();
+    } else {
+      BuildContext context = Get.context!;
+      dialogRender(
+        context: context,
+        message: 'NO_INTERNT_CONNECTION',
+        title: '',
+        stateRenderType: StateRenderType.popUpErrorState,
+        retryAction: () {
+          Navigator.of(context).pop();
+        },
+      );
+    }
+  }
 }

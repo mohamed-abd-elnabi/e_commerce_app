@@ -51,7 +51,7 @@ class DioFactory {
       ApiConstants.authorization: getAuthorization(),
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      'Accept-Language': appSettingsSharedPreferences.defaultLocale,
+      ApiConstants.acceptLanguage: appSettingsSharedPreferences.defaultLocale,
     };
   }
 }

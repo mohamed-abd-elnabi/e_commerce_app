@@ -37,6 +37,8 @@ class AppSettingsSharedPreferences {
   String get defaultLocale =>
       _sharedPreferences.getString(keyConestant.localeKey).parseLocale();
 
+//////////////////////////////////////////////////////////////
+
   Future<void> setToken(String token) async {
     await _sharedPreferences.setString(keyConestant.token, token);
   }
