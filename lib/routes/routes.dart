@@ -4,9 +4,11 @@ import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/features/profile/presentation/view/profile_view.dart';
 import '../features/about_app/presentation/view/about_view.dart';
 import '../features/auth/presentation/view/authentication.dart';
+import '../features/cart/presentation/view/cart_view.dart';
 import '../features/forget_password/presentation/view/forget_password_view.dart';
 import '../features/forget_password/presentation/view/otb_code_verification.dart';
 import '../features/home/presentation/view/home_view.dart';
+import '../features/laguage/presentation/view/locale_view.dart';
 import '../features/notifications/presentation/view/notifications_view.dart';
 import '../features/out_boarding/presentation/view/out_boarding_screen.dart';
 import '../features/auth/presentation/view/login_view.dart';
@@ -36,6 +38,8 @@ class Routes {
   static const String forgetPasswordView = '/forgetPassword_screen';
   static const String otbCodeCerificationView = '/otbCodeCerification_screen';
   static const String showMoreProducts = '/showMoreProducts_screen';
+  static const String localView = '/local_screen';
+  static const String cartView = '/cart_screen';
 }
 
 class RouteGenerator {
@@ -63,6 +67,7 @@ class RouteGenerator {
         return MaterialPageRoute(
             builder: (context) => const NotificationsView());
       case Routes.profileScreen:
+        initProfile();
         return MaterialPageRoute(builder: (context) => const ProfileView());
       case Routes.editProfileView:
         return MaterialPageRoute(builder: (context) => const EditProfileView());
@@ -79,6 +84,11 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => VerificationScreen());
       case Routes.showMoreProducts:
         return MaterialPageRoute(builder: (context) => ShowMoreProducts());
+      case Routes.localView:
+        initLocale();
+        return MaterialPageRoute(builder: (context) => LocaleView());
+      case Routes.cartView:
+        return MaterialPageRoute(builder: (context) => CartView());
       default:
         return unDefindRout();
     }
