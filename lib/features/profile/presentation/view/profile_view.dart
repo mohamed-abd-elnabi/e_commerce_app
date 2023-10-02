@@ -181,7 +181,7 @@ class ProfileView extends StatelessWidget {
                             ),
                             ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    backgroundColor: const Color(0xff393939)),
+                                    backgroundColor: ManagerColors.prossColor),
                                 onPressed: () {},
                                 child: Text(
                                   ManagerStrings.change,

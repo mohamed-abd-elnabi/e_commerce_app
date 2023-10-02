@@ -10,7 +10,7 @@ class ProductDetailsDataModel {
   int shopId;
   String shopName;
   String shopLogo;
-  List<ProductDetailsDataPhotosModel> photos;
+  List<ProductDetailsDataPhotoModel> photos;
   String thumbnailImage;
   List<String> tags;
   List<ProductDetailsDataChoiceOptionsModel> choiceOptions;
@@ -28,7 +28,7 @@ class ProductDetailsDataModel {
   String description;
   String videoLink;
   String link;
-  ProductDetailsBrandModel brand;
+  ProductDetailsDataBrandModel brand;
 
   ProductDetailsDataModel({
     required this.id,

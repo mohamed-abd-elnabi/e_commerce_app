@@ -84,7 +84,7 @@ class ForgetPasswordController extends GetxController {
       Get.back();
       dialogRender(
         context: context,
-        message: l.massege,
+        message: l.message,
         title: 'sorryFailed',
         stateRenderType: StateRenderType.popUpErrorState,
         retryAction: () {

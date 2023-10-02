@@ -67,4 +67,24 @@ class ManagerStrings {
   static String get mobileNumber => tr('mobileNumber');
   static String get invite => tr('invite');
   static String get change => tr('change');
+  static String get anyQueries => tr('anyQueries');
+  static String get numberSuboort => tr('05955316541');
+  static String get products => tr('products');
+  static String get inviteYourFriends => tr('inviteYourFriends');
+  static String get http => tr('http');
+  static String get cobyLink => tr('cobyLink');
+  static String get writeYourEmail => tr('writeYourEmail');
+  static String get send => tr('send');
+  static String get subTitleVerification => tr('subTitleVerification');
+  static String get verifyMessage => tr('verifyMessage');
+  static String get resendCode => tr('resendCode');
+  static String get error => tr('error');
+  static String get sorryFailed => tr('sorryFailed');
+  static String get byCategory => tr('byCategory');
+  static String get all => tr('all');
+  static String get freshFruits => tr('freshFruits');
+  static String get byPrice => tr('byPrice');
+  static String get freshHerbs => tr('freshHerbs');
+  static String get freshVegetables => tr('freshVegetables');
+  static String get ar => tr('ar');
 }

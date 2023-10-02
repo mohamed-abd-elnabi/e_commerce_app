@@ -11,7 +11,7 @@ class SplashController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    //appSettingsSharedPreferences.clear();
+    appSettingsSharedPreferences.clear();
     Future.delayed(const Duration(seconds: ManagerConestant.SplachTime), () {
       print('الوووووووووووووووووووووووووووووو');
       print(appSettingsSharedPreferences.loggedIn);
@@ -19,9 +19,9 @@ class SplashController extends GetxController {
       String route = appSettingsSharedPreferences.loggedIn
           ? Routes.homePage
           : appSettingsSharedPreferences.outBoardingViewed
-              ? Routes.authScreen
-              : Routes.outBoarding;
-      Get.offAllNamed(route);
+              ? Routes.homePage
+              : Routes.homePage;
+      Get.offAllNamed(Routes.homePage);
     });
   }
 }

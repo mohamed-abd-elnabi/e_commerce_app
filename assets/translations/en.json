@@ -62,5 +62,28 @@
   "save": "Save",
   "mobileNumber": "Mobile Number",
   "invite": "Invite",
-  "change": "change"
+  "change": "change",
+  "anyQueries": "       Any Queries or feedback?",
+  "numberSuboort": "05955316541",
+  "products": "Products",
+  "inviteYourFriends": "Invite your friends",
+  "cobyLink": "Coby Link",
+  "writeYourEmail": "Write Your Email",
+  "send": "Send",
+  "subTitleVerification": "SubTitleVerification",
+  "verifyMessage": "verifyMessage",
+  "error": "error",
+  "sorryFailed": "sorryFailed",
+  "byCategory": "By Category",
+  "all": "All",
+  "freshFruits": "Fresh Fruits",
+  "byPrice": "By Price",
+  "freshHerbs": "Fresh Herbs",
+  "freshVegetables": "Fresh Vegetables",
+  "ar": "ar"
+
+
+
+
+
 }

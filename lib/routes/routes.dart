@@ -64,8 +64,7 @@ class RouteGenerator {
         initProductDetails();
         return MaterialPageRoute(builder: (context) => const ItemDetails());
       case Routes.notificationsScreen:
-        return MaterialPageRoute(
-            builder: (context) => const NotificationsView());
+        return MaterialPageRoute(builder: (context) => NotificationsView());
       case Routes.profileScreen:
         initProfile();
         return MaterialPageRoute(builder: (context) => const ProfileView());
@@ -83,6 +82,7 @@ class RouteGenerator {
       case Routes.otbCodeCerificationView:
         return MaterialPageRoute(builder: (context) => VerificationScreen());
       case Routes.showMoreProducts:
+        initShowMoreProducts();
         return MaterialPageRoute(builder: (context) => ShowMoreProducts());
       case Routes.localView:
         initLocale();

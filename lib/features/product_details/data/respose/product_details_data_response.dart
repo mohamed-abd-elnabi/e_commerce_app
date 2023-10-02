@@ -22,7 +22,7 @@ class ProductDetailsDataResponse {
   @JsonKey(name: 'shop_logo')
   String? shopLogo;
   @JsonKey(name: 'photos')
-  List<ProductDetailsDataPhotosResponse>? photos;
+  List<ProductDetailsDataPhotoResponse>? photos;
   @JsonKey(name: 'thumbnail_image')
   String? thumbnailImage;
   @JsonKey(name: 'tags')
@@ -58,7 +58,7 @@ class ProductDetailsDataResponse {
   @JsonKey(name: 'link')
   String? link;
   @JsonKey(name: 'brand')
-  ProductDetailsBrandResponse? brand;
+  ProductDetailsDataBrandResponse? brand;
 
   ProductDetailsDataResponse({
     required this.id,
@@ -86,7 +86,7 @@ class ProductDetailsDataResponse {
     required this.description,
     required this.videoLink,
     required this.link,
-    this.brand,
+    required this.brand,
   });
 
   factory ProductDetailsDataResponse.fromJson(Map<String, dynamic> json) =>

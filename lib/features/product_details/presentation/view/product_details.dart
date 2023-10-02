@@ -1,12 +1,11 @@
 import 'package:shop_avatar/core/resources/manager_raduis.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
+import 'package:shop_avatar/features/product_details/presentation/view/widegts/container_reviews.dart';
 import 'package:shop_avatar/features/product_details/presentation/view/widegts/expandable_text.dart';
-
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_icon_size.dart';
 import '../../../../core/widegts/page_view_indicator.dart';
 import '../../../../routes/routes.dart';
-import '/core/resources/manager_assets.dart';
 import '/core/resources/manager_colors.dart';
 import '/core/resources/manager_font_weight.dart';
 import '/core/resources/manager_height.dart';
@@ -17,8 +16,6 @@ import '/features/product_details/domain/model/product_details_data_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'Review.dart';
-
 class ItemDetails extends StatefulWidget {
   const ItemDetails({Key? key}) : super(key: key);
 
@@ -27,127 +24,32 @@ class ItemDetails extends StatefulWidget {
 }
 
 class _ItemDetailsState extends State<ItemDetails> {
-  late PageController _pageController;
-  int currentPageIndex = 0;
-  bool isFavorite = false;
-
-  bool isDetails = true;
-  bool isReviews = false;
-  double itemHeight = 95;
-  late double reviewHeight;
-  late int counter;
-
-  int numQuantity = 1;
-
-  List<Review> reviews = [
-    Review(
-        id: 0,
-        name: 'Mohammed Emad',
-        imgPath: ManagerAssets.facebookIconSignIn,
-        numStars: 5.0,
-        time: '2',
-        content: 'Exercitationem neque aut architecto eum. '
-            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
-            'quia similique voluptas sit doloremque. '
-            'Harum eaque officia reiciendis sit beatae voluptatem.'
-            ' Inventore sequi expedita maiores aliquid et pariatur.'),
-    Review(
-        id: 0,
-        name: 'Mohammed Emad',
-        imgPath: ManagerAssets.facebookIconSignIn,
-        numStars: 5.0,
-        time: '2',
-        content: 'Exercitationem neque aut architecto eum. '
-            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
-            'quia similique voluptas sit doloremque. '
-            'Harum eaque officia reiciendis sit beatae voluptatem.'
-            ' Inventore sequi expedita maiores aliquid et pariatur.'),
-    Review(
-        id: 0,
-        name: 'Mohammed Emad',
-        imgPath: ManagerAssets.facebookIconSignIn,
-        numStars: 5.0,
-        time: '2',
-        content: 'Exercitationem neque aut architecto eum. '
-            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
-            'quia similique voluptas sit doloremque. '
-            'Harum eaque officia reiciendis sit beatae voluptatem.'
-            ' Inventore sequi expedita maiores aliquid et pariatur.'),
-    Review(
-        id: 0,
-        name: 'Mohammed Emad',
-        imgPath: ManagerAssets.facebookIconSignIn,
-        numStars: 5.0,
-        time: '2',
-        content: 'Exercitationem neque aut architecto eum. '
-            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
-            'quia similique voluptas sit doloremque. '
-            'Harum eaque officia reiciendis sit beatae voluptatem.'
-            ' Inventore sequi expedita maiores aliquid et pariatur.'),
-    Review(
-        id: 0,
-        name: 'Mohammed Emad',
-        imgPath: ManagerAssets.facebookIconSignIn,
-        numStars: 5.0,
-        time: '2',
-        content: 'Exercitationem neque aut architecto eum. '
-            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
-            'quia similique voluptas sit doloremque. '
-            'Harum eaque officia reiciendis sit beatae voluptatem.'
-            ' Inventore sequi expedita maiores aliquid et pariatur.'),
-    Review(
-        id: 0,
-        name: 'Mohammed Emad',
-        imgPath: ManagerAssets.facebookIconSignIn,
-        numStars: 5.0,
-        time: '2',
-        content: 'Exercitationem neque aut architecto eum. '
-            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
-            'quia similique voluptas sit doloremque. '
-            'Harum eaque officia reiciendis sit beatae voluptatem.'
-            ' Inventore sequi expedita maiores aliquid et pariatur.'),
-  ];
-
-  @override
-  void initState() {
-    super.initState();
-    _pageController = PageController(initialPage: 0);
-    counter = 3;
-    reviewHeight = itemHeight * counter + 120;
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeController>(builder: (controller) {
-      return Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-              size: 34,
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+            size: ManagerIconSize.s34,
           ),
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          title: Text(
-            ManagerStrings.productDetails,
-            style: getMediumTextStyle(
-              fontSize: ManagerFontSize.s18,
-            ),
-          ),
-          centerTitle: true,
         ),
-        body: ListView(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text(
+          ManagerStrings.productDetails,
+          style: getMediumTextStyle(
+            fontSize: ManagerFontSize.s18,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: GetBuilder<HomeController>(builder: (controller) {
+        return ListView(
           children: [
             SizedBox(
               width: ManagerWeight.w320,
@@ -157,10 +59,10 @@ class _ItemDetailsState extends State<ItemDetails> {
                   SizedBox(
                     width: double.infinity,
                     child: PageView(
-                      controller: _pageController,
+                      controller: controller.pageController,
                       onPageChanged: (int index) {
                         setState(() {
-                          currentPageIndex = index;
+                          controller.currentPageIndex = index;
                         });
                       },
                       children: [
@@ -190,10 +92,10 @@ class _ItemDetailsState extends State<ItemDetails> {
                           child: IconButton(
                             onPressed: () {
                               setState(() {
-                                isFavorite = !isFavorite;
+                                controller.isFavorite = !controller.isFavorite;
                               });
                             },
-                            icon: isFavorite
+                            icon: controller.isFavorite
                                 ? Icon(
                                     Icons.favorite,
                                     color: Colors.white.withOpacity(0.5),
@@ -219,7 +121,8 @@ class _ItemDetailsState extends State<ItemDetails> {
                                 (index) => Row(
                                   children: [
                                     PageViewIndicator(
-                                      selected: currentPageIndex == 0,
+                                      selected:
+                                          controller.currentPageIndex == 0,
                                       color: Colors.white,
                                       elseColor: Colors.white.withOpacity(0.6),
                                     ),
@@ -245,7 +148,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                     height: 57,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: isDetails
+                        backgroundColor: controller.isDetails
                             ? Colors.transparent
                             : Colors.grey.shade300,
                         elevation: 0,
@@ -257,8 +160,8 @@ class _ItemDetailsState extends State<ItemDetails> {
                       ),
                       onPressed: () {
                         setState(() {
-                          isDetails = true;
-                          isReviews = false;
+                          controller.isDetails = true;
+                          controller.isReviews = false;
                         });
                       },
                       child: Text(
@@ -273,7 +176,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                     height: 57,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: isReviews
+                          backgroundColor: controller.isReviews
                               ? Colors.transparent
                               : Colors.grey.shade300,
                           elevation: 0,
@@ -281,8 +184,8 @@ class _ItemDetailsState extends State<ItemDetails> {
                               side: BorderSide(color: Colors.grey.shade300))),
                       onPressed: () {
                         setState(() {
-                          isDetails = false;
-                          isReviews = true;
+                          controller.isDetails = false;
+                          controller.isReviews = true;
                         });
                       },
                       child: Text(
@@ -295,171 +198,13 @@ class _ItemDetailsState extends State<ItemDetails> {
               ],
             ),
             Visibility(
-              visible: isDetails,
-              replacement: buildContainerReviews(),
+              visible: controller.isDetails,
+              replacement: ContainerReviews(controller),
               child: buildContainerDetails(controller),
             )
           ],
-        ),
-      );
-    });
-  }
-
-  Container buildContainerReviews() {
-    return Container(
-      margin: EdgeInsets.only(
-        bottom: ManagerHeight.h6,
-        left: ManagerWeight.w24,
-        right: ManagerWeight.w24,
-        top: ManagerHeight.h24,
-      ),
-      child: Column(
-        children: [
-          SizedBox(
-            height: reviewHeight,
-            child: ListView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: reviews.length,
-              itemBuilder: (context, index) {
-                return Container(
-                  width: ManagerWeight.w320,
-                  height: itemHeight,
-                  margin: EdgeInsets.symmetric(
-                    vertical: ManagerHeight.h18,
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.grey,
-                                child: Image.asset(
-                                  reviews[index].imgPath,
-                                  width: ManagerWeight.w38,
-                                  height: ManagerHeight.h38,
-                                ),
-                              ),
-                              SizedBox(width: ManagerWeight.w12),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    reviews[index].name,
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Row(
-                                    children: [
-                                      Icon(
-                                        Icons.star,
-                                        color: Colors.yellow.shade700,
-                                        size: 20,
-                                      ),
-                                      Text(
-                                        '(${reviews[index].numStars})',
-                                        style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              top: 5,
-                            ),
-                            child: Text(
-                              '${reviews[index].time}min',
-                              style: getMediumTextStyle(
-                                color: ManagerColors.grey,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: ManagerHeight.h6,
-                      ),
-                      SizedBox(
-                        width: ManagerWeight.w320,
-                        height: ManagerHeight.h40,
-                        child: Text(
-                          reviews[index].content!,
-                          style: TextStyle(
-                            color: Colors.grey.shade700,
-                            fontWeight: FontWeight.w300,
-                          ),
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 2,
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
-          const Divider(height: 10, color: Colors.grey),
-          Visibility(
-            visible: counter < reviews.length,
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                  backgroundColor: Colors.transparent,
-                  elevation: 0,
-                ),
-                onPressed: () {
-                  setState(() {
-                    if (counter < reviews.length) {
-                      reviewHeight += itemHeight + 30;
-                      counter++;
-                    }
-                  });
-                },
-                child: const Column(
-                  children: [
-                    Text(
-                      'more',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 15,
-                      ),
-                    ),
-                    Icon(
-                      Icons.keyboard_arrow_down,
-                      color: Colors.grey,
-                    ),
-                  ],
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize: const Size(260, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                backgroundColor: Colors.deepOrangeAccent,
-              ),
-              onPressed: () {},
-              child: const Text(
-                'Add Review',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
+        );
+      }),
     );
   }
 
@@ -560,8 +305,8 @@ class _ItemDetailsState extends State<ItemDetails> {
                         padding: EdgeInsets.zero,
                         onPressed: () {
                           setState(() {
-                            if (numQuantity > 1) {
-                              numQuantity--;
+                            if (controller.numQuantity > 1) {
+                              controller.numQuantity--;
                             }
                           });
                         },
@@ -572,7 +317,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                         ),
                       ),
                       Text(
-                        numQuantity.toString(),
+                        controller.numQuantity.toString(),
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
@@ -581,7 +326,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                         padding: EdgeInsets.zero,
                         onPressed: () {
                           setState(() {
-                            numQuantity++;
+                            controller.numQuantity++;
                           });
                         },
                         icon: const Icon(

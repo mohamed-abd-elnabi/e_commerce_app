@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:shop_avatar/core/constants.dart';
+import 'package:shop_avatar/core/resources/managar_font_size.dart';
+import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_height.dart';
+import 'package:shop_avatar/core/resources/manager_raduis.dart';
+import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/core/resources/manager_text_styles.dart';
+import 'package:shop_avatar/core/resources/manager_weight.dart';
 
 class AboutView extends StatelessWidget {
   const AboutView({super.key});
@@ -11,35 +17,39 @@ class AboutView extends StatelessWidget {
     return Scaffold(
       backgroundColor: ManagerColors.homeScaffoldBackGround,
       appBar: AppBar(
-        title: Text('About'.toUpperCase(),
-            style: getBoldTextStyle(fontSize: 20, color: ManagerColors.blake)),
+        title: Text(ManagerStrings.about.toUpperCase(),
+            style: getBoldTextStyle(
+                fontSize: ManagerFontSize.s18, color: ManagerColors.blake)),
         centerTitle: true,
-        elevation: 0,
+        elevation: ManagerConestant.elevationAppbar,
         backgroundColor: ManagerColors.transparent,
       ),
       body: Column(
         children: [
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: ManagerHeight.h20,
           ),
-          Image.asset('assets/images/splach/mmm.png'),
-          const SizedBox(
-            height: 20,
+          Image.asset(ManagerAssets.mmm),
+          SizedBox(
+            height: ManagerHeight.h20,
           ),
           Text(
-            'New4Shop',
-            style: getBoldTextStyle(fontSize: 22, color: ManagerColors.blake),
+            ManagerStrings.new4shop,
+            style: getBoldTextStyle(
+                fontSize: ManagerFontSize.s20, color: ManagerColors.blake),
           ),
           Container(
-            decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadiusDirectional.all(Radius.circular(20))),
-            margin: const EdgeInsetsDirectional.symmetric(
-                vertical: 28, horizontal: 20),
+            decoration: BoxDecoration(
+                color: ManagerColors.white,
+                borderRadius: BorderRadiusDirectional.all(
+                    Radius.circular(ManagerRaduis.r20))),
+            margin: EdgeInsetsDirectional.symmetric(
+                vertical: ManagerWeight.w26, horizontal: ManagerHeight.h20),
             width: double.infinity,
             height: MediaQuery.sizeOf(context).height * 0.6,
             child: Container(
-              margin: const EdgeInsetsDirectional.symmetric(horizontal: 26),
+              margin: EdgeInsetsDirectional.symmetric(
+                  horizontal: ManagerHeight.h26),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,9 +58,10 @@ class AboutView extends StatelessWidget {
                       height: ManagerHeight.h20,
                     ),
                     Text(
-                      'About Us',
+                      ManagerStrings.about,
                       style: getBoldTextStyle(
-                          fontSize: 22, color: ManagerColors.blake),
+                          fontSize: ManagerFontSize.s18,
+                          color: ManagerColors.blake),
                     ),
                     SizedBox(
                       height: ManagerHeight.h24,
@@ -66,7 +77,8 @@ At consequuntur at dolorem cum rerum sit accusantium. Atque deleniti ratione est
 
 Praesentium vel officiis est voluptatem quam voluptates incidunt. Totam nemo sapiente veniam cum alias. Facere odio nobis quo corrupti accusamus. Ratione voluptate facere quaerat quia.''',
                       style: getRegularTextStyle(
-                          fontSize: 16, color: ManagerColors.grey),
+                          fontSize: ManagerFontSize.s16,
+                          color: ManagerColors.grey),
                     ),
                     SizedBox(
                       height: ManagerHeight.h24,

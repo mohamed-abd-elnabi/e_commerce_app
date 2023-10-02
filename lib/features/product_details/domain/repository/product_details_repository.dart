@@ -4,6 +4,7 @@ import 'package:shop_avatar/core/internet_checker/internet_checker.dart';
 import 'package:shop_avatar/features/product_details/data/mapper/product_details_mapper.dart';
 import 'package:shop_avatar/features/product_details/data/request/product_details_request.dart';
 import 'package:shop_avatar/features/product_details/domain/model/product_details_model.dart';
+import '../../../../core/resources/manager_strings.dart';
 import '../../data/data_source/remote_data_source.dart';
 
 abstract class ProductDetailsRepository {
@@ -34,14 +35,14 @@ class ProductDetailsRepositoryImplementation
         );
       } catch (e) {
         return Left(
-          ErrorHandler.handel(e).failure,
+          ErrorHandler.handle(e).failure,
         );
       }
     } else {
       return Left(
         Failure(
           code: 400,
-          massege: 'error',
+          message: ManagerStrings.error,
         ),
       );
     }

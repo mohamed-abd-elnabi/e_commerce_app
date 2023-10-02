@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:shop_avatar/features/out_boarding/presentation/controller/outboading_controller.dart';
+import 'package:shop_avatar/features/out_boarding/presentation/view/widegts/out_boarding_content.dart';
+import 'package:shop_avatar/features/out_boarding/presentation/view/widegts/progress_Indicator.dart';
 import '/core/constants.dart';
 import '/core/resources/managar_font_size.dart';
 import '/core/resources/manager_assets.dart';
@@ -12,8 +14,6 @@ import 'package:shop_avatar/core/resources/manager_weight.dart';
 import 'package:shop_avatar/routes/routes.dart';
 import '../../../../core/resources/manager_padding.dart';
 import '../../../../core/widegts/base_button.dart';
-import '../widegts/out_boarding_content.dart';
-import '../widegts/progress_Indicator.dart';
 
 class OutBoarding extends StatefulWidget {
   const OutBoarding({super.key});

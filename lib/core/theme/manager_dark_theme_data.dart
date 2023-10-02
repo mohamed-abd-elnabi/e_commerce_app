@@ -11,7 +11,7 @@ ThemeData managerDarkThemeData() {
       primaryColorDark: ManagerColors.white,
       disabledColor: ManagerColors.primaryTextColor,
       splashColor: ManagerColors.greyLight,
-      backgroundColor: ManagerColors.homeScaffoldBackGround,
+      backgroundColor: ManagerColors.blake,
       scaffoldBackgroundColor: ManagerColors.blake,
       appBarTheme: AppBarTheme(
         centerTitle: true,
@@ -31,11 +31,11 @@ ThemeData managerDarkThemeData() {
           ElevatedButtonThemeData(style: ElevatedButton.styleFrom()),
       textTheme: TextTheme(
         bodySmall: getRegularTextStyle(
-          color: ManagerColors.grey,
+          color: ManagerColors.white,
         ),
-        bodyLarge: getBoldTextStyle(color: ManagerColors.blake),
+        bodyLarge: getBoldTextStyle(color: ManagerColors.white),
         bodyMedium: getMediumTextStyle(
-          color: ManagerColors.blake,
+          color: ManagerColors.white,
         ),
       ));
 }

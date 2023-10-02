@@ -1,9 +1,9 @@
-class ProductDetailsBrandModel {
+class ProductDetailsDataBrandModel {
   int id;
   String name;
   String logo;
 
-  ProductDetailsBrandModel({
+  ProductDetailsDataBrandModel({
     required this.id,
     required this.name,
     required this.logo,

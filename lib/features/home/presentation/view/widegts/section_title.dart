@@ -18,7 +18,7 @@ InkWell sectionTitle({
       children: [
         Text(
           title ?? ManagerStrings.bestProduct,
-          style: getBoldTextStyle(fontSize: ManagerFontSize.s18),
+          style: TextStyle(fontSize: ManagerFontSize.s20),
         ),
         Container(
           height: ManagerHeight.h30,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/core/resources/manager_colors.dart';
 import 'package:shop_avatar/core/resources/manager_strings.dart';
-
 import '../../../../core/constants.dart';
 
 class NotificationsView extends StatelessWidget {

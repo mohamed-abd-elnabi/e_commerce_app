@@ -23,12 +23,12 @@ class ForgetPasswordRepositoryImpl extends ForgetPasswordRepository {
             .forgetPassword(forgetPasswordRequest);
         return Right(response.toDomain());
       } catch (e) {
-        return Left(ErrorHandler.handel(e).failure);
+        return Left(ErrorHandler.handle(e).failure);
       }
     } else {
       return Left(Failure(
           code: ResponseCode.NO_INTERNET_CONNECTION,
-          massege: 'NO_INTERNT_CONNECTION'));
+          message: 'NO_INTERNT_CONNECTION'));
     }
   }
 }

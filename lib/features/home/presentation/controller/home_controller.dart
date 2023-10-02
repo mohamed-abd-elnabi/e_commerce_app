@@ -5,6 +5,7 @@ import '../../../../core/internet_checker/internet_checker.dart';
 import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import '../../../../routes/routes.dart';
+import '../../../product_details/presentation/view/Review.dart';
 import '/features/home/data/data_source/home_api_controller.dart';
 import '/features/home/presentation/model/home_model.dart';
 import '/features/product_details/domain/model/product_details_model.dart';
@@ -17,6 +18,95 @@ import '../../../../core/resources/manager_height.dart';
 import '../model/category_model.dart';
 
 class HomeController extends GetxController {
+  ////
+  late PageController pageController;
+  int currentPageIndex = 0;
+  bool isFavorite = false;
+
+  bool isDetails = true;
+  bool isReviews = false;
+  double itemHeight = 95;
+  late double reviewHeight;
+  late int counter;
+
+  int numQuantity = 1;
+
+  List<Review> reviews = [
+    Review(
+        id: 0,
+        name: 'Mohammed Emad',
+        imgPath: ManagerAssets.facebookIconSignIn,
+        numStars: 5.0,
+        time: '2',
+        content: 'Exercitationem neque aut architecto eum. '
+            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
+            'quia similique voluptas sit doloremque. '
+            'Harum eaque officia reiciendis sit beatae voluptatem.'
+            ' Inventore sequi expedita maiores aliquid et pariatur.'),
+    Review(
+        id: 0,
+        name: 'Mohammed Emad',
+        imgPath: ManagerAssets.facebookIconSignIn,
+        numStars: 5.0,
+        time: '2',
+        content: 'Exercitationem neque aut architecto eum. '
+            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
+            'quia similique voluptas sit doloremque. '
+            'Harum eaque officia reiciendis sit beatae voluptatem.'
+            ' Inventore sequi expedita maiores aliquid et pariatur.'),
+    Review(
+        id: 0,
+        name: 'Mohammed Emad',
+        imgPath: ManagerAssets.facebookIconSignIn,
+        numStars: 5.0,
+        time: '2',
+        content: 'Exercitationem neque aut architecto eum. '
+            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
+            'quia similique voluptas sit doloremque. '
+            'Harum eaque officia reiciendis sit beatae voluptatem.'
+            ' Inventore sequi expedita maiores aliquid et pariatur.'),
+    Review(
+        id: 0,
+        name: 'Mohammed Emad',
+        imgPath: ManagerAssets.facebookIconSignIn,
+        numStars: 5.0,
+        time: '2',
+        content: 'Exercitationem neque aut architecto eum. '
+            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
+            'quia similique voluptas sit doloremque. '
+            'Harum eaque officia reiciendis sit beatae voluptatem.'
+            ' Inventore sequi expedita maiores aliquid et pariatur.'),
+    Review(
+        id: 0,
+        name: 'Mohammed Emad',
+        imgPath: ManagerAssets.facebookIconSignIn,
+        numStars: 5.0,
+        time: '2',
+        content: 'Exercitationem neque aut architecto eum. '
+            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
+            'quia similique voluptas sit doloremque. '
+            'Harum eaque officia reiciendis sit beatae voluptatem.'
+            ' Inventore sequi expedita maiores aliquid et pariatur.'),
+    Review(
+        id: 0,
+        name: 'Mohammed Emad',
+        imgPath: ManagerAssets.facebookIconSignIn,
+        numStars: 5.0,
+        time: '2',
+        content: 'Exercitationem neque aut architecto eum. '
+            'Ea blanditiis aliquid odit ipsa. Alias qui minus '
+            'quia similique voluptas sit doloremque. '
+            'Harum eaque officia reiciendis sit beatae voluptatem.'
+            ' Inventore sequi expedita maiores aliquid et pariatur.'),
+  ];
+
+  @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
+  }
+
+  ////
   List<CategoryModel> categories = [];
   HomeModel homeModel = HomeModel(data: [], success: true, status: 200);
   ProductDetailsModel productDetailsModel =
@@ -29,12 +119,15 @@ class HomeController extends GetxController {
   ProductDetailsUseCaseImplementation productDetailsUseCase =
       instance<ProductDetailsUseCaseImplementation>();
   NetworkInfo networkInfo = instance<NetworkInfo>();
-
   @override
   void onInit() {
     super.onInit();
     readCategories();
     readHome();
+    /////////////////////
+    pageController = PageController(initialPage: 0);
+    counter = 3;
+    reviewHeight = itemHeight * counter + 120;
   }
 
   readCategories() async {
@@ -63,7 +156,7 @@ class HomeController extends GetxController {
       dialogRender(
         context: context,
         stateRenderType: StateRenderType.popUpErrorState,
-        message: l.massege,
+        message: l.message,
         title: '',
       );
     }, (r) {
@@ -79,7 +172,7 @@ class HomeController extends GetxController {
       dialogRender(
         context: context,
         stateRenderType: StateRenderType.popUpErrorState,
-        message: l.massege,
+        message: l.message,
         title: '',
       );
     }, (r) {
