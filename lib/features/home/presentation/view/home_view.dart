@@ -1,7 +1,5 @@
+import 'package:shop_avatar/features/home/presentation/view/widegts/filters_widget.dart';
 import 'package:shop_avatar/routes/routes.dart';
-
-import '../../../../core/resources/manager_spacer.dart';
-import '../../../../core/widegts/base_button.dart';
 import '/core/resources/managar_font_size.dart';
 import '/core/resources/manager_raduis.dart';
 import '/features/home/presentation/view/widegts/CategoriesList.dart';
@@ -116,6 +114,12 @@ class HomeView extends StatelessWidget {
                                                     overflow:
                                                         TextOverflow.ellipsis,
                                                     maxLines: 1,
+                                                    style: getMediumTextStyle(
+                                                      color:
+                                                          ManagerColors.blake,
+                                                      fontSize:
+                                                          ManagerFontSize.s14,
+                                                    ),
                                                   ),
                                                   Text(
                                                     controller.productPrice(
@@ -233,7 +237,7 @@ class HomeView extends StatelessWidget {
                           ),
                           IconButton(
                             onPressed: () {
-                              _openFilters(context);
+                              openFilters(context);
                             },
                             icon: const Icon(
                               Icons.filter_list_rounded,
@@ -250,184 +254,6 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class FiltersWidget extends StatelessWidget {
-  int cuttentpageindex = 0;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      height: MediaQuery.sizeOf(context).height * 0.5,
-      width: double.infinity,
-      child: Container(
-        margin: EdgeInsetsDirectional.symmetric(horizontal: 20),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 26,
-              ),
-              Text('By Category', style: getBoldTextStyle()),
-              SizedBox(
-                height: 16,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CustomButton(
-                      onPressed: () {},
-                      text: 'All',
-                      backgroundColor: ManagerColors.primaryColor,
-                      textStyle: getMediumTextStyle(
-                          fontSize: 16, color: ManagerColors.white),
-                    ),
-                    SizedBox(
-                      width: 6,
-                    ),
-                    CustomButton(
-                      onPressed: () {},
-                      text: 'Fresh Fruits',
-                      backgroundColor: ManagerColors.primaryColor,
-                      textStyle: getMediumTextStyle(
-                          fontSize: 16, color: ManagerColors.white),
-                    ),
-                    SizedBox(
-                      width: 6,
-                    ),
-                    CustomButton(
-                      onPressed: () {},
-                      text: 'Fresh Vegetables',
-                      backgroundColor: ManagerColors.primaryColor,
-                      textStyle: getMediumTextStyle(
-                          fontSize: 16, color: ManagerColors.white),
-                    ),
-                    SizedBox(
-                      width: 6,
-                    ),
-                    CustomButton(
-                      onPressed: () {},
-                      text: 'Fresh Herbs',
-                      backgroundColor: ManagerColors.primaryColor,
-                      textStyle: getMediumTextStyle(
-                          fontSize: 16, color: ManagerColors.white),
-                    ),
-                    SizedBox(
-                      width: 6,
-                    ),
-                    CustomButton(
-                      onPressed: () {},
-                      text: 'Fresh Fruits',
-                      backgroundColor: ManagerColors.primaryColor,
-                      textStyle: getMediumTextStyle(
-                          fontSize: 16, color: ManagerColors.white),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 26,
-              ),
-              Divider(
-                color: ManagerColors.prossColor,
-              ),
-              SizedBox(
-                height: 26,
-              ),
-              Text('By Price', style: getBoldTextStyle()),
-              RangeSliderExample(),
-              SizedBox(
-                height: 36,
-              ),
-              base_button(
-                title: 'Save',
-                onPreessed: () {},
-                isVisibalIcon: false,
-                spacer: ManagerSpacer.s3,
-                bgColor: ManagerColors.primaryColor,
-                textStyle: getRegularTextStyle(
-                    color: ManagerColors.white, fontSize: ManagerFontSize.s18),
-              ),
-            ]),
-      ),
-    );
-  }
-}
-
-void _openFilters(BuildContext context) {
-  showModalBottomSheet(
-    context: context,
-    builder: (BuildContext context) {
-      return FiltersWidget();
-    },
-  );
-}
-
-class CustomButton extends StatelessWidget {
-  final ValueChanged<bool>? onFocusChange;
-  final VoidCallback onPressed;
-  final String text;
-  final Color backgroundColor;
-  final double fontSize;
-  final TextStyle? textStyle;
-
-  CustomButton({
-    required this.onPressed,
-    this.onFocusChange,
-    required this.text,
-    this.backgroundColor = Colors.blue, // اللون الافتراضي هو الأزرق
-    this.fontSize = 15,
-    this.textStyle,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onFocusChange: onFocusChange,
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: backgroundColor,
-        minimumSize: Size(100, 38),
-      ),
-      child: Text(
-        text,
-        style: textStyle ?? TextStyle(fontSize: fontSize, color: Colors.white),
-      ),
-    );
-  }
-}
-
-class RangeSliderExample extends StatefulWidget {
-  const RangeSliderExample({super.key});
-
-  @override
-  State<RangeSliderExample> createState() => _RangeSliderExampleState();
-}
-
-class _RangeSliderExampleState extends State<RangeSliderExample> {
-  RangeValues _currentRangeValues = const RangeValues(40, 80);
-
-  @override
-  Widget build(BuildContext context) {
-    return RangeSlider(
-      activeColor: ManagerColors.primaryColor,
-      inactiveColor: ManagerColors.prossColor,
-      values: _currentRangeValues,
-      max: 100,
-      divisions: 5,
-      labels: RangeLabels(
-        _currentRangeValues.start.round().toString(),
-        _currentRangeValues.end.round().toString(),
-      ),
-      onChanged: (RangeValues values) {
-        setState(() {
-          _currentRangeValues = values;
-        });
-      },
     );
   }
 }

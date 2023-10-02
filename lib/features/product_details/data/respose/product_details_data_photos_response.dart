@@ -2,17 +2,20 @@ import 'package:json_annotation/json_annotation.dart';
 part 'product_details_data_photos_response.g.dart';
 
 @JsonSerializable()
-class ProductDetailsDataPhotosResponse {
+class ProductDetailsDataPhotoResponse {
   @JsonKey(name: 'variant')
   String? variant;
   @JsonKey(name: 'path')
   String? path;
 
-  ProductDetailsDataPhotosResponse({this.variant, this.path});
-  factory ProductDetailsDataPhotosResponse.fromJson(
-          Map<String, dynamic> json) =>
-      _$ProductDetailsDataPhotosResponseFromJson(json);
+  ProductDetailsDataPhotoResponse({
+    required this.variant,
+    required this.path,
+  });
+
+  factory ProductDetailsDataPhotoResponse.fromJson(Map<String, dynamic> json) =>
+      _$ProductDetailsDataPhotoResponseFromJson(json);
 
   Map<String, dynamic> toJson() =>
-      _$ProductDetailsDataPhotosResponseToJson(this);
+      _$ProductDetailsDataPhotoResponseToJson(this);
 }

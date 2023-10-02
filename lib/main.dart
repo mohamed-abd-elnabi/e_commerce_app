@@ -9,6 +9,7 @@ import 'package:shop_avatar/core/resources/manager_assets.dart';
 import 'package:shop_avatar/core/theme/manager_dark_theme_data.dart';
 import 'package:shop_avatar/routes/routes.dart';
 import 'core/constants.dart';
+import 'core/service/theme_service.dart';
 import 'core/theme/manager_light_theme_data.dart';
 import 'firebase_options.dart';
 
@@ -23,13 +24,14 @@ main() async {
       path: ManagerPathes.translationsPaths,
       startLocale: localeSettings.defaultLocale,
       fallbackLocale: localeSettings.defaultLocale,
-      child: const MyApp(),
+      child: MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final ThemeService _themeService;
+  MyApp() : _themeService = ThemeService();
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +49,12 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           initialRoute: Routes.splachScreen,
           onGenerateRoute: RouteGenerator.getRoute,
-          //theme: managerDarkThemeData(),
-          themeMode: ThemeMode.dark,
+          themeMode: _themeService.getThemeMode(),
+          theme: _themeService.getThemeData(),
+          // Remove or comment out the themeMode line
+          // themeMode: ThemeMode.dark,
           //  darkTheme: ThemeData.dark(),
-          theme: ThemeData(useMaterial3: true),
+          //theme: ThemeData(useMaterial3: true),
           // defaultTransition: Transition.cupertino,
           //   routes: {
           //     Routes.splashScreen: (context) => const SplachScreen(),

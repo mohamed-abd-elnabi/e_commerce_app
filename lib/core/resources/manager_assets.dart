@@ -27,6 +27,21 @@ class ManagerAssets {
 
   static const String disableAlarm =
       'assets/images/notifications/disable-alarm.png';
+  static const String support = 'assets/images/support/phone.png';
+  static const String masseeg = 'assets/images/support/phone.png';
+  static const String whats = 'assets/images/support/whats.png';
+  static const String menu2 = 'assets/images/more_products/menu2.png';
+  static const String menu = 'assets/images/more_products/menu.png';
+  static const String mmm = 'assets/images/splach/mmm.png';
+  static const String skype = 'assets/images/share_app/skype.png';
+  static const String email = 'assets/images/share_app/email.png';
+  static const String x = 'assets/images/share_app/x.png';
+  static const String fasebook = 'assets/images/share_app/fasebook.png';
+  static const String google = 'assets/images/share_app/google.png';
+  static const String whatsApp = 'assets/images/share_app/whatsApp.png';
+  static const String masenger = 'assets/images/share_app/masenger.png';
+  static const String externallink =
+      'assets/images/share_app/external-link.png';
 }
 
 class ManagerPathes {

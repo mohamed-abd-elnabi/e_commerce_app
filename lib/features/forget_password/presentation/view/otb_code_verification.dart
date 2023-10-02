@@ -1,9 +1,10 @@
 import 'package:flutter_state_render_dialog/flutter_state_render_dialog.dart';
+import 'package:shop_avatar/core/constants.dart';
+import 'package:shop_avatar/core/resources/manager_strings.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
 import 'package:shop_avatar/features/forget_password/presentation/controller/forget_password_controller.dart';
 import 'package:shop_avatar/features/forget_password/presentation/view/widget/code_verification.dart';
 import 'package:shop_avatar/routes/routes.dart';
-
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_colors.dart';
 import '../../../../core/resources/manager_height.dart';
@@ -25,7 +26,7 @@ class VerificationScreen extends StatelessWidget {
               ),
             ),
             centerTitle: true,
-            elevation: 0,
+            elevation: ManagerConestant.elevationAppbar,
           ),
           backgroundColor: ManagerColors.white,
           body: Container(
@@ -42,7 +43,7 @@ class VerificationScreen extends StatelessWidget {
                     height: ManagerHeight.h10,
                   ),
                   Text(
-                    'subTitleVerification',
+                    ManagerStrings.subTitleVerification,
                     style: getMediumTextStyle(
                       fontSize: ManagerFontSize.s18,
                       color: ManagerColors.blake,
@@ -54,7 +55,7 @@ class VerificationScreen extends StatelessWidget {
                       vertical: ManagerHeight.h4,
                     ),
                     child: Text(
-                      'verifyMessage',
+                      ManagerStrings.verifyMessage,
                       style: getRegularTextStyle(
                         fontSize: ManagerFontSize.s14,
                         color: ManagerColors.grey,
@@ -65,142 +66,132 @@ class VerificationScreen extends StatelessWidget {
                   SizedBox(
                     height: ManagerHeight.h30,
                   ),
-                  Directionality(
-                    textDirection: TextDirection.ltr,
-                    child: Container(
-                      child: Row(
-                        children: [
-                          CodeVerification(
-                            controller: controller.firstCodeTextController,
-                            focusNode: controller.firstFocusNode,
-                            previousFocusNode: controller.firstFocusNode,
-                            onChanged: (String value) {
-                              if (value.isNotEmpty) {
-                                controller.secondFocusNode.requestFocus();
-                              }
-                            },
-                            validator: (value) =>
-                                controller.validator.validateCode(value),
-                          ),
-                          SizedBox(
-                            width: ManagerWeight.w10,
-                          ),
-                          CodeVerification(
-                            controller: controller.secondCodeTextController,
-                            focusNode: controller.secondFocusNode,
-                            previousFocusNode: controller.firstFocusNode,
-                            onChanged: (String value) {
-                              if (value.isNotEmpty) {
-                                controller.thirdFocusNode.requestFocus();
-                              } else {
-                                controller.firstFocusNode.requestFocus();
-                              }
-                            },
-                            validator: (value) =>
-                                controller.validator.validateCode(value),
-                          ),
-                          SizedBox(
-                            width: ManagerWeight.w10,
-                          ),
-                          CodeVerification(
-                            controller: controller.thirdCodeTextController,
-                            focusNode: controller.thirdFocusNode,
-                            previousFocusNode: controller.secondFocusNode,
-                            onChanged: (String value) {
-                              if (value.isNotEmpty) {
-                                controller.fourthFocusNode.requestFocus();
-                              }
-                            },
-                            validator: (value) =>
-                                controller.validator.validateCode(value),
-                          ),
-                          SizedBox(
-                            width: ManagerWeight.w10,
-                          ),
-                          CodeVerification(
-                            controller: controller.fourthCodeTextController,
-                            focusNode: controller.fourthFocusNode,
-                            previousFocusNode: controller.thirdFocusNode,
-                            onChanged: (String value) {
-                              if (value.isNotEmpty) {
-                                controller.fifthFocusNode.requestFocus();
-                              }
-                            },
-                            validator: (value) =>
-                                controller.validator.validateCode(value),
-                          ),
-                          SizedBox(
-                            width: ManagerWeight.w10,
-                          ),
-                          CodeVerification(
-                            controller: controller.fifthCodeTextController,
-                            focusNode: controller.fifthFocusNode,
-                            previousFocusNode: controller.fourthFocusNode,
-                            onChanged: (String value) {
-                              if (value.isNotEmpty) {
-                                controller.sixthFocusNode.requestFocus();
-                              }
-                            },
-                            validator: (value) =>
-                                controller.validator.validateCode(value),
-                          ),
-                          SizedBox(
-                            width: ManagerWeight.w10,
-                          ),
-                          CodeVerification(
-                            controller: controller.sixthCodeTextController,
-                            focusNode: controller.sixthFocusNode,
-                            previousFocusNode: controller.fifthFocusNode,
-                            onChanged: (String value) {
-                              if (value.isNotEmpty) {}
-                            },
-                            validator: (value) =>
-                                controller.validator.validateCode(value),
-                          ),
-                        ],
+                  Row(
+                    children: [
+                      CodeVerification(
+                        controller: controller.firstCodeTextController,
+                        focusNode: controller.firstFocusNode,
+                        previousFocusNode: controller.firstFocusNode,
+                        onChanged: (String value) {
+                          if (value.isNotEmpty) {
+                            controller.secondFocusNode.requestFocus();
+                          }
+                        },
+                        validator: (value) =>
+                            controller.validator.validateCode(value),
                       ),
-                    ),
+                      SizedBox(
+                        width: ManagerWeight.w10,
+                      ),
+                      CodeVerification(
+                        controller: controller.secondCodeTextController,
+                        focusNode: controller.secondFocusNode,
+                        previousFocusNode: controller.firstFocusNode,
+                        onChanged: (String value) {
+                          if (value.isNotEmpty) {
+                            controller.thirdFocusNode.requestFocus();
+                          } else {
+                            controller.firstFocusNode.requestFocus();
+                          }
+                        },
+                        validator: (value) =>
+                            controller.validator.validateCode(value),
+                      ),
+                      SizedBox(
+                        width: ManagerWeight.w10,
+                      ),
+                      CodeVerification(
+                        controller: controller.thirdCodeTextController,
+                        focusNode: controller.thirdFocusNode,
+                        previousFocusNode: controller.secondFocusNode,
+                        onChanged: (String value) {
+                          if (value.isNotEmpty) {
+                            controller.fourthFocusNode.requestFocus();
+                          }
+                        },
+                        validator: (value) =>
+                            controller.validator.validateCode(value),
+                      ),
+                      SizedBox(
+                        width: ManagerWeight.w10,
+                      ),
+                      CodeVerification(
+                        controller: controller.fourthCodeTextController,
+                        focusNode: controller.fourthFocusNode,
+                        previousFocusNode: controller.thirdFocusNode,
+                        onChanged: (String value) {
+                          if (value.isNotEmpty) {
+                            controller.fifthFocusNode.requestFocus();
+                          }
+                        },
+                        validator: (value) =>
+                            controller.validator.validateCode(value),
+                      ),
+                      SizedBox(
+                        width: ManagerWeight.w10,
+                      ),
+                      CodeVerification(
+                        controller: controller.fifthCodeTextController,
+                        focusNode: controller.fifthFocusNode,
+                        previousFocusNode: controller.fourthFocusNode,
+                        onChanged: (String value) {
+                          if (value.isNotEmpty) {
+                            controller.sixthFocusNode.requestFocus();
+                          }
+                        },
+                        validator: (value) =>
+                            controller.validator.validateCode(value),
+                      ),
+                      SizedBox(
+                        width: ManagerWeight.w10,
+                      ),
+                      CodeVerification(
+                        controller: controller.sixthCodeTextController,
+                        focusNode: controller.sixthFocusNode,
+                        previousFocusNode: controller.fifthFocusNode,
+                        onChanged: (String value) {
+                          if (value.isNotEmpty) {}
+                        },
+                        validator: (value) =>
+                            controller.validator.validateCode(value),
+                      ),
+                    ],
                   ),
                   SizedBox(
                     height: ManagerHeight.h10,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'resendCode',
-                        style: getRegularTextStyle(
-                          fontSize: ManagerFontSize.s14,
-                          color: ManagerColors.grey,
-                        ),
-                        textAlign: TextAlign.center,
+                  Text(
+                    ManagerStrings.resendCode,
+                    style: getRegularTextStyle(
+                      fontSize: ManagerFontSize.s14,
+                      color: ManagerColors.grey,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      if (controller.validateCode()) {
+                        Navigator.pushReplacementNamed(
+                            context, Routes.homePage);
+                      } else {
+                        dialogRender(
+                          context: context,
+                          message: ManagerStrings.sorryFailed,
+                          title: ManagerStrings.error,
+                          stateRenderType: StateRenderType.popUpErrorState,
+                          retryAction: () {
+                            Get.back();
+                          },
+                        );
+                      }
+                    },
+                    child: Text(
+                      ManagerStrings.send,
+                      style: getMediumTextStyle(
+                        fontSize: ManagerFontSize.s14,
+                        color: ManagerColors.primaryColor,
                       ),
-                      ElevatedButton(
-                        onPressed: () {
-                          if (controller.validateCode()) {
-                            Navigator.pushReplacementNamed(
-                                context, Routes.homePage);
-                          } else {
-                            dialogRender(
-                              context: context,
-                              message: 'sorryFailed',
-                              title: 'error',
-                              stateRenderType: StateRenderType.popUpErrorState,
-                              retryAction: () {
-                                Get.back();
-                              },
-                            );
-                          }
-                        },
-                        child: Text(
-                          'send',
-                          style: getMediumTextStyle(
-                            fontSize: ManagerFontSize.s14,
-                            color: ManagerColors.primaryColor,
-                          ),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ],
               ),

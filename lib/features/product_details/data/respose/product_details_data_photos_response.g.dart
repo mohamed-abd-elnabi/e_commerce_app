@@ -6,15 +6,15 @@ part of 'product_details_data_photos_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProductDetailsDataPhotosResponse _$ProductDetailsDataPhotosResponseFromJson(
+ProductDetailsDataPhotoResponse _$ProductDetailsDataPhotoResponseFromJson(
         Map<String, dynamic> json) =>
-    ProductDetailsDataPhotosResponse(
+    ProductDetailsDataPhotoResponse(
       variant: json['variant'] as String?,
       path: json['path'] as String?,
     );
 
-Map<String, dynamic> _$ProductDetailsDataPhotosResponseToJson(
-        ProductDetailsDataPhotosResponse instance) =>
+Map<String, dynamic> _$ProductDetailsDataPhotoResponseToJson(
+        ProductDetailsDataPhotoResponse instance) =>
     <String, dynamic>{
       'variant': instance.variant,
       'path': instance.path,

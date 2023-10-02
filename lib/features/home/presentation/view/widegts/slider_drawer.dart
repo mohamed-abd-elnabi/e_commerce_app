@@ -12,9 +12,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:slide_drawer/slide_drawer.dart';
 
-class SliderDrawer extends StatelessWidget {
+class SliderDrawer extends StatefulWidget {
   const SliderDrawer({Key? key}) : super(key: key);
 
+  @override
+  State<SliderDrawer> createState() => _SliderDrawerState();
+}
+
+class _SliderDrawerState extends State<SliderDrawer> {
+  bool isDarkThemeEnabled = false;
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (controller) {
@@ -35,16 +41,36 @@ class SliderDrawer extends StatelessWidget {
                 SizedBox(
                   height: ManagerHeight.h26,
                 ),
-                InkWell(
-                  onTap: () {
-                    SlideDrawer.of(context)?.close();
-                  },
-                  child: Container(
-                      alignment: AlignmentDirectional.centerEnd,
-                      margin: EdgeInsetsDirectional.symmetric(
-                          horizontal: ManagerWeight.w20,
-                          vertical: ManagerHeight.h20),
-                      child: Image.asset(ManagerAssets.iconBack)),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: ManagerWeight.w30,
+                    ),
+                    Switch(
+                      activeColor: Colors.black,
+                      inactiveTrackColor: ManagerColors.primaryColor,
+                      value: isDarkThemeEnabled,
+                      onChanged: (value) {
+                        setState(() {
+                          isDarkThemeEnabled = value;
+                        });
+                      },
+                    ),
+                    SizedBox(
+                      width: ManagerWeight.w208,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        SlideDrawer.of(context)?.close();
+                      },
+                      child: Container(
+                          alignment: AlignmentDirectional.centerEnd,
+                          margin: EdgeInsetsDirectional.symmetric(
+                              horizontal: ManagerWeight.w20,
+                              vertical: ManagerHeight.h20),
+                          child: Image.asset(ManagerAssets.iconBack)),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: ManagerHeight.h20,

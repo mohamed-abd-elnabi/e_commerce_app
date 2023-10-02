@@ -6,16 +6,16 @@ part of 'product_details_brand_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProductDetailsBrandResponse _$ProductDetailsBrandResponseFromJson(
+ProductDetailsDataBrandResponse _$ProductDetailsDataBrandResponseFromJson(
         Map<String, dynamic> json) =>
-    ProductDetailsBrandResponse(
+    ProductDetailsDataBrandResponse(
       id: json['id'] as int?,
       name: json['name'] as String?,
       logo: json['logo'] as String?,
     );
 
-Map<String, dynamic> _$ProductDetailsBrandResponseToJson(
-        ProductDetailsBrandResponse instance) =>
+Map<String, dynamic> _$ProductDetailsDataBrandResponseToJson(
+        ProductDetailsDataBrandResponse instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

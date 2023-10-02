@@ -8,28 +8,29 @@ import '../resources/manager_strings.dart';
 
 class Failure {
   int code;
-  String massege;
+  String message;
 
   Failure({
     required this.code,
-    required this.massege,
+    required this.message,
   });
 }
 
 class ErrorHandler implements Exception {
   late Failure failure;
-  ErrorHandler.handel(dynamic error) {
+
+  ErrorHandler.handle(dynamic error) {
     if (error is DioException) {
       failure = Failure(
         code: error.response!.statusCode.parseError(),
-        massege: error.response?.data['message'] ??
+        message: error.response?.data['message'] ??
             error.response?.data['errors'].toString() ??
-            'error',
+            ManagerStrings.error,
       );
     } else {
       failure = Failure(
         code: 400,
-        massege: 'error',
+        message: ManagerStrings.error,
       );
     }
   }
@@ -58,22 +59,22 @@ extension DataSourceExtension on TypeHandler {
       case TypeHandler.SUCCESS:
         return Failure(
           code: ResponseCode.SUCCESS,
-          massege: 'SUCCESS',
+          message: 'SUCCESS',
         );
       case TypeHandler.NO_CONTENT:
         return Failure(
           code: ResponseCode.NO_CONTENT,
-          massege: 'NO_CONTENT',
+          message: 'NO_CONTENT',
         );
       case TypeHandler.BAD_REQUEST:
         return Failure(
           code: ResponseCode.BAD_REQUEST,
-          massege: 'BAD_REQUEST',
+          message: 'BAD_REQUEST',
         );
       case TypeHandler.FORBIDDEN:
         return Failure(
           code: ResponseCode.FORBIDDEN,
-          massege: 'FORBIDDEN',
+          message: 'FORBIDDEN',
         );
       case TypeHandler.UNAUTHORISED:
         Get.offAllNamed(
@@ -81,52 +82,52 @@ extension DataSourceExtension on TypeHandler {
         );
         return Failure(
           code: ResponseCode.UNAUTHORISED,
-          massege: 'UNAUTHORISED',
+          message: 'UNAUTHORISED',
         );
       case TypeHandler.NOT_FOUND:
         return Failure(
           code: ResponseCode.NOT_FOUND,
-          massege: 'NOT_FOUND',
+          message: 'NOT_FOUND',
         );
       case TypeHandler.INTERNAL_SERVER_ERROR:
         return Failure(
           code: ResponseCode.INTERNAL_SERVER_ERROR,
-          massege: 'INTERNAL_SERVER_ERROR',
+          message: 'INTERNAL_SERVER_ERROR',
         );
       case TypeHandler.CONNECT_TIMEOUT:
         return Failure(
           code: ResponseCode.CONNECT_TIMEOUT,
-          massege: 'CONNECT_TIMEOUT',
+          message: 'CONNECT_TIMEOUT',
         );
       case TypeHandler.CANCEL:
         return Failure(
           code: ResponseCode.CANCEL,
-          massege: 'CANCEL',
+          message: 'CANCEL',
         );
       case TypeHandler.RECEIVE_TIMEOUT:
         return Failure(
           code: ResponseCode.RECEIVE_TIMEOUT,
-          massege: 'RECIEVE_TIMEOUT',
+          message: 'RECIEVE_TIMEOUT',
         );
       case TypeHandler.SEND_TIMEOUT:
         return Failure(
           code: ResponseCode.SEND_TIMEOUT,
-          massege: 'SEND_TIMEOUT',
+          message: 'SEND_TIMEOUT',
         );
       case TypeHandler.CACHE_ERROR:
         return Failure(
           code: ResponseCode.CACHE_ERROR,
-          massege: 'CACHE_ERROR',
+          message: 'CACHE_ERROR',
         );
       case TypeHandler.NO_INTERNET_CONNECTION:
         return Failure(
           code: ResponseCode.NO_INTERNET_CONNECTION,
-          massege: 'NO_INTERNT_CONNECTION',
+          message: 'NO_INTERNT_CONNECTION',
         );
       default:
         return Failure(
           code: ResponseCode.UNKNOWN,
-          massege: 'UNKNOWN',
+          message: 'UNKNOWN',
         );
     }
   }

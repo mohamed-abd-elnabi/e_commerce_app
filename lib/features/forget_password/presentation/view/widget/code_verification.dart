@@ -57,10 +57,10 @@ class CodeVerification extends StatelessWidget {
               ),
               borderSide: BorderSide(
                 width: ManagerWeight.w2,
-                color: Colors.white,
+                color: ManagerColors.white,
               ),
             ),
-            enabledBorder: OutlineInputBorder(
+            enabledBorder: const OutlineInputBorder(
                 borderSide:
                     BorderSide(color: ManagerColors.homeScaffoldBackGround))),
       ),

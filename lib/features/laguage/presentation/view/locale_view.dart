@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:shop_avatar/core/resources/manager_raduis.dart';
 import 'package:shop_avatar/core/resources/manager_weight.dart';
-
 import '../../../../config/locale/locale_settings.dart';
 import '../../../../core/resources/managar_font_size.dart';
 import '../../../../core/resources/manager_colors.dart';
@@ -57,13 +56,13 @@ class LocaleView extends StatelessWidget {
                         SizedBox(
                           width: ManagerWeight.w10,
                         ),
-                        Icon(
+                        const Icon(
                           Icons.language,
                           color: ManagerColors.blake,
                         ),
                         SizedBox(width: ManagerWeight.w10),
                         Text(
-                          'Lang',
+                          ManagerStrings.language,
                           style: getMediumTextStyle(
                             fontSize: ManagerIconSize.s14,
                             color: ManagerColors.blake,
@@ -73,14 +72,14 @@ class LocaleView extends StatelessWidget {
                         Text(
                           LocaleSettings
                                   .languages[controller.currentLanguage] ??
-                              'ar',
+                              ManagerStrings.ar,
                           style: getMediumTextStyle(
                             fontSize: ManagerIconSize.s14,
                             color: ManagerColors.blake,
                           ),
                         ),
                         SizedBox(width: ManagerWeight.w10),
-                        Icon(
+                        const Icon(
                           Icons.arrow_forward_ios_rounded,
                           size: ManagerIconSize.s16,
                           color: ManagerColors.white,

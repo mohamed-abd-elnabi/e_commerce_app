@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/services.dart';
 import 'package:shop_avatar/features/forget_password/data/repoitory_impl/forget_password_repository_impl.dart';
-
 import '../../core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import '../../features/auth/presentation/controller/auth_controller.dart';
 import '../../features/forget_password/data/data_sourse/forget_password_remote_data_source.dart';
@@ -11,7 +10,9 @@ import '../../features/forget_password/presentation/controller/forget_password_c
 import '../../features/laguage/presentation/controller/locale_notifier_controller.dart';
 import '../../features/out_boarding/presentation/controller/outboading_controller.dart';
 import '../../features/product_details/domain/repository/product_details_repository.dart';
+import '../../features/product_details/presentation/controller/product_details_controller.dart';
 import '../../features/profile/presentation/controller/profile_controller.dart';
+import '../../features/show_more_products/presentation/controller/show_more_products_controller.dart';
 import '../../features/splach/presentation/controller/splach_controller.dart';
 import '/core/internet_checker/internet_checker.dart';
 import '/core/network/api/app_api.dart';
@@ -26,12 +27,14 @@ import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 
 final instance = GetIt.instance;
+final GetIt getIt = GetIt.instance;
 
 initModule() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await AppSettingsSharedPreferences().initPreferences();
-
+  getIt.registerLazySingleton<AppSettingsSharedPreferences>(
+      () => AppSettingsSharedPreferences());
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -163,4 +166,8 @@ initLocale() {
 
 initProfile() {
   Get.put<ProfileController>(ProfileController());
+}
+
+initShowMoreProducts() {
+  Get.put<ShowMoreProductsController>(ShowMoreProductsController());
 }

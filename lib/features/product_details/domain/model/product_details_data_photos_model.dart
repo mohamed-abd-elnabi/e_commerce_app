@@ -1,8 +1,8 @@
-class ProductDetailsDataPhotosModel {
+class ProductDetailsDataPhotoModel {
   String variant;
   String path;
 
-  ProductDetailsDataPhotosModel({
+  ProductDetailsDataPhotoModel({
     required this.variant,
     required this.path,
   });

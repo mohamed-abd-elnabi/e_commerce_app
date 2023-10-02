@@ -6,9 +6,9 @@ import '../../domain/model/product_details_model.dart';
 extension ProductDetailsMapper on ProductDetailsResponse {
   ProductDetailsModel toDomain() {
     return ProductDetailsModel(
+      data: data!.map((e) => e.toDomain()).toList(),
       status: status.onNull(),
       success: success.onNull(),
-      data: data!.map((e) => e.toDomain()).toList(),
     );
   }
 }

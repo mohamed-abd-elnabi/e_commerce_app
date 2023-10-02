@@ -17,7 +17,7 @@ ProductDetailsDataResponse _$ProductDetailsDataResponseFromJson(
       shopName: json['shop_name'] as String?,
       shopLogo: json['shop_logo'] as String?,
       photos: (json['photos'] as List<dynamic>?)
-          ?.map((e) => ProductDetailsDataPhotosResponse.fromJson(
+          ?.map((e) => ProductDetailsDataPhotoResponse.fromJson(
               e as Map<String, dynamic>))
           .toList(),
       thumbnailImage: json['thumbnail_image'] as String?,
@@ -43,7 +43,7 @@ ProductDetailsDataResponse _$ProductDetailsDataResponseFromJson(
       link: json['link'] as String?,
       brand: json['brand'] == null
           ? null
-          : ProductDetailsBrandResponse.fromJson(
+          : ProductDetailsDataBrandResponse.fromJson(
               json['brand'] as Map<String, dynamic>),
     );
 

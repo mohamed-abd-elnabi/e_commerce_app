@@ -10,8 +10,12 @@ class ProductDetailsDataChoiceOptionsResponse {
   @JsonKey(name: 'title')
   String? title;
 
-  ProductDetailsDataChoiceOptionsResponse(
-      {this.name, this.options, this.title});
+  ProductDetailsDataChoiceOptionsResponse({
+    required this.name,
+    required this.options,
+    required this.title,
+  });
+
   factory ProductDetailsDataChoiceOptionsResponse.fromJson(
           Map<String, dynamic> json) =>
       _$ProductDetailsDataChoiceOptionsResponseFromJson(json);
