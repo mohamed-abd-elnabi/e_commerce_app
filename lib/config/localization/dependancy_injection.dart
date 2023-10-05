@@ -1,5 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
+import 'package:shop_avatar/core/storage/remote/firebase/controllers/fb_notifications.dart';
 import 'package:shop_avatar/features/forget_password/data/repoitory_impl/forget_password_repository_impl.dart';
 import '../../core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import '../../features/auth/presentation/controller/auth_controller.dart';
@@ -14,6 +16,7 @@ import '../../features/product_details/presentation/controller/product_details_c
 import '../../features/profile/presentation/controller/profile_controller.dart';
 import '../../features/show_more_products/presentation/controller/show_more_products_controller.dart';
 import '../../features/splach/presentation/controller/splach_controller.dart';
+import '../../firebase_options.dart';
 import '/core/internet_checker/internet_checker.dart';
 import '/core/network/api/app_api.dart';
 import '/core/network/api/dio_factory.dart';
@@ -29,9 +32,20 @@ import 'package:internet_connection_checker_plus/internet_connection_checker_plu
 final instance = GetIt.instance;
 final GetIt getIt = GetIt.instance;
 
+initFirebase() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  final fbNotifications = FbNotifications();
+  fbNotifications.requestNotificationPermissions();
+  fbNotifications.initializeForegroundNotificationForAndroid();
+  FbNotifications.initNotifications();
+}
+
 initModule() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  initFirebase();
   await AppSettingsSharedPreferences().initPreferences();
   getIt.registerLazySingleton<AppSettingsSharedPreferences>(
       () => AppSettingsSharedPreferences());
