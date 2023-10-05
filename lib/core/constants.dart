@@ -16,6 +16,11 @@ class ManagerConestant {
   static const String preferencesKeyTheme = 'theme_key';
   static const String dark = 'dark';
   static const String light = 'light';
+  static const String notificationChannel = 'App_Name_Notifications_channel';
+  static const String notificationChannelName = 'AppName Notifications Channel';
+  static const String notificationChannelDescription =
+      'This channel will receive notifications specific to the app';
+  static const String notificationIconName = 'launch_background';
 }
 
 class keyConestant {
