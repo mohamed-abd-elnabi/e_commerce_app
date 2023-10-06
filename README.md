@@ -48,6 +48,7 @@ Contributions to the app are welcome. Feel free to submit bug reports, feature r
 <br>
 <div style="display: flex; flex-direction: row; gap: 60px;">
   <img height="250px" src="https://i.postimg.cc/hvhZRhpT/Screenshot-1696551706.png"></img>
+  [![Screenshot-1696551790.png](https://i.postimg.cc/sg7zdT2j/Screenshot-1696551790.png)](https://postimg.cc/K1GwtrLw)
   <img height="250px" src="https://i.postimg.cc/sg7zdT2j/Screenshot-1696551790.png"></img>
   <img height="250px" src="https://i.postimg.cc/nzZcw6Yf/Screenshot-1696551732.png"></img>
   <img height="250px" src="https://i.postimg.cc/x8h59ydY/Screenshot-1696551780.png"></img>
