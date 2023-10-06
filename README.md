@@ -42,8 +42,8 @@ To get started with the MyShop app, follow these steps:
 
 ## Contributions
 
-Contributions to the MyShop app are welcome. Feel free to submit bug reports, feature requests, or code contributions through pull requests.
+Contributions to the app are welcome. Feel free to submit bug reports, feature requests, or code contributions through pull requests.
 
 ## Contact
 
-If you have any questions or need assistance, you can reach out to the project maintainers at [contact@example.com](mailto:contact@example.com).
+If you have any questions or need assistance, you can reach out to the project maintainers at [mohmad14220040@gmail.com]
