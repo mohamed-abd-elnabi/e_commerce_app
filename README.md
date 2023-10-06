@@ -10,7 +10,7 @@ e-commerce application built using Flutter that allows users to shop for a varie
 - Real-time product listings and updates
 - Firebase push notifications for order tracking
 - User-friendly shopping cart management(WIP)
-- Secure online payment processing
+- Secure online payment processing(WIP)
 
 ## Technologies Used
 
