@@ -47,4 +47,9 @@ Contributions to the app are welcome. Feel free to submit bug reports, feature r
 ## Contact
 
 If you have any questions or need assistance, you can reach out to the project maintainers at [mohmad14220040@gmail.com]
-<img height="50px" src="https://i.postimg.cc/hvhZRhpT/Screenshot-1696551706.png"></img>
+<br>
+<img height="150px" src="https://i.postimg.cc/hvhZRhpT/Screenshot-1696551706.png"></img>
+<img height="150px" src="https://i.postimg.cc/hvhZRhpT/Screenshot-1696551706.png"></img>
+<img height="150px" src="https://i.postimg.cc/hvhZRhpT/Screenshot-1696551706.png"></img>
+<img height="150px" src="https://i.postimg.cc/hvhZRhpT/Screenshot-1696551706.png"></img>
+<img height="150px" src="https://i.postimg.cc/hvhZRhpT/Screenshot-1696551706.png"></img>
