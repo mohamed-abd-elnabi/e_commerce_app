@@ -1,11 +1,9 @@
 import 'package:shop_avatar/core/resources/manager_weight.dart';
-
 import '../../../../config/localization/dependancy_injection.dart';
 import '../../../../core/internet_checker/internet_checker.dart';
-import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/storage/local/database/shared_preferences/app_setings_shared_preferences.dart';
 import '../../../../routes/routes.dart';
-import '../../../product_details/presentation/view/Review.dart';
+import '../../../product_details/presentation/model/Review.dart';
 import '/features/home/data/data_source/home_api_controller.dart';
 import '/features/home/presentation/model/home_model.dart';
 import '/features/product_details/domain/model/product_details_model.dart';
