@@ -1,6 +1,6 @@
 # e_commerce_app
 
-MyShop is an e-commerce application built using Flutter that allows users to shop for a variety of products. It features authentication with APIs, supports multiple languages, and offers a dark mode. The app is constructed using the GetX library for state management and Firebase for authentication and notifications.
+e-commerce application built using Flutter that allows users to shop for a variety of products. It features authentication with APIs, supports multiple languages, and offers a dark mode. The app is constructed using the GetX library for state management and Firebase for authentication and notifications.
 
 ## Features
 
